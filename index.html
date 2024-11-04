@@ -6,12 +6,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>Bootstrap 5 Simple Starter</title>
+    <title>UX Ramirez</title>
   </head>
   <body>
-    <div class="container d-flex flex-column align-items-center justify-content-center text-center vh-100 w-50">
-      <h1 class="text-primary">UX Ramirez Website</h1>
-    </div>
+    <!-- NAVIGATION -->
+    <!-- Navigation Start -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/uxRamirezLogo.png" alt="" width="124" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#servicess">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#recent">Recent Work</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+    <!-- Navigation End -->
+
+    <!-- HEADER -->
+    <!-- Header Start -->
+    <header class="header position-relative vh-100">
+      <!-- Images -->
+      <img src="images/header-img.png" class="header-img position-absolute">
+      <img src="images/cssIcon.png" class="css-icon position-absolute d-none d-xl-block">
+      <img src="images/htmlIcon.png" class="html-icon position-absolute d-none d-xl-block">
+      <img src="images/jsIcon.png" class="js-icon position-absolute d-none d-xl-block">
+      <img src="images/bootstrapIcon.png" class="bootstrap-icon position-absolute d-none d-xl-block">
+      <img src="images/figmaIcon.png" class="figma-icon position-absolute d-none d-xl-block">
+      <!-- Images -->
+
+      <!-- Background Video -->
+      <video autoplay loop muted playsinline class="video-background">
+        <source src="/images/gradientBackground.mp4" type="video/mp4">
+      </video>
+      <!-- Background Video -->
+
+      <!-- Overlay para el gradiente -->
+      <div class="overlay vh-100"></div>
+
+      <!-- Contenido principal -->
+      <div class="container position-relative text-white py-6">
+        <div class="row">
+          <div class="col-md-7 pt-5">
+            <h1 class="display-3 mt-5 fw-bold">Hi, my name is Abril Ramirez</h1>
+            <p class="lead text-primary-50">And I’m a UI/UX Designer & Frontend Developer</p>
+            <!-- Social media -->
+            <div>
+              <a href="https://facebook.com/uxramirez/"> <img src="images/facebookIcon.png" alt="Facebook" class="socialIcon"></a>
+              <a href="https://x.com/ux_ramirez"> <img src="images/xIcon.png" alt="X" class="socialIcon"></a>
+              <a href="https://instagram.com/ux_ramirez/"> <img src="images/instagramIcon.png" alt="Instagram" class="socialIcon"></a>
+              <a href="https://www.behance.net/abrilramirez15"> <img src="images/behanceIcon.png" alt="Behance" class="socialIcon"></a>
+              <a href="https://dribbble.com/ux_ramirez"> <img src="images/dribbbleIcon.png" alt="Dribbble" class="socialIcon"></a>
+              <a href="https://github.com/UX-Ramirez"> <img src="images/githubIcon.png" alt="Github" class="socialIcon"></a>
+            </div>
+            <!-- Social media -->
+            <p class="lead py-3">Graduated in Computer Systems Engineer, I'm starting my journey on web design and UI/UX world. Actually, I’m focused on landing page and web design.</p>
+            <a href="#contact" class="btn btn-primary text-white me-3">Contact</a>
+            <a href="#services" class="btn btn-outline-light">Services</a>
+          </div>
+
+        </div>
+
+        <img src="images/profile-pic.png" class="profile-pic rounded-circle pt-3">
+
+      </div>
+    </header>
+    <!-- Header End -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>

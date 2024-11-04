@@ -8,6 +8,46 @@ $light: #f3f6f9;
 $body-color: #FAFAFA;
 $body-bg: #202020;
 
+// Primary Color palette
+$primary-shades: (
+  "50": #e9d9fb,
+  "100": #d3b3f8,
+  "200": #be8df5,
+  "300": #a867f2,
+  "400": #9240ef,
+  "500": #6C2AD9, // Base Color
+  "600": #5b23b3,
+  "700": #4a1b8d,
+  "800": #391467,
+  "900": #290e41
+);
+
+// Bootstrap default theme colors
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": #28a745,
+  "info": #17a2b8,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": $light,
+  "dark": #343a40
+);
+
+// Extender $theme-colors con los tonos personalizados de primary
+$theme-colors: map-merge($theme-colors, (
+  "primary-50": map-get($primary-shades, "50"),
+  "primary-100": map-get($primary-shades, "100"),
+  "primary-200": map-get($primary-shades, "200"),
+  "primary-300": map-get($primary-shades, "300"),
+  "primary-400": map-get($primary-shades, "400"),
+  "primary-500": map-get($primary-shades, "500"),
+  "primary-600": map-get($primary-shades, "600"),
+  "primary-700": map-get($primary-shades, "700"),
+  "primary-800": map-get($primary-shades, "800"),
+  "primary-900": map-get($primary-shades, "900"),
+));
+
 // Custom Bootstrap Navbar
 $navbar-padding-y: 1rem;
 $navbar-dark-color: #FFF;
@@ -51,4 +91,5 @@ $headings-margin-bottom: $spacer * 1;
 
 $enable-negative-margins: true;
 
+// Importa Bootstrap
 @import '../node_modules/bootstrap/scss/bootstrap.scss';

@@ -1,1 +1,107 @@
+.background-black {
+  background-color: #202020;
+}
 
+.navbar {
+  transition: all 0.5s ease-in-out;
+  padding: 25px 0 25px 0;
+}
+
+.navbar-brand img {
+  width: 200px;
+}
+
+.navbar-nav li {
+  padding: 0 0 0 36px;
+  color: white;
+}
+
+.navbar-nav li a {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav li a:hover {
+  color: var(--bs-secondary) !important;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(32, 32, 32));
+  z-index: -3;
+}
+
+.header .container {
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.header .header-img {
+  width: 900px;
+  right: 0px;
+  bottom: 11px;
+}
+
+.header .profile-pic {
+  width: 250px;
+}
+
+.header .stripe-circles {
+  z-index: -1;
+  width: 350px;
+}
+
+.header .css-icon {
+  width: 60px;
+  left: 86px;
+  top: 150px;
+  transform: rotate(15deg);
+}
+
+.header .html-icon {
+  width: 100px;
+  left: 600px;
+  bottom: 150px;
+  transform: rotate(-10deg);
+}
+
+.header .js-icon {
+  width: 100px;
+  left: 86px;
+  bottom: 15px;
+  transform: rotate(-20deg);
+}
+
+.header .bootstrap-icon {
+  width: 150px;
+  left: 800px;
+  bottom: 40px;
+  transform: rotate(15deg);
+}
+
+.header .figma-icon {
+  width: 160px;
+  left: 1000px;
+  top: 130px;
+  transform: rotate(-15deg);
+}
+
+.socialIcon {
+  width: 48px;
+  padding: 0 0 0 8px;
+}

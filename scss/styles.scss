@@ -1,7 +1,7 @@
 // |==========| Global CSS |==========|
-body {
-    overflow-x: hidden;
-}
+// body {
+//     overflow-x: hidden;
+// }
 
 .background-black {
     background-color: #202020;
@@ -44,7 +44,7 @@ body {
 // |==========| Navbar CSS |==========|
 
 // |==========| Header/Hero Section CSS |==========|
-.video-background {
+.header .video-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -54,7 +54,7 @@ body {
     z-index: -2;
 }
 
-.overlay {
+.header .overlay {
     position: absolute;
     width: 100%;
     height: 850px;
@@ -199,7 +199,7 @@ body {
     z-index: -1;
     width: 500px;
     left: 200px;
-    top: 100px;
+    top: 50px;
 }
 
 .contact .pinkGradient {
@@ -215,3 +215,28 @@ body {
     bottom: 100px;
 }
 // |==========| Contact Section CSS |==========|
+
+// |==========| Footer CSS |==========|
+.footer .logo {
+    width: 300px;
+}
+
+.footer .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.footer .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 219px;
+    background: linear-gradient(to bottom, rgb(32, 32, 32), rgba(0, 0, 0, 0));
+    z-index: -1;
+}
+// |==========| Footer CSS |==========|

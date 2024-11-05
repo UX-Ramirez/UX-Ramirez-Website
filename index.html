@@ -27,7 +27,7 @@
                 <a class="nav-link" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#servicess">Services</a>
+                <a class="nav-link" href="#services">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#recent">Recent Work</a>
@@ -97,52 +97,272 @@
 
     <!-- SERVICES -->
     <!-- Services Start -->
-    <section id="services" class="services py-6">
+    <section id="services" class="services position-relative py-7">
+      <!-- Images -->
+      <img src="images/purpleGradient.png" class="purpleGradient position-absolute">
+      <img src="images/pinkGradient.png" class="pinkGradient position-absolute">
+      <!-- Images -->
+
       <div class="container">
         <h1 class="pb-4 fw-bold">My services</h1>
           <!-- Row -->
           <div class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
-              <div class="card">
-                <img src="images/service1Cover.jpg" class="card-img-top" alt="Service 1">
-                <div class="card-body">
-                  <h3 class="card-title fw-bold">Landing Page UI/UX Design</h3>
-                  <p class="card-text">Capture the attention of your users with a unique landing page designed in Figma to convert visitors into customers. Each design is fully customized to reflect your brand and maximize the user experience.</p>
+              <a data-bs-toggle="modal" data-bs-target="#modal1">
+                <div class="card">
+                  <img src="images/service1Cover.jpg" class="card-img-top" alt="Service 1">
+                  <div class="card-body">
+                    <h3 class="card-title fw-bold">Landing Page UI/UX Design</h3>
+                    <p class="card-text">Capture the attention of your users with a unique landing page designed in Figma to convert visitors into customers. Each design is fully customized to reflect your brand and maximize the user experience.</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div class="col">
-              <div class="card">
-                <img src="images/service2Cover.jpg" class="card-img-top" alt="Service 2">
-                <div class="card-body">
-                  <h3 class="card-title fw-bold">Complete Website UI/UX Design</h3>
-                  <p class="card-text">Take your website to the next level with a custom design. From home pages to advanced sections, the design will reflect professionalism, making a lasting visual impact that highlights every aspect of your business.</p>
+              <a data-bs-toggle="modal" data-bs-target="#modal2">
+                <div class="card">
+                  <img src="images/service2Cover.jpg" class="card-img-top" alt="Service 2">
+                  <div class="card-body">
+                    <h3 class="card-title fw-bold">Complete Website UI/UX Design</h3>
+                    <p class="card-text">Take your website to the next level with a custom design. From home pages to advanced sections, the design will reflect professionalism, making a lasting visual impact that highlights every aspect of your business.</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div class="col">
-              <div class="card">
-                <img src="images/service3Cover.jpg" class="card-img-top" alt="Service 3">
-                <div class="card-body">
-                  <h3 class="card-title fw-bold">Design + Frontend Development: Landing Page</h3>
-                  <p class="card-text">Get an all-in-one solution for your landing page: Figma design and frontend development. With a focus on aesthetics, I offer a service that includes everything from visual planning to coding, so you can launch a professional and optimized page.</p>
+              <a data-bs-toggle="modal" data-bs-target="#modal3">
+                <div class="card">
+                  <img src="images/service3Cover.jpg" class="card-img-top" alt="Service 3">
+                  <div class="card-body">
+                    <h3 class="card-title fw-bold">Design + Frontend Development: Landing Page</h3>
+                    <p class="card-text">Get an all-in-one solution for your landing page: Figma design and frontend development. With a focus on aesthetics, I offer a service that includes everything from visual planning to coding, so you can launch a professional and optimized page.</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
             <div class="col">
-              <div class="card">
-                <img src="images/service4Cover.jpg" class="card-img-top" alt="Service 4">
-                <div class="card-body">
-                  <h3 class="card-title fw-bold">Design + Frontend: Complete Website</h3>
-                  <p class="card-text">A service that covers both Figma design and frontend development of your entire website. Ideal for companies looking for a customized website from start to finish, with a unique aesthetic and an outstanding user experience.</p>
+              <a data-bs-toggle="modal" data-bs-target="#modal4">
+                <div class="card">
+                  <img src="images/service4Cover.jpg" class="card-img-top" alt="Service 4">
+                  <div class="card-body">
+                    <h3 class="card-title fw-bold">Design + Frontend: Complete Website</h3>
+                    <p class="card-text">A service that covers both Figma design and frontend development of your entire website. Ideal for companies looking for a customized website from start to finish, with a unique aesthetic and an outstanding user experience.</p>
+                  </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
           <!-- Row -->
       </div>
     </section>
-    <!-- Projects End -->
+    <!-- Servicess End -->
+
+    <!-- MODAL 1 -->
+    <!-- Modal 1 Start -->
+    <div id="modal1" class="modal fade">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content p-5">
+          <div class="row">
+
+            <!-- Column 1 -->
+            <div class="col-lg-6">
+              <div class="image-container">
+                <img src="images/service1Example.jpg" class="img-fluid">
+              </div>
+            </div>
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+            <div class="col-lg-6">
+              <div class="text-container">
+                <h2 class="display-6 fw-bold">Landing Page UI/UX Design</h2>
+                <p>
+                  Capture the attention of your users with a unique landing page to convert visitors into customers. 
+                  Each design is fully customized to reflect your brand and maximize the user experience.
+                </p>
+
+                <p>This service includes:</p>
+
+                <ul class="lh-lg">
+                  <li class="list-group-item">- Figma design of 1 page</li>
+
+                  <li class="list-group-item">- 1 revision to perfect the final product</li>
+
+                  <li class="list-group-item">- Full ownership of the website design and content</li>
+                </ul>
+
+                <p><img class="icon me-2" src="images/clockIcon.png"><strong>Delivery time:</strong> Within 1-2 weeks</p>
+                <p><img class="icon me-2" src="images/revisionIcon.png"><strong>Revision:</strong> 1 revision</p>
+
+                <p>Contact me to discuss your requirements!</p>
+
+                <a href="#contact" class="btn btn-secondary text-white me-3">Contact</a>                
+              </div>
+            </div>
+            <!-- Column 2 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 1 End -->
+
+    <!-- MODAL 2 -->
+    <!-- Modal 2 Start -->
+    <div id="modal2" class="modal fade">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content p-5">
+          <div class="row">
+
+            <!-- Column 1 -->
+            <div class="col-lg-6">
+              <div class="image-container">
+                <img src="images/service2Example.jpg" class="img-fluid">
+              </div>
+            </div>
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+            <div class="col-lg-6">
+              <div class="text-container">
+                <h2 class="display-6 fw-bold">Complete Website UI/UX Design</h2>
+                <p>
+                  Take your website to the next level with a custom design. 
+                  From home pages to advanced sections, the design will reflect professionalism, 
+                  making a lasting visual impact that highlights every aspect of your business.
+                </p>
+
+                <p>This service includes:</p>
+
+                <ul class="lh-lg">
+                  <li class="list-group-item">- Figma design of 2 or more pages</li>
+
+                  <li class="list-group-item">- 1 revision to perfect the final product</li>
+
+                  <li class="list-group-item">- Full ownership of the website design and content</li>
+                </ul>
+
+                <p><img class="icon me-2" src="images/clockIcon.png"><strong>Delivery time:</strong> Within 1-2 weeks</p>
+                <p><img class="icon me-2" src="images/revisionIcon.png"><strong>Revision:</strong> 1 revision</p>
+
+                <p>Contact me to discuss your requirements!</p>
+
+                <a href="#contact" class="btn btn-secondary text-white me-3">Contact</a>                
+              </div>
+            </div>
+            <!-- Column 2 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 2 End -->
+
+    <!-- MODAL 3 -->
+    <!-- Modal 3 Start -->
+    <div id="modal3" class="modal fade">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content p-5">
+          <div class="row">
+
+            <!-- Column 1 -->
+            <div class="col-lg-6">
+              <div class="image-container">
+                <img src="images/service3Example.jpg" class="img-fluid">
+              </div>
+            </div>
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+            <div class="col-lg-6">
+              <div class="text-container">
+                <h2 class="display-6 fw-bold">Design + Frontend: Landing Page</h2>
+                <p>
+                  Get an all-in-one solution for your landing page: Figma design and frontend development. 
+                  With a focus on aesthetics, I offer a service that includes everything from visual planning 
+                  to coding, so you can launch a professional and optimized page.
+                </p>
+
+                <p>This service includes:</p>
+
+                <ul class="lh-lg">
+                  <li class="list-group-item">- Figma design of 1 page</li>
+
+                  <li class="list-group-item">- Full ownership of the website design and content </li>
+
+                  <li class="list-group-item">- Full ownership of HTML, CSS & JS with Bootstrap Framework source code</li>
+
+                  <li class="list-group-item">- 1 revision to perfect the final product</li>
+
+                  <li class="list-group-item text-danger">- For the moment this service does not include page hosting!!</li>
+                </ul>
+
+                <p><img class="icon me-2" src="images/clockIcon.png"><strong>Delivery time:</strong> Within 1 month</p>
+                <p><img class="icon me-2" src="images/revisionIcon.png"><strong>Revision:</strong> 1 revision</p>
+
+                <p>Contact me to discuss your requirements!</p>
+
+                <a href="#contact" class="btn btn-secondary text-white me-3">Contact</a>                
+              </div>
+            </div>
+            <!-- Column 2 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 3 End -->
+
+    <!-- MODAL 4 -->
+    <!-- Modal 4 Start -->
+    <div id="modal4" class="modal fade">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content p-5">
+          <div class="row">
+
+            <!-- Column 1 -->
+            <div class="col-lg-6">
+              <div class="image-container">
+                <img src="images/service4Example.jpg" class="img-fluid">
+              </div>
+            </div>
+            <!-- Column 1 -->
+
+            <!-- Column 2 -->
+            <div class="col-lg-6">
+              <div class="text-container">
+                <h2 class="display-6 fw-bold">Design + Frontend: Complete Website</h2>
+                <p>
+                  A service that covers both Figma design and frontend development of your entire website. 
+                  Ideal for companies looking for a customized website from start to finish, with a unique 
+                  aesthetic and an outstanding user experience.
+                </p>
+
+                <p>This service includes:</p>
+
+                <ul class="lh-lg">
+                  <li class="list-group-item">- Figma design of 2 or more pages</li>
+
+                  <li class="list-group-item">- Full ownership of the website design and content </li>
+
+                  <li class="list-group-item">- Full ownership of HTML, CSS & JS with Bootstrap Framework source code</li>
+
+                  <li class="list-group-item">- 1 revision to perfect the final product</li>
+
+                  <li class="list-group-item text-danger">- For the moment this service does not include page hosting!!</li>
+                </ul>
+
+                <p><img class="icon me-2" src="images/clockIcon.png"><strong>Delivery time:</strong> Within 1 month</p>
+                <p><img class="icon me-2" src="images/revisionIcon.png"><strong>Revision:</strong> 1 revision</p>
+
+                <p>Contact me to discuss your requirements!</p>
+
+                <a href="#contact" class="btn btn-secondary text-white me-3">Contact</a>                
+              </div>
+            </div>
+            <!-- Column 2 -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 4 End -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>

@@ -4,8 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BOOTSTRAP 5 -->
     <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- BOOTSTRAP 5 -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css" />
+
+    <!-- LOCAL CSS STYLESHEET -->
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- LOCAL CSS STYLESHEET -->
+
+    <link rel="icon" href="images/logos/uxRamirezLogo.png" />
     <title>UX Ramirez</title>
   </head>
   <body>
@@ -366,7 +376,7 @@
 
     <!-- RECENT WORK -->
     <!-- Recent Work Section Start -->
-    <section id="recent" class="recent position-relative py-4">
+    <section id="recent" class="recent position-relative pt-3 pb-7">
       <!-- Images -->
       <img src="images/decorations/purpleGradient.png" class="purpleGradient position-absolute">
       <img src="images/decorations/pinkGradient.png" class="pinkGradient position-absolute">
@@ -477,7 +487,96 @@
     </section>
     <!-- Recent Work Section End -->
 
+    <!-- CONTACT -->
+    <!-- Contact Start -->
+    <section id="contact" class="contact position-relative pt-3 pb-5">
+      <!-- Images -->
+      <img src="images/decorations/purpleGradient.png" class="purpleGradient position-absolute">
+      <img src="images/decorations/pinkGradient.png" class="pinkGradient position-absolute">
+      <img src="images/decorations/cyanGradient.png" class="cyanGradient position-absolute">
+      <!-- Images -->
+
+      <div class="container">
+        <h1 class="pb-4 fw-bold">Contact</h1>
+
+        <div class="row">
+          <!-- Column 1 -->
+          <div class="col-lg-5">
+            <div>
+              <p class="fw-light">If you want a unique and personalized project, send me a message, or contact me at:</p>
+
+              <div class="row">
+                <ul class="list-unstyled lh-lg">
+                  <!-- List Item 1 -->
+                  <li class="d-flex align-items-center py-3">
+                    <a href="mailto:ux.ramirez01@gmail.com"> <img src="images/icons/mailIcon.png" alt="Mail" class="socialIcon me-4"></a>
+                    <div>
+                      <strong>Email</strong> <br>ux.ramirez01@gmail.com
+                    </div>
+                  </li>
+                  <!-- List Item 1 -->
+                  <!-- List Item 2 -->
+                  <li class="d-flex align-items-center pb-3">
+                    <a href="https://facebook.com/uxramirez/"> <img src="images/icons/facebookIcon.png" alt="Facebook" class="socialIcon me-4"></a>
+                    <div>
+                      <strong>Facebook Message</strong> <br>UX Ramirez
+                    </div>
+                  </li>
+                  <!-- List Item 2 -->
+                  <!-- List Item 3 -->
+                  <li class="d-flex align-items-center">
+                    <a href="https://instagram.com/ux_ramirez/"> <img src="images/icons/instagramIcon.png" alt="Instagram" class="socialIcon me-4"></a>
+                    <div>
+                      <strong>Instagram DM</strong> <br>UX Ramirez
+                    </div>
+                  </li>
+                  <!-- List Item 3 -->
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <!-- Column 1 -->
+
+          <!-- Column 2 -->
+          <div class="col-lg-7">
+            <div>
+              <form action="https://api.web3forms.com/submit" method="POST" class="row g-3">
+                <input type="hidden" name="access_key" value="d3b01a7c-5288-4217-8e54-94df4fa70043">
+                
+                <div class="col-md-6">
+                  <label for="inputName" class="form-label required-input">Name</label>
+                  <input type="text" class="form-control" id="inputName" placeholder="Name">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputLastName" class="form-label required-input">Last Name</label>
+                  <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+                </div>
+                <div class="col-12">
+                  <label for="inputEmail" class="form-label required-input">Email</label>
+                  <input type="text" class="form-control" id="inputEmail" placeholder="example@email.com">
+                </div>
+                <div class="col-12">
+                  <label for="inputMessage" class="form-label required-input">Message</label>
+                  <textarea class="form-control" id="inputMessage" rows="3" placeholder="Write your message here..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-primary text-white" onclick=sendMessage() type="button">Send</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- Column 2 -->
+        </div>
+      </div>
+    </section>
+    <!-- Contact End -->
+
+    <!-- SCRIPTS -->
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <!-- SCRIPTS -->
   </body>
 </html>

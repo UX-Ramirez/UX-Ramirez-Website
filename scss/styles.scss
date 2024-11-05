@@ -11,6 +11,11 @@ body {
     width: 48px;
     padding: 0 0 0 8px;
 }
+
+.required-input::after {
+    content: " *";
+    color: rgb(255, 132, 118);
+}
 // |==========| Global CSS |==========|
 
 // |==========| Navbar CSS |==========|
@@ -188,3 +193,25 @@ body {
     top: 400px;
 }
 // |==========| Recent Work Section CSS |==========|
+
+// |==========| Contact Section CSS |==========|
+.contact .purpleGradient {
+    z-index: -1;
+    width: 500px;
+    left: 200px;
+    top: 100px;
+}
+
+.contact .pinkGradient {
+    z-index: -1;
+    width: 300px;
+    right: 400px;
+    top: 100px;
+}
+
+.contact .cyanGradient {
+    width: 200px;
+    right: -100px;
+    bottom: 100px;
+}
+// |==========| Contact Section CSS |==========|

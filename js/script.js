@@ -26,3 +26,17 @@ function sendMessage() {
   });
 }
 // |-----| SweetAlert2 "Contact" alert |-----| //
+
+document.querySelectorAll('.btnClose').forEach(function (button) {
+  button.addEventListener('click', function () {
+
+    var modal = button.closest('.modal');
+    var bootstrapModal = bootstrap.Modal.getInstance(modal);
+    
+    if (bootstrapModal) {
+      bootstrapModal.hide(); // Cierra el modal
+    }
+
+    window.location.href = '#contact';
+  });
+});

@@ -1,8 +1,4 @@
 // |==========| Global CSS |==========|
-// body {
-//     overflow-x: hidden;
-// }
-
 .background-black {
     background-color: #202020;
 }
@@ -40,6 +36,10 @@
 
 .navbar-nav li a:hover {
     color: var(--bs-secondary) !important;
+}
+
+.nav-link.active {
+    color: #ff6347;
 }
 // |==========| Navbar CSS |==========|
 
@@ -154,8 +154,13 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    text-align: center;
 }
+
+.modal .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
 .modal .image-container img {
     max-width: 100%;

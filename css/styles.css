@@ -1,5 +1,14 @@
+@charset "UTF-8";
+.list-group-item {
+  background-color: transparent; /* Hace el fondo transparente */
+}
+
 .background-black {
   background-color: #202020;
+}
+
+.servicesIcon {
+  width: 64px;
 }
 
 .socialIcon {
@@ -10,6 +19,28 @@
 .required-input::after {
   content: " *";
   color: rgb(255, 132, 118);
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.card {
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.card-img-top {
+  transition: transform 0.3s ease; /* Suaviza el efecto de zoom */
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.07); /* Aumenta el tamaño de la imagen al pasar el cursor */
 }
 
 .navbar {
@@ -121,44 +152,29 @@
   transform: rotate(-15deg);
 }
 
-.services a {
-  cursor: pointer;
+.about .card {
+  background-color: transparent;
 }
 
-.services .purpleGradient {
+.about .purpleGradient {
   z-index: -1;
   width: 338px;
   left: -51px;
   top: 100px;
 }
 
-.services .pinkGradient {
-  width: 476px;
+.about .pinkGradient {
+  width: 400px;
   right: 20px;
   bottom: -4px;
 }
 
-.modal-dialog {
-  max-width: 1240px;
+.services {
+  background-color: var(--bs-primary-900);
 }
 
-.modal .image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.modal .text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.modal .image-container img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+.services .card {
+  background-color: #1d0b3a;
 }
 
 .recent .img-fluid {

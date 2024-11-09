@@ -1,24 +1,7 @@
 // |==========| Global CSS |==========|
-.list-group-item {
-    background-color: transparent; /* Hace el fondo transparente */
-}
-
-.background-black {
-    background-color: #202020;
-}
-
-.servicesIcon {
-    width: 64px;
-}
-
-.socialIcon {
-    width: 48px;
-    padding: 0 0 0 8px;
-}
-
-.required-input::after {
-    content: " *";
-    color: rgb(255, 132, 118);
+::selection {
+    background-color: var(--bs-primary-50);
+    color: var(--bs-body-bg);
 }
 
 svg {
@@ -30,17 +13,43 @@ svg {
     z-index: 1;
 }
 
+span {
+    color: rgb(240, 157, 157);
+}
+
+.listIcon {
+    width: 36px;
+}
+
+.servicesIcon {
+    width: 64px;
+}
+
+.socialIcon {
+    width: 48px;
+    padding: 0 0 0 8px;
+}
+
+.list-group-item {
+    background-color: transparent;
+}
+
 .card {
     background-color: transparent;
     overflow: hidden;
 }
 
 .card-img-top {
-    transition: transform 0.3s ease; /* Suaviza el efecto de zoom */
+    transition: transform 0.3s ease;
 }
   
 .card:hover .card-img-top {
-    transform: scale(1.07); /* Aumenta el tamaño de la imagen al pasar el cursor */
+    transform: scale(1.07);
+}
+
+.required-input::after {
+    content: " *";
+    color: rgb(255, 132, 118);
 }
 // |==========| Global CSS |==========|
 
@@ -67,13 +76,15 @@ svg {
 .navbar-nav li a:hover {
     color: var(--bs-secondary) !important;
 }
-
-.nav-link.active {
-    color: #ff6347;
-}
 // |==========| Navbar CSS |==========|
 
 // |==========| Header/Hero Section CSS |==========|
+.header {
+    overflow: hidden;
+    background-size: cover;
+    height: 850px;
+}
+
 .header .video-background {
     position: absolute;
     top: 0;
@@ -90,12 +101,6 @@ svg {
     height: 850px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(32, 32, 32));
     z-index: -1;
-}
-
-.header {
-    overflow: hidden;
-    background-size: cover;
-    height: 850px;
 }
 
 .header .container {
@@ -158,10 +163,6 @@ svg {
 // |==========| Header/Hero Section CSS |==========|
 
 // |==========| About Section CSS |==========|
-.about .card {
-    background-color: transparent;
-}
-
 .about .purpleGradient {
     z-index: -1;
     width: 338px;
@@ -184,6 +185,15 @@ svg {
 .services .card {
     background-color: #1d0b3a;
 }
+
+.services .btnBehance:hover {
+    background: #0057FF;
+    color: var(--bs-light);
+}
+
+.services .btnIcon {
+    width: 24px;
+}
 // |==========| Services Section CSS |==========|
 
 // |==========| Recent Work Section CSS |==========|
@@ -191,15 +201,6 @@ svg {
     object-fit: cover;
     width: 100%;
     height: 100%;
-}
-
-.recent .btn-behance {
-    background-color: #0057FF;
-}
-
-.recent .btn-dribbble {
-    background-color: #FFABE7;
-    color: #202020;
 }
 
 .recent .purpleGradient {

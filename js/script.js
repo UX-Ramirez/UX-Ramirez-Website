@@ -4,9 +4,9 @@ function userScroll() {
   
     window.addEventListener('scroll', () => {
       if (window.scrollY > 35) {
-        navbar.classList.add('background-black');
+        navbar.classList.add('bg-dark');
       } else {
-        navbar.classList.remove('background-black');
+        navbar.classList.remove('bg-dark');
       }
     });
   }

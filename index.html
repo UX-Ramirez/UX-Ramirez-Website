@@ -34,7 +34,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#services">Services</a>
@@ -54,7 +57,7 @@
 
     <!-- HEADER -->
     <!-- Header Start -->
-    <header class="header position-relative overflow-hidden">
+    <header id="home" class="header position-relative overflow-hidden">
       <!-- Images -->
       <img src="images/decorations/header-img.png" class="header-img position-absolute">
       <img src="images/icons/cssIcon.png" class="css-icon position-absolute d-none d-xxl-block">
@@ -111,20 +114,23 @@
       <img src="images/decorations/purpleGradient.png" class="purpleGradient position-absolute">
       <img src="images/decorations/pinkGradient.png" class="pinkGradient position-absolute">
       <!-- Images -->
-       
+      
+      <!-- Title -->
       <div class="container">
         <div class="row mb-4">
           <div class="col-md-8 offset-md-2 d-flex flex-column align-items-center text-center">
             <h4><span class="badge bg-secondary rounded-0 text-uppercase">About</span></h4>
-            <h2 class="fw-bold">UX Ramirez</h2>
-            <p>
-              I'm beginning my journey as a freelance designer & web developer, passionate about creating solutions that make a difference.
-              I am dedicated to providing services with commitment and attention to detail, always ensuring results that exceed expectations.
+            <h2 class="fw-bold">What UX Ramirez</h2>
+            <p>I'm beginning my journey as a freelance designer & web developer, passionate about creating solutions that make a difference. 
+              I am dedicated to providing services with commitment and attention to detail, always ensuring results that exceed expectations. 
               Here are some areas where I stand out:
             </p>
           </div>
         </div>
+      </div>
+      <!-- Title -->
 
+      <div class="container">
         <div class="row">
           <!-- Row 1 -->
           <!-- Card 1 -->
@@ -200,58 +206,71 @@
                 <div class="card-body">
                   <h3 class="fw-bold">Landing Page UI/UX Design</h3>
   
-                  <ul class="list-group list-group-flush fs-5 mb-5 vstack gap-2">
+                  <ul class="list-group list-group-flush fs-5 mb-5 vstack">
                     <li class="list-group-item border-0">Figma design of one-page website</li>
                     <li class="list-group-item border-0">Desktop, tablet & mobile layouts</li>
                     <li class="list-group-item border-0">Full ownership of the website design and content</li>
                     <li class="list-group-item border-0">Depend of the number of sections you need, is the price I'll give you</li>
                   </ul>
   
+                  <p class="col-lg-7"><img class="listIcon me-2" src="images/icons/clockIcon.png"><strong>Delivery time:</strong> Within 1-2 weeks</p>
+                  <p class="col-lg-5"><img class="listIcon me-2" src="images/icons/revisionIcon.png"><strong>Revision:</strong> 1 revision</p>
+
                   <h4 class="fw-bold mt-4">From $49 USD</h4>
-                  <button class="btn btn-light mb-4 rounded-4">Contact</button>
+                  <a href="#contact" class="btn btn-primary text-white me-3">Contact</a>
+                  <a href="https://www.behance.net/ux_ramirez/services/446581/Landing-Page-UI-UX-Design" class="btn btn-outline-light btnBehance"><img class="btnIcon me-2" src="images/icons/behanceOriginalIcon.png">Behance Message</a>
                 </div>
              </div>
             <!-- Card 1 -->
           </div>
 
           <div class="col-md-6">
-            <!-- Card 3 -->
+            <!-- Card 2 -->
             <div class="card rounded-4 border-white mb-5 p-4 shadow-lg">
               <div class="card-body">
                 <h3 class="fw-bold">Landing Page Bundle: Design + Development</h3>
 
-                <ul class="list-group list-group-flush fs-5 mb-5 vstack gap-2">
+                <ul class="list-group list-group-flush fs-5 mb-5 vstack">
                   <li class="list-group-item border-0">Figma design of one-page website</li>
                   <li class="list-group-item border-0">Includes Frontend Development with Bootstrap</li>
                   <li class="list-group-item border-0">Full ownership of the website design and code</li>
                   <li class="list-group-item border-0">Depend of the number of sections you need, is the price I'll give you</li>
+                  <li class="list-group-item border-0"><span>Page Hosting not available for the moment...</span></li>
                 </ul>
 
+                <p class="col-lg-7"><img class="icon me-2" src="images/icons/clockIcon.png"><strong>Delivery time:</strong> Within 1-2 weeks</p>
+                <p class="col-lg-5"><img class="icon me-2" src="images/icons/revisionIcon.png"><strong>Revision:</strong> 1 revision</p>
+
                 <h4 class="fw-bold mt-4">From $75 USD</h4>
-                <button class="btn btn-light mb-4 rounded-4">Contact</button>
+                <a href="#contact" class="btn btn-primary text-white me-3">Contact</a>
+                <a href="https://www.behance.net/ux_ramirez/services/446585/Landing-Page-Bundle-Design-Development" class="btn btn-outline-light btnBehance"><img class="btnIcon me-2" src="images/icons/behanceOriginalIcon.png">Behance Message</a>
               </div>
             </div>
-            <!-- Card 3 -->
+            <!-- Card 2 -->
           </div>
 
           <div class="col-md-6">
-            <!-- Card 2 -->
+            <!-- Card 3 -->
             <div class="card rounded-4 border-0 mb-5 p-4">
               <div class="card-body">
                 <h3 class="fw-bold">Larger Website UI/UX Design</h3>
 
-                <ul class="list-group list-group-flush fs-5 mb-5 vstack gap-2">
-                  <li class="list-group-item border-0">Figma Design of up to 1 pages</li>
+                <ul class="list-group list-group-flush fs-5 mb-5 vstack">
+                  <li class="list-group-item border-0">Figma Design of up to 1 page</li>
                   <li class="list-group-item border-0">Desktop, tablet & mobile layouts</li>
                   <li class="list-group-item border-0">Full ownership of the website design and content</li>
                   <li class="list-group-item border-0">Depend of the number of pages you need, is the price I'll give you</li>
                 </ul>
 
+                <p class="col-lg-7"><img class="icon me-2" src="images/icons/clockIcon.png"><strong>Delivery time:</strong> Within 1 month</p>
+                <p class="col-lg-5"><img class="icon me-2" src="images/icons/revisionIcon.png"><strong>Revision:</strong> 1 revision</p>
+
                 <h4 class="fw-bold mt-4">From $73 USD</h4>
-                <button class="btn btn-light mb-4 rounded-4">Contact</button>
+                <a href="#contact" class="btn btn-primary text-white me-3">Contact</a>
+                <a href="https://www.behance.net/ux_ramirez/services/446583/Larger-Website-UI-UX-Design" class="btn btn-outline-light btnBehance"><img class="btnIcon me-2" src="images/icons/behanceOriginalIcon.png">Behance Message</a>
               </div>
            </div>
-          <!-- Card 2 -->
+          <!-- Card 3 -->
           </div>
 
           <div class="col-md-6">
@@ -260,15 +279,20 @@
               <div class="card-body">
                 <h3 class="fw-bold">Larger Website Bundle: Design + Development</h3>
 
-                <ul class="list-group list-group-flush fs-5 mb-5 vstack gap-2">
+                <ul class="list-group list-group-flush fs-5 mb-5 vstack">
                   <li class="list-group-item border-0">Figma Design of up to 1 pages</li>
                   <li class="list-group-item border-0">Includes Frontend Development with Bootstrap</li>
                   <li class="list-group-item border-0">Full ownership of the website design and code</li>
                   <li class="list-group-item border-0">Depend of the number of pages you need, is the price I'll give you</li>
+                  <li class="list-group-item border-0"><span>Page Hosting not available for the moment...</span></li>
                 </ul>
 
+                <p class="col-lg-7"><img class="icon me-2" src="images/icons/clockIcon.png"><strong>Delivery time:</strong> Within 1 month</p>
+                <p class="col-lg-5"><img class="icon me-2" src="images/icons/revisionIcon.png"><strong>Revision:</strong> 1 revision</p>
+
                 <h4 class="fw-bold mt-4">From $113 USD</h4>
-                <button class="btn btn-light mb-4 rounded-4">Contact</button>
+                <a href="#contact" class="btn btn-primary text-white me-3">Contact</a>
+                <a href="https://www.behance.net/ux_ramirez/services/446587/Larger-Website-Bundle-Design-Development" class="btn btn-outline-light btnBehance"><img class="btnIcon me-2" src="images/icons/behanceOriginalIcon.png">Behance Message</a>
               </div>
             </div>
             <!-- Card 4 -->
@@ -277,213 +301,6 @@
       </div>
     </section>
     <!-- Servicess End -->
-
-    <!-- MODAL 1 -->
-    <!-- Modal 1 Start -->
-    <div id="modal1" class="modal fade">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content p-5">
-          <div class="row">
-
-            <!-- Column 1 -->
-            <div class="col-lg-6">
-              <div class="image-container">
-                <img src="images/covers/service1Example.jpg" class="img-fluid">
-              </div>
-            </div>
-            <!-- Column 1 -->
-
-            <!-- Column 2 -->
-            <div class="col-lg-6">
-              <div class="text-container">
-                <h2 class="display-6 fw-bold my-3">Landing Page UI/UX Design</h2>
-                <p>
-                  Capture the attention of your users with a unique landing page to convert visitors into customers. 
-                  Each design is fully customized to reflect your brand and maximize the user experience.
-                </p>
-
-                <p>This service includes:</p>
-
-                <ul class="lh-lg">
-                  <li class="list-group-item">- Figma design of 1 page</li>
-
-                  <li class="list-group-item">- 1 revision to perfect the final product</li>
-
-                  <li class="list-group-item">- Full ownership of the website design and content</li>
-                </ul>
-
-                <p><img class="icon me-2" src="images/icons/clockIcon.png"><strong>Delivery time:</strong> Within 1-2 weeks</p>
-                <p><img class="icon me-2" src="images/icons/revisionIcon.png"><strong>Revision:</strong> 1 revision</p>
-
-                <p>Contact me to discuss your requirements!</p>
-
-                <a href="#contact" class="btn btnClose btn-secondary text-white me-3" id="contactButton">Contact</a>            
-              </div>
-            </div>
-            <!-- Column 2 -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 1 End -->
-
-    <!-- MODAL 2 -->
-    <!-- Modal 2 Start -->
-    <div id="modal2" class="modal fade">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content p-5">
-          <div class="row">
-
-            <!-- Column 1 -->
-            <div class="col-lg-6">
-              <div class="image-container">
-                <img src="images/covers/service2Example.jpg" class="img-fluid">
-              </div>
-            </div>
-            <!-- Column 1 -->
-
-            <!-- Column 2 -->
-            <div class="col-lg-6">
-              <div class="text-container">
-                <h2 class="display-6 fw-bold my-3">Complete Website UI/UX Design</h2>
-                <p>
-                  Take your website to the next level with a custom design. 
-                  From home pages to advanced sections, the design will reflect professionalism, 
-                  making a lasting visual impact that highlights every aspect of your business.
-                </p>
-
-                <p>This service includes:</p>
-
-                <ul class="lh-lg">
-                  <li class="list-group-item">- Figma design of 2 or more pages</li>
-
-                  <li class="list-group-item">- 1 revision to perfect the final product</li>
-
-                  <li class="list-group-item">- Full ownership of the website design and content</li>
-                </ul>
-
-                <p><img class="icon me-2" src="images/icons/clockIcon.png"><strong>Delivery time:</strong> Within 1-2 weeks</p>
-                <p><img class="icon me-2" src="images/icons/revisionIcon.png"><strong>Revision:</strong> 1 revision</p>
-
-                <p>Contact me to discuss your requirements!</p>
-
-                <a href="#contact" class="btn btnClose btn-secondary text-white me-3" id="contactButton">Contact</a>                       
-              </div>
-            </div>
-            <!-- Column 2 -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 2 End -->
-
-    <!-- MODAL 3 -->
-    <!-- Modal 3 Start -->
-    <div id="modal3" class="modal fade">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content p-5">
-          <div class="row">
-
-            <!-- Column 1 -->
-            <div class="col-lg-6">
-              <div class="image-container">
-                <img src="images/covers/service3Example.jpg" class="img-fluid">
-              </div>
-            </div>
-            <!-- Column 1 -->
-
-            <!-- Column 2 -->
-            <div class="col-lg-6">
-              <div class="text-container">
-                <h2 class="display-6 fw-bold my-3">Design + Frontend: Landing Page</h2>
-                <p>
-                  Get an all-in-one solution for your landing page: Figma design and frontend development. 
-                  With a focus on aesthetics, I offer a service that includes everything from visual planning 
-                  to coding, so you can launch a professional and optimized page.
-                </p>
-
-                <p>This service includes:</p>
-
-                <ul class="lh-lg">
-                  <li class="list-group-item">- Figma design of 1 page</li>
-
-                  <li class="list-group-item">- Full ownership of the website design and content </li>
-
-                  <li class="list-group-item">- Full ownership of HTML, CSS & JS with Bootstrap Framework source code</li>
-
-                  <li class="list-group-item">- 1 revision to perfect the final product</li>
-
-                  <li class="list-group-item text-danger">- For the moment this service does not include page hosting!!</li>
-                </ul>
-
-                <p><img class="icon me-2" src="images/icons/clockIcon.png"><strong>Delivery time:</strong> Within 1 month</p>
-                <p><img class="icon me-2" src="images/icons/revisionIcon.png"><strong>Revision:</strong> 1 revision</p>
-
-                <p>Contact me to discuss your requirements!</p>
-
-                <a href="#contact" class="btn btnClose btn-secondary text-white me-3" data-bs-dismiss="modal">Contact</a>                        
-              </div>
-            </div>
-            <!-- Column 2 -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 3 End -->
-
-    <!-- MODAL 4 -->
-    <!-- Modal 4 Start -->
-    <div id="modal4" class="modal fade">
-      <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content p-5">
-          <div class="row">
-
-            <!-- Column 1 -->
-            <div class="col-lg-6">
-              <div class="image-container">
-                <img src="images/covers/service4Example.jpg" class="img-fluid">
-              </div>
-            </div>
-            <!-- Column 1 -->
-
-            <!-- Column 2 -->
-            <div class="col-lg-6">
-              <div class="text-container">
-                <h2 class="display-6 fw-bold my-3">Design + Frontend Development: Complete Website</h2>
-                <p>
-                  A service that covers both Figma design and frontend development of your entire website. 
-                  Ideal for companies looking for a customized website from start to finish, with a unique 
-                  aesthetic and an outstanding user experience.
-                </p>
-
-                <p>This service includes:</p>
-
-                <ul class="lh-lg">
-                  <li class="list-group-item">- Figma design of 2 or more pages</li>
-
-                  <li class="list-group-item">- Full ownership of the website design and content </li>
-
-                  <li class="list-group-item">- Full ownership of HTML, CSS & JS with Bootstrap Framework source code</li>
-
-                  <li class="list-group-item">- 1 revision to perfect the final product</li>
-
-                  <li class="list-group-item text-danger">- For the moment this service does not include page hosting!!</li>
-                </ul>
-
-                <p><img class="icon me-2" src="images/icons/clockIcon.png"><strong>Delivery time:</strong> Within 1 month</p>
-                <p><img class="icon me-2" src="images/icons/revisionIcon.png"><strong>Revision:</strong> 1 revision</p>
-
-                <p>Contact me to discuss your requirements!</p>
-
-                <a href="#contact" class="btn btnClose btn-secondary text-white me-3" data-bs-dismiss="modal">Contact</a>                      
-              </div>
-            </div>
-            <!-- Column 2 -->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 4 End -->
 
     <!-- RECENT WORK -->
     <!-- Recent Work Section Start -->
@@ -496,6 +313,7 @@
       <img src="images/decorations/pinkGradient.png" class="pinkGradient position-absolute">
       <!-- Images -->
 
+      <!-- Title -->
       <div class="container">
         <div class="row mb-4">
           <div class="col-md-6 offset-md-3 d-flex flex-column align-items-center text-center">
@@ -504,6 +322,7 @@
           </div>
         </div>
       </div>
+      <!-- Title -->
 
       <div class="container">
         <div class="row row-cols-1 row-cols-md-3 g-4">
@@ -514,7 +333,7 @@
                 <h5 class="card-title fw-bold">UX Ramirez Website</h5>
                 <p class="card-text">Landing Page where you'll fin information about my Freelance Services and contact info.</p>
                 <div>
-                  <a href="" class="btn btn-outline-primary btn-md text-white">Visit Website</a>
+                  <button href="" class="btn btn-primary btn-md text-white" disabled>Actual Page</button>
                 </div>
               </div>
             </div>
@@ -557,6 +376,7 @@
       <img src="images/decorations/cyanGradient.png" class="cyanGradient position-absolute">
       <!-- Images -->
 
+      <!-- Title -->
       <div class="container">
         <div class="row mb-4">
           <div class="col-md-8 offset-md-2 d-flex flex-column align-items-center text-center">
@@ -565,9 +385,9 @@
           </div>
         </div>
       </div>
+      <!-- Title -->
 
       <div class="container">
-
         <div class="row">
           <!-- Column 1 -->
           <div class="col-lg-5">

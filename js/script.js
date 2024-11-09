@@ -15,16 +15,21 @@ function userScroll() {
 // |-----| Scroll Effect function |-----| //
 
 // |-----| SweetAlert2 "Contact" alert |-----| //
-function sendMessage() {
-  Swal.fire({
-      title: "Message sent!",
-      text: "Your message will be delivered to Abril",
-      icon: "success",
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
 
-      confirmButtonColor: '#6C2AD9',
-      confirmButtonText: 'Entendido'
+  Swal.fire({
+    title: "Message sent!",
+    text: "Your message will be delivered to Abril",
+    icon: "success",
+    confirmButtonColor: '#6C2AD9',
+    confirmButtonText: 'Close'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      this.submit();
+    }
   });
-}
+});
 // |-----| SweetAlert2 "Contact" alert |-----| //
 
 document.querySelectorAll('.btnClose').forEach(function (button) {
@@ -34,7 +39,7 @@ document.querySelectorAll('.btnClose').forEach(function (button) {
     var bootstrapModal = bootstrap.Modal.getInstance(modal);
     
     if (bootstrapModal) {
-      bootstrapModal.hide(); // Cierra el modal
+      bootstrapModal.hide();
     }
 
     window.location.href = '#contact';

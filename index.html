@@ -610,27 +610,27 @@
           <!-- Column 2 -->
           <div class="col-lg-7">
             <div>
-              <form action="https://api.web3forms.com/submit" method="POST" class="row g-3">
+              <form action="https://api.web3forms.com/submit" method="POST" class="row g-3" id="contactForm">
                 <input type="hidden" name="access_key" value="d3b01a7c-5288-4217-8e54-94df4fa70043">
                 
                 <div class="col-md-6">
                   <label for="inputName" class="form-label required-input">Name</label>
-                  <input type="text" class="form-control" id="inputName" placeholder="Name" name="Name">
+                  <input type="text" class="form-control" id="inputName" placeholder="Name" name="Name" required>
                 </div>
                 <div class="col-md-6">
                   <label for="inputLastName" class="form-label required-input">Last Name</label>
-                  <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" name="Last Name">
+                  <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" name="Last Name" required>
                 </div>
                 <div class="col-12">
                   <label for="inputEmail" class="form-label required-input">Email</label>
-                  <input type="email" class="form-control" id="inputEmail" placeholder="example@email.com" name="Email Address">
+                  <input type="email" class="form-control" id="inputEmail" placeholder="example@email.com" name="Email Address" required>
                 </div>
                 <div class="col-12">
                   <label for="inputMessage" class="form-label required-input">Message</label>
-                  <textarea class="form-control" id="inputMessage" rows="3" placeholder="Write your message here..." name="Message"></textarea>
+                  <textarea class="form-control" id="inputMessage" rows="3" placeholder="Write your message here..." name="Message" required></textarea>
                 </div>
                 <div class="col-12">
-                  <button class="btn btn-primary text-white" onclick=sendMessage() type="submit">Send</button>
+                  <button class="btn btn-primary text-white" type="submit">Send</button>
                 </div>
               </form>
             </div>

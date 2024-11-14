@@ -30,19 +30,6 @@ svg {
     background-color: transparent;
 }
 
-.card {
-    background-color: transparent;
-    overflow: hidden;
-}
-
-.card-img-top {
-    transition: transform 0.3s ease;
-}
-  
-.card:hover .card-img-top {
-    transform: scale(1.07);
-}
-
 .required-input::after {
     content: " *";
     color: rgb(255, 132, 118);
@@ -76,19 +63,30 @@ svg {
 
 // |==========| Header/Hero Section CSS |==========|
 .header {
-    overflow: hidden;
-    background-size: cover;
     height: 850px;
+    position: relative;
+    background: linear-gradient(220deg, #D437C0, var(--bs-primary-500));
+    background-size: 400% 400%;
+
+    -webkit-animation: gradientBackground 9s ease infinite;
+    -moz-animation: gradientBackground 9s ease infinite;
+    animation: gradientBackground 9s ease infinite;
 }
 
-.header .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
+@-webkit-keyframes gradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 .header .overlay {
@@ -96,7 +94,7 @@ svg {
     width: 100%;
     height: 850px;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(32, 32, 32));
-    z-index: -1;
+    z-index: 1;
 }
 
 .header .container {
@@ -109,7 +107,6 @@ svg {
 }
 
 .header .header-img {
-    z-index: -1;
     width: 900px;
     right: 0px;
     bottom: -70px;
@@ -159,6 +156,10 @@ svg {
 // |==========| Header/Hero Section CSS |==========|
 
 // |==========| About Section CSS |==========|
+.about .card {
+    background: transparent;
+}
+
 .about .purpleGradient {
     z-index: -1;
     width: 338px;
@@ -193,6 +194,20 @@ svg {
 // |==========| Services Section CSS |==========|
 
 // |==========| Recent Work Section CSS |==========|
+.recent .card {
+    background-color: transparent;
+    border: transparent;
+    overflow: hidden;
+}
+
+.recent .card-img-top {
+    transition: transform 0.3s ease;
+}
+  
+.recent .card:hover .card-img-top {
+    transform: scale(1.07);
+}
+
 .recent .img-fluid {
     object-fit: cover;
     width: 100%;
@@ -236,26 +251,44 @@ svg {
 // |==========| Contact Section CSS |==========|
 
 // |==========| Footer CSS |==========|
+.footer {
+    z-index: 4;
+    position: relative;
+    background: linear-gradient(220deg, #D437C0, var(--bs-primary-500));
+    background-size: 400% 400%;
+
+    -webkit-animation: gradientBackground 9s ease infinite;
+    -moz-animation: gradientBackground 9s ease infinite;
+    animation: gradientBackground 9s ease infinite;
+}
+
+@-webkit-keyframes gradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes gradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes gradientBackground {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
 .footer .logo {
     width: 300px;
 }
 
-.footer .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2;
-}
 
 .footer .overlay {
+    z-index: -1;
     position: absolute;
     top: 0;
     width: 100%;
-    height: 219px;
+    height: 300px;
     background: linear-gradient(to bottom, rgb(32, 32, 32), rgba(0, 0, 0, 0));
-    z-index: -1;
 }
 // |==========| Footer CSS |==========|

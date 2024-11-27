@@ -183,9 +183,14 @@ svg {
   background-color: #1d0b3a;
 }
 
-.services .btnBehance:hover {
-  background: #0057FF;
-  color: var(--bs-light);
+.services .btnWhatsApp img {
+  width: 32px;
+  margin-right: 6px;
+}
+
+.services .btnWhatsApp:hover {
+  background: #40C351;
+  color: black;
 }
 
 .services .btnIcon {

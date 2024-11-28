@@ -201,6 +201,13 @@ svg {
     width: 1000px;
     opacity: 0.7;
 }
+
+.about .lines-1 {
+    z-index: -1;
+    top: 0px;
+    width: 2000px;
+    transform: scaleX(-1);
+}
 // |==========| About Section CSS |==========|
 
 // |==========| Services Section CSS |==========|
@@ -255,6 +262,12 @@ svg {
     opacity: 50%;
     transform: rotate(15deg);
 }
+
+.services .lines-1 {
+    z-index: -1;
+    top: 0px;
+    width: 2000px;
+}
 // |==========| Services Section CSS |==========|
 
 // |==========| Focus Section CSS |==========|
@@ -299,6 +312,13 @@ svg {
     width: 500px;
     opacity: 0.7;
 }
+
+.recent .lines-1 {
+    z-index: -1;
+    top: 0px;
+    width: 2000px;
+    transform: scaleX(-1);
+}
 // |==========| Recent Work Section CSS |==========|
 
 // |==========| Contact Section CSS |==========|
@@ -316,6 +336,12 @@ svg {
     right: -100px;
     width: 1000px;
     opacity: 0.7;
+}
+
+.contact .lines-1 {
+    z-index: -1;
+    top: 0px;
+    width: 2000px;
 }
 // |==========| Contact Section CSS |==========|
 

@@ -63,6 +63,12 @@ svg {
   align-items: center;
 }
 
+.img-fluid {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .to-top-btn {
   position: fixed;
   z-index: 10;
@@ -201,6 +207,14 @@ svg {
   width: 90%;
 }
 
+.about .gradient-1 {
+  z-index: -1;
+  top: 10px;
+  right: -500px;
+  width: 1000px;
+  opacity: 0.7;
+}
+
 .services .btnIcon {
   width: 24px;
 }
@@ -285,10 +299,28 @@ svg {
   transform: scale(1.07);
 }
 
-.img-fluid {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.recent .gradient-2 {
+  z-index: -1;
+  bottom: 60px;
+  left: -100px;
+  width: 500px;
+  opacity: 0.7;
+}
+
+.contact .gradient-1 {
+  z-index: -1;
+  top: -10px;
+  left: 400px;
+  width: 500px;
+  opacity: 0.7;
+}
+
+.contact .gradient-2 {
+  z-index: -1;
+  top: -40px;
+  right: -100px;
+  width: 1000px;
+  opacity: 0.7;
 }
 
 .footer {

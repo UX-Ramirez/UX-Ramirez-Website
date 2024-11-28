@@ -4,6 +4,21 @@
     color: var(--bs-body-bg);
 }
 
+::-webkit-scrollbar { width: 8px; }
+
+::-webkit-scrollbar-track { background-color: var(--bs-body-bg) }
+
+::-webkit-scrollbar-thumb { background-color: var(--bs-primary-300) }
+
+::-webkit-scrollbar-thumb:hover { background-color: var(--bs-primary); }
+
+.gradient-text {
+    font-weight: bold;
+    background: linear-gradient(40deg, var(--bs-primary-200), white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 svg {
     position: absolute;
     top: 0;
@@ -33,6 +48,12 @@ svg {
 .required-input::after {
     content: " *";
     color: rgb(255, 132, 118);
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 // |---------------| To Top Button |---------------|
@@ -73,6 +94,7 @@ svg {
 .navbar {
     transition: all 0.5s ease-in-out;
     padding: 25px 0 25px 0;
+    opacity: 97%;
 }
 
 .navbar-brand img {
@@ -154,43 +176,21 @@ svg {
 // |==========| Header/Hero Section CSS |==========|
 
 // |==========| About Section CSS |==========|
-.about .card {
-    background: transparent;
+.about .feature {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
 }
 
-.about .purpleGradient {
-    z-index: -1;
-    width: 338px;
-    left: -51px;
-    top: 100px;
-}
-
-.about .pinkGradient {
-    width: 400px;
-    right: 20px;
-    bottom: -4px;
+.about .aboutImg {
+    width: 90%;
 }
 // |==========| About Section CSS |==========|
 
 // |==========| Services Section CSS |==========|
-.services {
-    background-color: var(--bs-primary-900);
-}
-
-.services .card {
-    background-color: #1d0b3a;
-}
-
-.services .btnWhatsApp img {
-    width: 32px;
-    margin-right: 6px;
-}
-
-.services .btnWhatsApp:hover {
-    background: #40C351;
-    color: black;
-}
-
 .services .btnIcon {
     width: 24px;
 }
@@ -244,6 +244,26 @@ svg {
 }
 // |==========| Services Section CSS |==========|
 
+// |==========| Focus Section CSS |==========|
+.focus .btnWhatsApp img {
+    width: 32px;
+    margin-right: 6px;
+}
+
+.focus .btnWhatsApp:hover {
+    background: #40C351;
+    color: black;
+}
+
+.focus {
+    background: linear-gradient(110deg, rgba(141, 12, 173, 0.5), rgba(241, 207, 255, 0.5));
+}
+
+.focus .focusImg {
+    width: 50%;
+}
+// |==========| Focus Section CSS |==========|
+
 // |==========| Recent Work Section CSS |==========|
 .recent .card {
     background-color: transparent;
@@ -259,46 +279,15 @@ svg {
     transform: scale(1.07);
 }
 
-.recent .img-fluid {
+.img-fluid {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
-
-.recent .purpleGradient {
-    z-index: -1;
-    width: 500px;
-    left: 500px;
-    top: 100px;
-}
-
-.recent .pinkGradient {
-    width: 350px;
-    left: -15px;
-    top: 400px;
-}
 // |==========| Recent Work Section CSS |==========|
 
 // |==========| Contact Section CSS |==========|
-.contact .purpleGradient {
-    z-index: -1;
-    width: 500px;
-    left: 200px;
-    top: 50px;
-}
 
-.contact .pinkGradient {
-    z-index: -1;
-    width: 300px;
-    right: 400px;
-    top: 100px;
-}
-
-.contact .cyanGradient {
-    width: 200px;
-    right: -100px;
-    bottom: 100px;
-}
 // |==========| Contact Section CSS |==========|
 
 // |==========| Footer CSS |==========|

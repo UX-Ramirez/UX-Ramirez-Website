@@ -1,3 +1,4 @@
+@charset "UTF-8";
 ::selection {
   background-color: var(--bs-primary-50);
   color: var(--bs-body-bg);
@@ -91,6 +92,65 @@ svg {
 
 .to-top-btn:hover {
   background-color: var(--bs-secondary);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #28a745; /* Verde */
+  border-radius: 50%;
+  display: inline-block;
+  animation: blink 1.5s infinite;
+}
+
+/* Animación de parpadeo */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+.popup {
+  position: fixed;
+  z-index: 10;
+  width: 225px;
+  border-radius: 15px;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.popup img {
+  border: 3px solid #fff;
+}
+
+.popup .btnClose {
+  opacity: 0.5;
+  background-color: #d8d8d8;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  margin-top: -70px;
+  margin-left: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.popup .btnClose:hover {
+  opacity: 1;
+  background-color: #a8a8a8;
+}
+
+.popup .btnClose:focus {
+  outline: 2px solid #6c757d;
 }
 
 .show {

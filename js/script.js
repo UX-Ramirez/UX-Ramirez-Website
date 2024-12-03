@@ -1,20 +1,36 @@
 // |-----| Scroll Effect function |-----| //
 function userScroll() {
-    const navbar = document.querySelector('.navbar');
-    const toTopButton = document.getElementById("to-top");
+  const navbar = document.querySelector('.navbar');
+  const toTopButton = document.getElementById("to-top");
+  const popup = document.getElementById("popup");
 
-    window.addEventListener('scroll', () => {
+  let popupClosed = false; // Bandera para rastrear si el popup fue cerrado
+
+  // Oculta el popup manualmente
+  document.getElementById('popup-close').addEventListener('click', () => {
+      popup.classList.remove("show");
+      popupClosed = true; // Marca el popup como cerrado
+  });
+
+  // Controla el comportamiento al hacer scroll
+  window.addEventListener('scroll', () => {
       if (window.scrollY > 35) {
-        toTopButton.classList.add("show");
-        navbar.classList.add('bg-dark');
+          toTopButton.classList.add("show");
+          navbar.classList.add('bg-dark');
+
+          // Solo muestra el popup si no fue cerrado manualmente
+          if (!popupClosed) {
+              popup.classList.add("show");
+          }
       } else {
-        toTopButton.classList.remove("show");
-        navbar.classList.remove('bg-dark');
+          toTopButton.classList.remove("show");
+          popup.classList.remove("show");
+          navbar.classList.remove('bg-dark');
       }
-    });
-  }
-  
-  document.addEventListener('DOMContentLoaded', userScroll);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', userScroll);
 // |-----| Scroll Effect function |-----| //
 
 // |-----| Scroll To Top function |-----| //
@@ -41,3 +57,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   });
 });
 // |-----| SweetAlert2 "Contact" alert |-----| //
+
+document.getElementById('popup-close').addEventListener('click', () => {
+  const popup = document.getElementById('popup');
+  popup.classList.remove('show');
+});

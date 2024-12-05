@@ -90,6 +90,7 @@ svg {
 }
 // |---------------| To Top Button |---------------|
 
+// |---------------| Popup |---------------|
 .status-dot {
     width: 10px;
     height: 10px;
@@ -98,8 +99,7 @@ svg {
     display: inline-block;
     animation: blink 1.5s infinite;
 }
-  
-  /* Animación de parpadeo */
+
 @keyframes blink {
     0%, 100% {
         opacity: 1;
@@ -149,6 +149,7 @@ svg {
 .popup .btnClose:focus {
     outline: 2px solid #6c757d;
 }
+// |---------------| Popup |---------------|
 
 .show {
     opacity: 1;
@@ -270,6 +271,50 @@ svg {
 }
 // |==========| About Section CSS |==========|
 
+// |==========| Technologies Section CSS |==========|
+.technologies .generalCard {
+    background-color: transparent;
+}
+
+.nav-tabs .nav-link {
+    color: white;
+}
+
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: var(--bs-primary-100);
+    font-weight: 700;
+    background-color: var(--bs-nav-tabs-link-active-bg);
+    border-color: var(--bs-nav-tabs-link-active-border-color);
+}
+
+.technologies .tab-content .card {
+    background-color: #2b2b2b;
+    border: 1px solid #414141 !important;
+}
+
+.technologies .tab-content .card:hover {
+    background-color: #242424;
+    border: 1px solid #727272 !important;
+
+}
+
+.technologies .gradient-1 {
+    z-index: -1;
+    bottom: -70px;
+    left: -100px;
+    width: 1000px;
+    opacity: 0.7;
+}
+
+.technologies .lines-1 {
+    z-index: -1;
+    top: 0px;
+    width: 2000px;
+    transform: scaleX(-1);
+}
+// |==========| Technologies Section CSS |==========|
+
 // |==========| Services Section CSS |==========|
 .services .btnIcon {
     width: 24px;
@@ -329,26 +374,6 @@ svg {
     width: 2000px;
 }
 // |==========| Services Section CSS |==========|
-
-// |==========| Focus Section CSS |==========|
-.focus .btnWhatsApp img {
-    width: 32px;
-    margin-right: 6px;
-}
-
-.focus .btnWhatsApp:hover {
-    background: #40C351;
-    color: black;
-}
-
-.focus {
-    background: linear-gradient(110deg, rgba(141, 12, 173, 0.5), rgba(241, 207, 255, 0.5));
-}
-
-.focus .focusImg {
-    width: 50%;
-}
-// |==========| Focus Section CSS |==========|
 
 // |==========| Recent Work Section CSS |==========|
 .recent .card {

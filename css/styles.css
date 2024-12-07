@@ -284,16 +284,19 @@ svg {
   background-color: transparent;
 }
 
-.nav-tabs .nav-link {
-  color: white;
+.technologies .nav-tabs {
+  --bs-nav-tabs-border-color: none;
 }
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   color: var(--bs-primary-100);
   font-weight: 700;
-  background-color: var(--bs-nav-tabs-link-active-bg);
-  border-color: var(--bs-nav-tabs-link-active-border-color);
+  background-color: transparent;
+}
+
+.technologies .contentCard {
+  background-color: transparent;
 }
 
 .technologies .tab-content .card {

@@ -252,19 +252,11 @@ svg {
 }
 
 .about .aboutImg {
-    width: 90%;
-}
-
-.about .gradient-1 {
-    z-index: -1;
-    top: 10px;
-    right: -500px;
-    width: 1000px;
-    opacity: 0.7;
+    width: 100%;
 }
 
 .about .lines-1 {
-    z-index: -1;
+    z-index: 1;
     top: 0px;
     width: 2000px;
     transform: scaleX(-1);
@@ -306,6 +298,14 @@ svg {
     z-index: -1;
     bottom: -70px;
     left: -100px;
+    width: 1000px;
+    opacity: 0.7;
+}
+
+.technologies .gradient-2 {
+    z-index: -1;
+    top: -800px;
+    right: -600px;
     width: 1000px;
     opacity: 0.7;
 }

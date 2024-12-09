@@ -314,8 +314,8 @@
 .technologies .gradient-2 {
     z-index: -1;
     top: -500px;
-    right: -200px;
-    width: 800px;
+    left: 300px;
+    width: 600px;
     opacity: 0.3;
 }
 
@@ -423,17 +423,16 @@
 .contact .gradient-1 {
     z-index: -1;
     top: -10px;
-    left: 700px;
+    right: 100px;
     width: 500px;
     opacity: 0.7;
 }
 
 .contact .gradient-2 {
     z-index: -1;
-    top: -40px;
-    right: -100px;
-    width: 1200px;
-    height: 800px;
+    top: -100px;
+    right: 300px;
+    width: 800px;
     opacity: 0.3;
 }
 

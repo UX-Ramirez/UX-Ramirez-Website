@@ -266,7 +266,7 @@
 
       <!-- Title -->
       <div class="container">
-        <div class="row mb-4">
+        <div class="row mb-2">
           <div class="col-md-8 offset-md-2 d-flex flex-column align-items-center text-center">
             <h4>Services</h4>
             <h2 class="gradient-text">What I'm Offering?</h2>
@@ -275,95 +275,219 @@
       </div>
       <!-- Title -->
 
-      <div class="container">
-        <div class="row mt-5">
-          <div class="col-md-6">
-            <!-- Card 1 -->
-             <div class="card rounded-4 mb-5 p-4">
-                <div class="card-body">
-                  <h3 class="fw-bold">Landing Page UI/UX Design</h3>
-  
-                  <ul class="list-group list-group-flush fs-5 mb-5 vstack">
-                    <li class="list-group-item border-0">Figma design of one-page website</li>
-                    <li class="list-group-item border-0">Desktop, tablet & mobile layouts</li>
-                    <li class="list-group-item border-0">Full ownership of the website design (.FIG File)</li>
-                  </ul>
-  
-                  <p class="col-lg-7"><img class="serviceIcon me-2" src="images/icons/gradientClockIcon.png"><strong>Delivery time:</strong> Within 1-2 weeks</p>
+      <!-- Services Tabs -->
+      <div class="col-12">
+        <div class="card border-0 tabs">
+          <div class="card-body p-4">
+            
+            <ul class="nav nav-tabs" id="buttons">
+              <li class="nav-item pe-1" role="presentation">
+                <button class="btn btn-outline-primary-50 active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general-tab-pane" type="button" role="tab" aria-controls="general-tab-pane" aria-selected="true">General</button>
+              </li>
 
-                  <h4 class="fw-bold mt-4">From $149 USD</h4>
-                  <a href="#contact" class="btn btn-primary text-white">Let's Talk!</a>
+              <li class="nav-item" role="presentation">
+                <button class="btn btn-outline-primary-50" id="students-tab" data-bs-toggle="tab" data-bs-target="#students-tab-pane" type="button" role="tab" aria-controls="students-tab-pane" aria-selected="false">For students</button>
+              </li>
+            </ul>
+
+            <div class="tab-content" id="servicesTabContent">
+              <!-- General Services Tab -->
+              <div class="tab-pane fade show active" id="general-tab-pane" role="tabpanel" aria-labelledby="general-tab" tabindex="0">
+                <div class="container">
+                  <div class="row mt-5">
+                    <div class="col-md-6">
+                      <!-- Card 1 -->
+                        <div class="card rounded-4 mb-5 p-4">
+                          <div class="card-body">
+                            <h3 class="fw-bold">Landing Page UI/UX Design</h3>
+            
+                            <ul class="list-group list-group-flush fs-5 mb-5 vstack">
+                              <li class="list-group-item border-0">Figma design of one-page website</li>
+                              <li class="list-group-item border-0">Desktop, tablet & mobile layouts</li>
+                              <li class="list-group-item border-0">Full ownership of the website design (.FIG File)</li>
+                            </ul>
+            
+                            <p><img class="serviceIcon me-2" src="images/icons/gradientClockIcon.png"><strong>Delivery time:</strong> Within 1-2 weeks</p>
+          
+                            <h4 class="fw-bold mt-4">From $149 USD</h4>
+                            <a href="#contact" class="btn btn-primary text-white">Let's Talk!</a>
+                          </div>
+                        </div>
+                      <!-- Card 1 -->
+                    </div>
+          
+                    <div class="col-md-6">
+                      <!-- Card 2 -->
+                      <div class="card rounded-4 mb-5 p-4 shadow-lg">
+                        <div class="card-body">
+                          <h3 class="fw-bold">Landing Page Bundle: Design + Frontend Development</h3>
+          
+                          <ul class="list-group list-group-flush fs-5 mb-5 vstack">
+                            <li class="list-group-item border-0">Figma design of one-page website</li>
+                            <li class="list-group-item border-0">Includes <strong>Frontend</strong> Development with Bootstrap</li>
+                            <li class="list-group-item border-0">For <strong>5 USD more</strong>, I'll give you a seat to host your page</li>
+                          </ul>
+          
+                          <p><img class="serviceIcon me-2" src="images/icons/gradientClockIcon.png"><strong>Delivery time:</strong> Within 1-2 weeks</p>
+          
+                          <h4 class="fw-bold mt-4">From $249 USD + Domain (optional)</h4>
+                          <a href="#contact" class="btn btn-primary text-white">Let's Talk!</a>
+                        </div>
+                      </div>
+                      <!-- Card 2 -->
+                    </div>
+          
+                    <div class="col-md-6">
+                      <!-- Card 3 -->
+                      <div class="card rounded-4 mb-5 p-4">
+                        <div class="card-body">
+                          <h3 class="fw-bold">Larger Website UI/UX Design</h3>
+          
+                          <ul class="list-group list-group-flush fs-5 mb-5 vstack">
+                            <li class="list-group-item border-0">Figma Website Design of 2 views or more</li>
+                            <li class="list-group-item border-0">Desktop, tablet & mobile layouts</li>
+                            <li class="list-group-item border-0">Full ownership of the website design (.FIG File)</li>
+                            <li class="list-group-item border-0"><strong>For each extra view, 5 dlls are added to the price</strong></li>
+                          </ul>
+          
+                          <p><img class="serviceIcon me-2" src="images/icons/gradientClockIcon.png"><strong>Delivery time:</strong> Within 3 weeks - 1 month</p>
+          
+                          <h4 class="fw-bold mt-4">From $199 USD</h4>
+                          <a href="#contact" class="btn btn-primary text-white">Let's Talk!</a>
+                        </div>
+                      </div>
+                    <!-- Card 3 -->
+                    </div>
+          
+                    <div class="col-md-6">
+                      <!-- Card 4 -->
+                      <div class="card rounded-4 mb-5 p-4 shadow-lg">
+                        <div class="card-body">
+                          <h3 class="fw-bold">Larger Website Bundle: Design + Frontend Development</h3>
+          
+                          <ul class="list-group list-group-flush fs-5 mb-5 vstack">
+                            <li class="list-group-item border-0">Figma Website Design of 2 views or more</li>
+                            <li class="list-group-item border-0">Includes <strong>Frontend</strong> Development with Bootstrap</li>
+                            <li class="list-group-item border-0"><strong>For each extra view, 5 dlls are added to the price</strong></li>
+                            <li class="list-group-item border-0">For <strong>5 USD more</strong>, I'll give you a seat to host your page</li>
+                          </ul>
+          
+                          <p><img class="serviceIcon me-2" src="images/icons/gradientClockIcon.png"><strong>Delivery time:</strong> Within 1 month</p>
+          
+                          <h4 class="fw-bold mt-4">From $299 USD + Domain (optional)</h4>
+                          <a href="#contact" class="btn btn-primary text-white">Let's Talk!</a>
+                        </div>
+                      </div>
+                      <!-- Card 4 -->
+                    </div>
+                  </div>
                 </div>
-             </div>
-            <!-- Card 1 -->
-          </div>
-
-          <div class="col-md-6">
-            <!-- Card 2 -->
-            <div class="card rounded-4 mb-5 p-4 shadow-lg">
-              <div class="card-body">
-                <h3 class="fw-bold">Landing Page Bundle: Design + Frontend Development</h3>
-
-                <ul class="list-group list-group-flush fs-5 mb-5 vstack">
-                  <li class="list-group-item border-0">Figma design of one-page website</li>
-                  <li class="list-group-item border-0">Includes <strong>Frontend</strong> Development with Bootstrap</li>
-                  <li class="list-group-item border-0">For <strong>5 USD more</strong>, I'll give you a seat to host your page</li>
-                </ul>
-
-                <p class="col-lg-7"><img class="serviceIcon me-2" src="images/icons/gradientClockIcon.png"><strong>Delivery time:</strong> Within 1-2 weeks</p>
-
-                <h4 class="fw-bold mt-4">From $249 USD + Domain (optional)</h4>
-                <a href="#contact" class="btn btn-primary text-white">Let's Talk!</a>
               </div>
+              <!-- General Services Tab -->
+
+              <!-- For Students Services Tab -->
+              <div class="tab-pane fade position-relative" id="students-tab-pane" role="tabpanel" aria-labelledby="students-tab" tabindex="0">
+                <div class="container">
+                  <div class="row mt-5">
+                    <div class="col-md-6">
+                      <!-- Card 1 -->
+                        <div class="card rounded-4 mb-5 p-4">
+                          <div class="card-body">
+                            <h3 class="fw-bold">Landing Page UI/UX Design</h3>
+            
+                            <ul class="list-group list-group-flush fs-5 mb-5 vstack">
+                              <li class="list-group-item border-0">Figma design of one-page website</li>
+                              <li class="list-group-item border-0">Desktop layout only</li>
+                              <li class="list-group-item border-0">Full ownership of the website design (.FIG File)</li>
+                            </ul>
+            
+                            <p><img class="serviceIcon me-2" src="images/icons/gradientClockIcon.png"><strong>Delivery time:</strong> Within 1-2 weeks</p>
+
+                            <h4 class="originalPrice mt-4"><del>From $149 USD</del></h4>
+                            <h3 class="fw-bold mt-3">From $59.60 USD</h3>
+                            <a href="#contact" class="btn btn-primary text-white">Let's Talk!</a>
+                          </div>
+                        </div>
+                      <!-- Card 1 -->
+                    </div>
+          
+                    <div class="col-md-6">
+                      <!-- Card 2 -->
+                      <div class="card rounded-4 mb-5 p-4 shadow-lg">
+                        <div class="card-body">
+                          <h3 class="fw-bold">Landing Page Bundle: Design + Frontend Development</h3>
+          
+                          <ul class="list-group list-group-flush fs-5 mb-5 vstack">
+                            <li class="list-group-item border-0">Figma design of one-page website</li>
+                            <li class="list-group-item border-0">Includes <strong>Frontend</strong> Development with Bootstrap</li>
+                            <li class="list-group-item border-0">Full ownership of the design (.FIG File) & Code Files</li>
+                          </ul>
+          
+                          <p><img class="serviceIcon me-2" src="images/icons/gradientClockIcon.png"><strong>Delivery time:</strong> Within 1-2 weeks</p>
+          
+                          <h4 class="originalPrice mt-4"><del>From $249 USD</del></h4>
+                          <h3 class="fw-bold mt-3">From $99.60 USD</h3>
+                          <a href="#contact" class="btn btn-primary text-white">Let's Talk!</a>
+                        </div>
+                      </div>
+                      <!-- Card 2 -->
+                    </div>
+          
+                    <div class="col-md-6">
+                      <!-- Card 3 -->
+                      <div class="card rounded-4 mb-5 p-4">
+                        <div class="card-body">
+                          <h3 class="fw-bold">Larger Website UI/UX Design</h3>
+          
+                          <ul class="list-group list-group-flush fs-5 mb-5 vstack">
+                            <li class="list-group-item border-0">Figma Website Design of 2 views or more</li>
+                            <li class="list-group-item border-0">Desktop, tablet & mobile layouts</li>
+                            <li class="list-group-item border-0">Full ownership of the website design (.FIG File)</li>
+                            <li class="list-group-item border-0"><strong>For each extra view, 5 dlls are added to the price</strong></li>
+                          </ul>
+          
+                          <p><img class="serviceIcon me-2" src="images/icons/gradientClockIcon.png"><strong>Delivery time:</strong> Within 3 weeks - 1 month</p>
+          
+                          <h4 class="originalPrice mt-4"><del>From $199 USD</del></h4>
+                          <h3 class="fw-bold mt-3">From $79.60 USD</h3>
+                          <a href="#contact" class="btn btn-primary text-white">Let's Talk!</a>
+                        </div>
+                      </div>
+                    <!-- Card 3 -->
+                    </div>
+          
+                    <div class="col-md-6">
+                      <!-- Card 4 -->
+                      <div class="card rounded-4 mb-5 p-4 shadow-lg">
+                        <div class="card-body">
+                          <h3 class="fw-bold">Larger Website Bundle: Design + Frontend Development</h3>
+          
+                          <ul class="list-group list-group-flush fs-5 mb-5 vstack">
+                            <li class="list-group-item border-0">Figma Website Design of 2 views or more</li>
+                            <li class="list-group-item border-0">Includes <strong>Frontend</strong> Development with Bootstrap</li>
+                            <li class="list-group-item border-0">Full ownership of the design (.FIG File) & Code Files</li>
+                            <li class="list-group-item border-0"><strong>For each extra view, 5 dlls are added to the price</strong></li>
+                          </ul>
+          
+                          <p><img class="serviceIcon me-2" src="images/icons/gradientClockIcon.png"><strong>Delivery time:</strong> Within 1 month</p>
+          
+                          <h4 class="originalPrice mt-4"><del>From $299 USD</del></h4>
+                          <h3 class="fw-bold mt-3">From $119.60 USD</h3>
+                          <a href="#contact" class="btn btn-primary text-white">Let's Talk!</a>
+                        </div>
+                      </div>
+                      <!-- Card 4 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- For Students Services Tab -->
             </div>
-            <!-- Card 2 -->
-          </div>
-
-          <div class="col-md-6">
-            <!-- Card 3 -->
-            <div class="card rounded-4 mb-5 p-4">
-              <div class="card-body">
-                <h3 class="fw-bold">Larger Website UI/UX Design</h3>
-
-                <ul class="list-group list-group-flush fs-5 mb-5 vstack">
-                  <li class="list-group-item border-0">Figma Website Design of 2 views or more</li>
-                  <li class="list-group-item border-0">Desktop, tablet & mobile layouts</li>
-                  <li class="list-group-item border-0">Full ownership of the website design (.FIG File)</li>
-                  <li class="list-group-item border-0"><strong>For each extra view, 5 dlls are added to the price</strong></li>
-                </ul>
-
-                <p class="col-lg-7"><img class="serviceIcon me-2" src="images/icons/gradientClockIcon.png"><strong>Delivery time:</strong> Within 3 weeks - 1 month</p>
-
-                <h4 class="fw-bold mt-4">From $199 USD</h4>
-                <a href="#contact" class="btn btn-primary text-white">Let's Talk!</a>
-              </div>
-           </div>
-          <!-- Card 3 -->
-          </div>
-
-          <div class="col-md-6">
-            <!-- Card 4 -->
-            <div class="card rounded-4 mb-5 p-4 shadow-lg">
-              <div class="card-body">
-                <h3 class="fw-bold">Larger Website Bundle: Design + Frontend Development</h3>
-
-                <ul class="list-group list-group-flush fs-5 mb-5 vstack">
-                  <li class="list-group-item border-0">Figma Website Design of 2 views or more</li>
-                  <li class="list-group-item border-0">Includes <strong>Frontend</strong> Development with Bootstrap</li>
-                  <li class="list-group-item border-0"><strong>For each extra view, 5 dlls are added to the price</strong></li>
-                  <li class="list-group-item border-0">For <strong>5 USD more</strong>, I'll give you a seat to host your page</li>
-                </ul>
-
-                <p class="col-lg-7"><img class="serviceIcon me-2" src="images/icons/gradientClockIcon.png"><strong>Delivery time:</strong> Within 1 month</p>
-
-                <h4 class="fw-bold mt-4">From $299 USD + Domain (optional)</h4>
-                <a href="#contact" class="btn btn-primary text-white">Let's Talk!</a>
-              </div>
-            </div>
-            <!-- Card 4 -->
           </div>
         </div>
       </div>
+      <!-- Services Tabs -->
+
     </section>
     <!-- Servicess End -->
 

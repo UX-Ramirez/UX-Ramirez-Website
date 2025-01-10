@@ -328,6 +328,14 @@
 // |==========| Technologies Section CSS |==========|
 
 // |==========| Services Section CSS |==========|
+.services .tabs {
+    background-color: transparent;
+}
+
+.services .originalPrice {
+    color: #c9c9c9;
+}
+
 .services .btnIcon {
     width: 24px;
 }
@@ -384,6 +392,19 @@
     z-index: -1;
     top: 0px;
     width: 2000px;
+}
+
+.services .nav-tabs {
+    --bs-nav-tabs-border-color: none;
+}
+
+.services .nav-tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
 }
 // |==========| Services Section CSS |==========|
 

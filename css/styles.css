@@ -337,6 +337,37 @@
   background-color: transparent;
 }
 
+.custom-tabs .nav-link {
+  position: relative;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: none;
+}
+.custom-tabs .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #ffffff;
+  transition: width 0.3s ease-in-out;
+}
+.custom-tabs .nav-link:hover {
+  color: var(--bs-primary-100);
+}
+.custom-tabs .nav-link.active {
+  color: #ffffff;
+  background-color: transparent;
+}
+.custom-tabs .nav-link.active::after {
+  width: 100%;
+}
+
 .services .originalPrice {
   color: #c9c9c9;
 }

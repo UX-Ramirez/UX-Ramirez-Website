@@ -332,6 +332,47 @@
     background-color: transparent;
 }
 
+// Custom styles for the tabs
+.custom-tabs {
+    .nav-link {
+      position: relative;
+      color: #ffffff; // Text color
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      background-color: transparent;
+      border: none;
+  
+      // Default underline (thin and hidden initially)
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0; // Align underline to the bottom of the link
+        left: 0;
+        width: 0%; // Initially hidden
+        height: 3px; // Thickness of the underline
+        background-color: #ffffff; // Same color as text
+        transition: width 0.3s ease-in-out;
+      }
+  
+      // Hover effect: Show partial underline
+      &:hover {
+        color: var(--bs-primary-100); // Slightly lighter color on hover
+      }
+  
+      // Active link style
+      &.active {
+        color: #ffffff; // Ensure consistent active color
+        background-color: transparent;
+  
+        &::after {
+          width: 100%; // Full underline for active tab
+        }
+      }
+    }
+  }
+
 .services .originalPrice {
     color: #c9c9c9;
 }

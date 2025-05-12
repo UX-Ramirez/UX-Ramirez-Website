@@ -52,6 +52,15 @@
     background-color: transparent;
 }
 
+.with-bullets {
+  list-style-type: disc !important;
+  padding-left: 1.5rem;
+}
+
+.with-bullets .list-group-item {
+  display: list-item;
+}
+
 .required-input::after {
     content: " *";
     color: rgb(255, 132, 118);

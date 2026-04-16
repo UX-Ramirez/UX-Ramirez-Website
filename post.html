@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title id="page-title">UX Ramirez — Blog</title>
+
+    <!-- Open Graph (for sharing previews) -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" id="og-title" content="UX Ramirez — Blog">
+    <meta property="og:description" id="og-desc" content="">
+    <meta property="og:image" id="og-image" content="">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <meta name="p:domain_verify" content="0b38517be15d1363cfdd71f0a3bbb39e"/>
+    
+    <link rel="stylesheet" href="style.css">
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="home.html">
+                <img id="navbar-logo" src="assets/uxRamirezLogo_dark.png" alt="UX Ramirez Logo" />
+            </a>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="work.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="store.html">Store</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <a href="contact.html" class="nav-btn">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- POST HERO (populated by JS) -->
+    <section id="post-hero" class="post-hero" data-theme="dark">
+        <div class="container">
+            <a href="blog.html" class="post-back reveal reveal-left">
+                <i class="bi bi-arrow-left"></i> Back to Blog
+            </a>
+
+            <div id="post-meta" class="post-meta reveal reveal-up reveal-delay-1"></div>
+            <h1 id="post-title" class="post-hero-title reveal reveal-up reveal-delay-2"></h1>
+
+            <div id="post-cover" class="post-cover-wrapper reveal reveal-up reveal-delay-3"></div>
+        </div>
+    </section>
+
+    <!-- ARTICLE BODY (populated by JS) -->
+    <section id="post-body-section" class="post-body-section" data-theme="light">
+        <div class="container">
+
+            <!-- ARTICLE CONTENT -->
+            <article id="post-article" class="post-article">
+                <!-- HTML content injected here -->
+            </article>
+
+            <!-- SHARE -->
+            <div class="post-share">
+                <h4>Share this article</h4>
+                <div id="share-buttons" class="share-buttons">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
+            <!-- COMMENTS (Cusdis) -->
+            <div class="post-comments">
+                <h4>Comments</h4>
+                <div id="cusdis_thread" data-host="" data-app-id="" data-page-id="" data-page-url="" data-page-title="">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RELATED POSTS -->
+    <section id="related-section" class="related-section" data-theme="light" style="display:none;">
+        <div class="container">
+            <div class="related-header">
+                <h3>More articles</h3>
+            </div>
+            <div id="related-grid" class="row g-5"></div>
+        </div>
+    </section>
+
+    <!-- 404 STATE (hidden by default) -->
+    <section id="post-404" class="post-not-found" data-theme="light" style="display:none;">
+        <i class="bi bi-journal-x" style="font-size:56px; color:#9ca3af;"></i>
+        <h2 class="mt-3">Post not found</h2>
+        <p>The article you're looking for doesn't exist or may have been removed.</p>
+        <a href="blog.html"><i class="bi bi-arrow-left"></i> Back to Blog</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer reveal reveal-up reveal-delay-1" data-theme="dark">
+        <div class="container">
+            <div class="row footer-top">
+                <div class="col-lg-4 footer-brand">
+                    <a class="footer-brand" href="home.html">
+                        <img src="assets/uxRamirezLogo_dark.png" alt="UX Ramirez Logo" />
+                    </a>
+                    <p>
+                        UI/UX Designer specializing in creating clear, functional, and user-centered digital
+                        experiences.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.behance.net/ux_ramirez" target="_blank"><i
+                                class="fab fa-behance footer-icon"></i></a>
+                        <a href="https://dribbble.com/ux_ramirez" target="_blank"><i
+                                class="fab fa-dribbble footer-icon"></i></a>
+                        <a href="https://www.facebook.com/uxramirez" target="_blank"><i
+                                class="fab fa-facebook footer-icon"></i></a>
+                        <a href="https://www.instagram.com/ux_ramirez" target="_blank"><i
+                                class="fab fa-instagram footer-icon"></i></a>
+                        <a href="https://x.com/ux_ramirez" target="_blank"><i
+                                class="fa-brands fa-x-twitter footer-icon"></i></a>
+                        <a href="https://bsky.app/profile/uxramirez.bsky.social" target="_blank"><i
+                                class="fa-brands fa-bluesky footer-icon"></i></a>
+                        <a href="https://mx.pinterest.com/ux_ramirez/" target="_blank"><i
+                                class="fa-brands fa-pinterest footer-icon"></i></a>
+                        <a href="https://www.linkedin.com/in/abril-ramirez-flores-71a26b275/" target="_blank"><i
+                                class="fab fa-linkedin footer-icon"></i></a>
+                        <a href="https://github.com/iscRamirezAbril" target="_blank"><i
+                                class="fab fa-github footer-icon"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 footer-links">
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="home.html#projects">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="store.html">Store</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 footer-links">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="services.html#WebDesign">Web Design</a></li>
+                        <li><a href="services.html#ProductDesign">Product Design</a></li>
+                        <li><a href="services.html#Templates">Templates & Landing Pages</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 footer-links">
+                    <a href="contact.html" class="footer-contact-title">Contact
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                        </svg>
+                    </a>
+                    <ul>
+                        <li><a class="email" href="mailto:contact@uxramirez.com">contact@uxramirez.com</a></li>
+                        <li><a class="email" href="https://wa.me/526643352557">+52 (664) 335 2557</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 UX Ramirez. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Config (add config.js to .gitignore) -->
+    <script src="config.js"></script>
+
+    <!-- ====================================================== -->
+    <!-- POST DETAIL SCRIPT                                     -->
+    <!-- ====================================================== -->
+    <script>
+        /*  ========================================================
+            CONFIG — Pulled from config.js
+            ======================================================== */
+        const POSTS_FILE = SITE_CONFIG.POSTS_FILE;
+        const CUSDIS_APP_ID = SITE_CONFIG.CUSDIS_APP_ID;
+        const CUSDIS_HOST = SITE_CONFIG.CUSDIS_HOST;
+
+        /*  ========================================================
+            HELPERS
+            ======================================================== */
+        function getSlugFromURL() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get("slug");
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return "";
+            const d = new Date(dateStr + "T00:00:00");
+            return d.toLocaleDateString("en-US", {
+                year: "numeric", month: "long", day: "numeric"
+            });
+        }
+
+        function escHtml(str) {
+            const el = document.createElement("span");
+            el.textContent = str || "";
+            return el.innerHTML;
+        }
+
+        /*  ========================================================
+            SHOW 404
+            ======================================================== */
+        function show404() {
+            document.getElementById("post-hero").style.display = "none";
+            document.getElementById("post-body-section").style.display = "none";
+            document.getElementById("related-section").style.display = "none";
+            document.getElementById("post-404").style.display = "block";
+        }
+
+        /*  ========================================================
+            RENDER POST
+            ======================================================== */
+        function renderPost(post) {
+            // Page title
+            document.getElementById("page-title").textContent = `${post.title} — UX Ramirez`;
+
+            // Open Graph meta tags (for link previews when sharing)
+            document.getElementById("og-title").setAttribute("content", post.title);
+            document.getElementById("og-desc").setAttribute("content", post.excerpt || "");
+            if (post.cover) {
+                document.getElementById("og-image").setAttribute("content", post.cover);
+            }
+
+            // Meta line
+            document.getElementById("post-meta").innerHTML = `
+                <span>${escHtml(post.category)}</span>
+                ${post.date ? `<span class="dot"></span><span>${escHtml(formatDate(post.date))}</span>` : ""}
+            `;
+
+            // Title
+            document.getElementById("post-title").textContent = post.title;
+
+            // Cover image
+            const $cover = document.getElementById("post-cover");
+            if (post.cover) {
+                $cover.innerHTML = `<img src="${escHtml(post.cover)}" alt="${escHtml(post.title)}">`;
+            } else {
+                $cover.innerHTML = `
+                    <div class="post-cover-placeholder">
+                        <i class="bi bi-image" style="font-size:48px;"></i>
+                    </div>`;
+            }
+
+            // Article content (HTML from JSON)
+            document.getElementById("post-article").innerHTML = post.content || "<p>This article has no content yet.</p>";
+
+            // Share buttons
+            renderShareButtons(post);
+        }
+
+        /*  ========================================================
+            SHARE BUTTONS
+            ======================================================== */
+        function renderShareButtons(post) {
+            const url = window.location.href;
+            const title = encodeURIComponent(post.title);
+            const text = encodeURIComponent(post.excerpt || post.title);
+
+            const $share = document.getElementById("share-buttons");
+
+            // Native share (mobile)
+            const hasNativeShare = !!navigator.share;
+
+            $share.innerHTML = `
+                ${hasNativeShare ? `
+                    <button class="share-btn" id="native-share">
+                        <i class="bi bi-share"></i> Share
+                    </button>
+                ` : ""}
+                <button class="share-btn" id="copy-link">
+                    <i class="bi bi-link-45deg"></i> Copy link
+                </button>
+                <a class="share-btn" href="https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${title}" target="_blank" rel="noopener">
+                    <i class="fab fa-x-twitter"></i> X
+                </a>
+                <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank" rel="noopener">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a class="share-btn" href="https://wa.me/?text=${title}%20${encodeURIComponent(url)}" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            `;
+
+            // Native share handler
+            if (hasNativeShare) {
+                document.getElementById("native-share").addEventListener("click", async () => {
+                    try {
+                        await navigator.share({ title: post.title, text: post.excerpt, url: url });
+                    } catch (e) { /* user cancelled */ }
+                });
+            }
+
+            // Copy link handler
+            document.getElementById("copy-link").addEventListener("click", async () => {
+                const btn = document.getElementById("copy-link");
+                try {
+                    await navigator.clipboard.writeText(url);
+                    btn.classList.add("copied");
+                    btn.innerHTML = '<i class="bi bi-check-lg"></i> Copied!';
+                    setTimeout(() => {
+                        btn.classList.remove("copied");
+                        btn.innerHTML = '<i class="bi bi-link-45deg"></i> Copy link';
+                    }, 2000);
+                } catch (e) {
+                    // Fallback
+                    prompt("Copy this link:", url);
+                }
+            });
+        }
+
+        /*  ========================================================
+            RELATED POSTS
+            ======================================================== */
+        function renderRelated(allPosts, currentPost) {
+            // Same category first, then others, excluding current
+            const others = allPosts.filter(p => p.slug !== currentPost.slug);
+            const sameCategory = others.filter(p => p.category === currentPost.category);
+            const different = others.filter(p => p.category !== currentPost.category);
+            const candidates = [...sameCategory, ...different].slice(0, 3);
+
+            if (!candidates.length) return;
+
+            const $section = document.getElementById("related-section");
+            const $grid = document.getElementById("related-grid");
+            $section.style.display = "block";
+
+            $grid.innerHTML = candidates.map((post, i) => {
+                const delay = i + 1;
+                const link = `post.html?slug=${encodeURIComponent(post.slug)}`;
+                const img = post.cover
+                    ? `<img src="${escHtml(post.cover)}" alt="${escHtml(post.title)}" class="img-fluid" loading="lazy">`
+                    : `<div style="background:#e5e7eb;height:240px;display:flex;align-items:center;justify-content:center;color:#9ca3af;"><i class="bi bi-image" style="font-size:32px;"></i></div>`;
+
+                const dateStr = post.date ? formatDate(post.date) : "";
+
+                return `
+                    <div class="col-lg-4 col-md-6 reveal reveal-up reveal-delay-${delay}">
+                        <div class="project-item">
+                            <div class="project-image">
+                                <a href="${link}">${img}</a>
+                            </div>
+                            <div class="project-body">
+                                <div class="blog-meta">
+                                    <span>${escHtml(post.category)}</span>
+                                    ${dateStr ? `<span class="dot"></span><span>${escHtml(dateStr)}</span>` : ""}
+                                </div>
+                                <h4>${escHtml(post.title)}</h4>
+                                <a href="${link}" class="cta">
+                                    Read Post <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>`;
+            }).join("");
+
+            // Trigger reveals
+            $grid.querySelectorAll(".reveal").forEach(el => el.classList.add("show"));
+        }
+
+        /*  ========================================================
+            CUSDIS COMMENTS
+            ======================================================== */
+        function loadCusdis(post) {
+            const $thread = document.getElementById("cusdis_thread");
+
+            if (!CUSDIS_APP_ID || CUSDIS_APP_ID === "YOUR_CUSDIS_APP_ID") {
+                $thread.innerHTML = `
+                    <div style="text-align:center; padding:40px 20px; color:#9ca3af; border:1px dashed rgba(0,0,0,0.12); border-radius:8px;">
+                        <i class="bi bi-chat-dots" style="font-size:32px;"></i>
+                        <p style="margin-top:12px; font-size:14px;">
+                            Comments will appear here once you configure Cusdis.<br>
+                            Open <code style="background:#e5e7eb;padding:2px 6px;border-radius:4px;">config.js</code>
+                            and set <code style="background:#e5e7eb;padding:2px 6px;border-radius:4px;">CUSDIS_APP_ID</code> to your Cusdis App ID.
+                        </p>
+                    </div>`;
+                return;
+            }
+
+            // Set Cusdis data attributes
+            $thread.setAttribute("data-host", CUSDIS_HOST);
+            $thread.setAttribute("data-app-id", CUSDIS_APP_ID);
+            $thread.setAttribute("data-page-id", post.slug);
+            $thread.setAttribute("data-page-url", window.location.href);
+            $thread.setAttribute("data-page-title", post.title);
+
+            // Load the Cusdis SDK (~5kb gzipped)
+            const script = document.createElement("script");
+            script.src = CUSDIS_HOST + "/js/cusdis.es.js";
+            script.async = true;
+            script.defer = true;
+            document.body.appendChild(script);
+        }
+
+        /*  ========================================================
+            INIT
+            ======================================================== */
+        (async function init() {
+            const slug = getSlugFromURL();
+
+            if (!slug) { show404(); return; }
+
+            let allPosts = [];
+            try {
+                const res = await fetch(POSTS_FILE);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                allPosts = await res.json();
+            } catch (err) {
+                console.error("[Post] Could not load posts.json:", err.message);
+                show404();
+                return;
+            }
+
+            const post = allPosts.find(p => p.slug === slug);
+            if (!post) { show404(); return; }
+
+            renderPost(post);
+            renderRelated(allPosts, post);
+            loadCusdis(post);
+        })();
+    </script>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

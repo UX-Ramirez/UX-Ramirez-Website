@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UX Ramirez — UI/UX Designer</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <meta name="p:domain_verify" content="0b38517be15d1363cfdd71f0a3bbb39e"/>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="home.html">
+                <img id="navbar-logo" src="assets/uxRamirezLogo_dark.png" alt="UX Ramirez Logo" />
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navMenu">
+
+                <!-- Centered Links -->
+                <ul class="navbar-nav mx-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="work.html">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Store</a>
+                    </li>
+                </ul>
+
+                <!-- Contact Button -->
+                <div class="d-flex align-items-center gap-3">
+                    <a href="contact.html" class="nav-btn">Contact</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" data-theme="dark">
+        <!-- Images -->
+        <img src="assets/background_pattern.png" class="hero-img position-absolute">
+        <!-- Images -->
+
+        <div class="container hero-content">
+            <h1 class="hero-title">
+                <span>Designs</span>
+                <div class="small-text">THAT ARE</div>
+                <span>Experiences</span>
+            </h1>
+
+            <!-- SOCIAL -->
+            <div class="hero-footer">
+
+                <div class="socials">
+                    <a href="https://www.behance.net/ux_ramirez" target="_blank"><i
+                            class="fab fa-behance hero-icon"></i></a>
+                    <a href="https://dribbble.com/ux_ramirez" target="_blank"><i
+                            class="fab fa-dribbble hero-icon"></i></a>
+                    <a href="https://www.facebook.com/uxramirez" target="_blank"><i
+                            class="fab fa-facebook hero-icon"></i></a>
+                    <a href="https://www.instagram.com/ux_ramirez" target="_blank"><i
+                            class="fab fa-instagram hero-icon"></i></a>
+                    <a href="https://x.com/ux_ramirez" target="_blank"><i
+                            class="fa-brands fa-x-twitter hero-icon"></i></a>
+                    <a href="https://bsky.app/profile/uxramirez.com" target="_blank"><i
+                            class="fa-brands fa-bluesky hero-icon"></i></a>
+                    <a href="https://mx.pinterest.com/ux_ramirez/" target="_blank"><i
+                            class="fa-brands fa-pinterest hero-icon"></i></a>
+                    <a href="https://www.linkedin.com/in/abril-ramirez-flores-71a26b275/" target="_blank"><i
+                            class="fab fa-linkedin hero-icon"></i></a>
+                    <a href="https://github.com/iscRamirezAbril" target="_blank"><i
+                            class="fab fa-github hero-icon"></i></a>
+
+                    <a class="email" href="mailto:contact@uxramirez.com">contact@uxramirez.com</a>
+                </div>
+
+                <div class="hero-actions">
+                    <div class="my-5">
+                        <a href="#projects" class="btn-view-projects">
+                            <span class="btn-text">View more</span>
+                            <span class="arrow-circle">
+                                <svg class="arrow-icon" width="18" height="18" viewBox="0 0 24 24">
+                                    <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <polyline points="12 5 19 12 12 19" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section dark" data-theme="dark">
+        <!-- Images -->
+        <img src="assets/decorative-imgs/portfolioHeading.png"
+            class="portfolio-decorative position-absolute d-none d-lg-block">
+        <!-- Images -->
+
+        <div class="container projects-content">
+
+            <h1 class="section-title reveal reveal-down">
+                PROJECTS
+            </h1>
+
+            <div class="row g-5">
+
+                <!-- PROJECT 1 -->
+                <div class="col-lg-4 reveal reveal-up reveal-delay-1">
+                    <div class="project-item">
+                        <div class="project-image">
+                            <a href="https://www.behance.net/gallery/244664643/SkyCMS-Landing-Page?platform=direct"
+                                target="_blank">
+
+                                <img src="assets/projects/skyCMS.jpg" alt="SkyCMS Landing Page" class="img-fluid">
+                            </a>
+                        </div>
+
+                        <div class="project-body">
+                            <h4>SkyCMS Landing Page</h4>
+
+                            <p>
+                                UI/UX Design
+                            </p>
+
+                            <a href="https://www.behance.net/gallery/244664643/SkyCMS-Landing-Page?platform=direct"
+                                class="cta" target="_blank">
+                                Read Project <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div class="col-lg-4 reveal reveal-up reveal-delay-2">
+                    <div class="project-item">
+                        <div class="project-image">
+                            <a href="https://www.behance.net/gallery/243839899/Custom-WebArts-Website?platform=direct"
+                                target="_blank">
+
+                                <img src="assets/projects/customWebArts.jpg" alt="Custom WebArts Website" class="img-fluid">
+                            </a>
+                        </div>
+
+                        <div class="project-body">
+                            <h4>Custom WebArts Website</h4>
+
+                            <p>
+                                Logo & UI/UX Design
+                            </p>
+
+                            <a href="https://www.behance.net/gallery/243839899/Custom-WebArts-Website?platform=direct"
+                                class="cta" target="_blank">
+                                Read Project <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <div class="col-lg-4 reveal reveal-up reveal-delay-3">
+                    <div class="project-item">
+                        <div class="project-image">
+                            <a href="https://www.behance.net/gallery/243169771/Christina-Ross-Photography-Website?platform=direct"
+                                target="_blank">
+
+                                <img src="assets/projects/photographyWebsite.jpg" alt="Christina Ross Photography Website"
+                                    class="img-fluid">
+                            </a>
+                        </div>
+
+                        <div class="project-body">
+                            <h4>Christina Ross Photography Website</h4>
+
+                            <p>
+                                UI/UX Design
+                            </p>
+
+                            <a href="https://www.behance.net/gallery/243169771/Christina-Ross-Photography-Website?platform=direct"
+                                class="cta" target="_blank">
+                                Read Project <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 4 -->
+                <div class="col-lg-4 reveal reveal-up reveal-delay-4">
+                    <div class="project-item">
+                        <div class="project-image">
+                            <a href="https://www.behance.net/gallery/234222823/Deliv-Restaurant-Delivery-Mobile-App?platform=direct"
+                                target="_blank">
+
+                                <img src="assets/projects/delivApp.jpg" alt="Deliv Mobile App" class="img-fluid">
+                            </a>
+                        </div>
+
+                        <div class="project-body">
+                            <h4>Deliv Mobile App</h4>
+
+                            <p>
+                                UI/UX Design
+                            </p>
+
+                            <a href="https://www.behance.net/gallery/234222823/Deliv-Restaurant-Delivery-Mobile-App?platform=direct"
+                                class="cta" target="_blank">
+                                Read Project <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 5 -->
+                <div class="col-lg-4 reveal reveal-up reveal-delay-4">
+                    <div class="project-item">
+                        <div class="project-image">
+                            <a href="https://www.behance.net/gallery/224625061/Smile-Dental-Landing-Page?platform=direct"
+                                target="_blank">
+
+                                <img src="assets/projects/smileDental.jpg" alt="Smile Dental Landing Page" class="img-fluid">
+                            </a>
+                        </div>
+
+                        <div class="project-body">
+                            <h4>Smile Dental Landing Page</h4>
+
+                            <p>
+                                UI/UX Design
+                            </p>
+
+                            <a href="https://www.behance.net/gallery/224625061/Smile-Dental-Landing-Page?platform=direct"
+                                class="cta" target="_blank">
+                                Read Project <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 6 -->
+                <div class="col-lg-4 reveal reveal-up reveal-delay-4">
+                    <div class="project-item">
+                        <div class="project-image">
+                            <a href="https://www.behance.net/gallery/222906709/Xbox-Mexico-Landing-Page?platform=direct"
+                                target="_blank">
+
+                                <img src="assets/projects/xboxLanding.jpg" alt="Xbox Mexico Landing Page" class="img-fluid">
+                            </a>
+                        </div>
+
+                        <div class="project-body">
+                            <h4>Xbox Mexico Landing Page</h4>
+
+                            <p>
+                                UI/UX Design
+                            </p>
+
+                            <a href="https://www.behance.net/gallery/222906709/Xbox-Mexico-Landing-Page?platform=direct"
+                                class="cta" target="_blank">
+                                Read Project <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" data-theme="dark">
+
+        <div class="container">
+            <!-- HERO TITLE -->
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="section-title reveal reveal-down">
+                        LET'S BRING YOUR IDEA<br>
+                        TO LIFE
+                    </h1>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="row services-grid">
+                <!-- INTRO -->
+                <div class="col-lg-3 service-intro reveal reveal-left">
+                    <p>
+                        I design user-centered digital products.
+                        My approach combines strategy, research, and design to transform complex problems into
+                        clear, intuitive, and efficient experiences.<br>
+                        I seek to improve the digital experience by optimizing processes, simplifying interactions, and
+                        creating
+                        solutions that generate value for both users and the business.
+                    </p>
+
+                    <p class="availability">
+                        <span class="status-dot"></span> Available for new projects
+                    </p>
+
+                    <a href="services.html" class="services-link">Services <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- SERVICE 1 -->
+                <div class="col-lg-3 service-item reveal reveal-right reveal-delay-1">
+                    <h3>WEB DESIGN</h3>
+                    <p>
+                        I design websites aimed at strengthening brand presence and improving conversion.
+                        Each project is built with clear architecture, intuitive navigation, and a carefully crafted
+                        interface, applying best practices in UX, accessibility, and UI design.
+                    </p>
+                </div>
+
+                <!-- SERVICE 2 -->
+                <div class="col-lg-3 service-item reveal reveal-right reveal-delay-2">
+                    <h3>PRODUCT DESIGN</h3>
+                    <p>
+                        I design digital experiences for mobile applications, web platforms, SaaS products, and
+                        e-commerce.
+                        I integrate UX/UI design with strategic product thinking to transform ideas into
+                        functional, scalable, user-centered digital solutions.
+                    </p>
+                </div>
+
+                <!-- SERVICE 3 -->
+                <div class="col-lg-3 service-item reveal reveal-right reveal-delay-3">
+                    <h3>TEMPLATES &<br>LANDING PAGES</h3>
+                    <p>
+                        Design and development of landing pages and web templates optimized for companies or products
+                        <br>Built with HTML, CSS, JavaScript, and Bootstrap, focused on performance, clarity of message,
+                        and conversion.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <section class="marquee-section" data-theme="light">
+
+        <div class="marquee">
+
+            <div class="marquee-track">
+
+                <span>Research</span>
+                <span>UI Design</span>
+                <span>Accessibility</span>
+                <span>UX Design</span>
+                <span>Contact</span>
+
+                <!-- DUPLICADO para loop infinito -->
+                <span>Research</span>
+                <span>UI Design</span>
+                <span>Accessibility</span>
+                <span>UX Design</span>
+                <span>Contact</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section dark" data-theme="dark">
+
+        <div class="container">
+            <!-- TITLE -->
+            <div>
+                <div class="col-12">
+                    <h1 class="section-title reveal reveal-down">
+                        UI/UX DESIGNER<br>
+                        SINCE 2023
+                    </h1>
+                </div>
+            </div>
+
+            <!-- CONTENT -->
+            <div class="row about-content">
+                <!-- LEFT TEXT -->
+                <div class="col-lg-6 about-text reveal reveal-left">
+
+                    <p class="about-intro">
+                        I work as a freelance UI/UX designer, creating digital solutions focused on the
+                        user experience and product effectiveness.
+                    </p>
+
+                    <p>
+                        I am a Systems Engineer and have worked in software development agencies, collaborating in the
+                        design of digital products and web platforms. I currently work independently, helping startups,
+                        agencies, and students transform their ideas into clear, functional, and well-designed digital
+                        experiences.
+                    </p>
+
+                    <a href="#" class="about-link">Read more <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                        </svg></a>
+
+                </div>
+
+                <!-- RIGHT TOOLS -->
+                <div class="col-lg-6 about-experience">
+
+                    <h3>EXPERIENCE</h3>
+
+                    <div class="experience-list">
+
+                        <!-- ITEM -->
+                        <div class="experience-item reveal reveal-right reveal-delay-1">
+
+                            <div class="experience-header">
+                                <h4>Freelance UI/UX Designer</h4>
+                                <span>Oct 2023 — Today</span>
+                            </div>
+
+                            <p>
+                                Freelance web designer focused on creating user-centered digital experiences.
+                                I turn ideas into functional landing pages and web platforms aligned with client goals.
+                            </p>
+
+                        </div>
+
+
+                        <!-- ITEM -->
+                        <div class="experience-item reveal reveal-right reveal-delay-2">
+
+                            <div class="experience-header">
+                                <h4>Jr. UI/UX Designer — Jointech-MX</h4>
+                                <span>Apr 2025 — Jan 2026</span>
+                            </div>
+
+                            <p>
+                                Worked as a Jr. UX/UI Designer, focused on requirements gathering, interface design, and
+                                client communication. I also took on Product Owner responsibilities, organizing tasks
+                                using Agile methodology
+                            </p>
+
+                        </div>
+
+
+                        <!-- ITEM -->
+                        <div class="experience-item reveal reveal-right reveal-delay-3">
+
+                            <div class="experience-header">
+                                <h4>Project Intern — Bizclon Tijuana</h4>
+                                <span>Jun 2023 — Jul 2023</span>
+                            </div>
+
+                            <p>
+                                In this work team, I played the roles of UI/UX Designer, Project Documentation, Project
+                                manager and team leader.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section" data-theme="light">
+        <div class="container">
+            <!-- TITLE -->
+            <div class="process-header">
+                <h1 class="section-title reveal reveal-down">PROCESS</h1>
+                <p>A structured approach to designing meaningful digital experiences.</p>
+            </div>
+
+            <!-- STEPS -->
+            <div class="process-grid">
+
+                <!-- STEP 1 -->
+                <div class="process-step reveal reveal-up reveal-delay-1">
+                    <span class="step-number">01</span>
+                    <h3>UX Research</h3>
+                    <p>
+                        Understanding users, business goals, and context through research,
+                        audits, and insights that guide every decision.
+                    </p>
+                </div>
+
+                <!-- STEP 2 -->
+                <div class="process-step reveal reveal-up reveal-delay-2">
+                    <span class="step-number">02</span>
+                    <h3>Functional Design</h3>
+                    <p>
+                        Structuring information and defining flows to ensure clarity,
+                        usability, and logical interactions across the product.
+                    </p>
+                </div>
+
+                <!-- STEP 3 -->
+                <div class="process-step reveal reveal-up reveal-delay-3">
+                    <span class="step-number">03</span>
+                    <h3>Wireframes & Prototypes</h3>
+                    <p>
+                        Translating ideas into tangible layouts and interactive prototypes
+                        to validate concepts before visual execution.
+                    </p>
+                </div>
+
+                <!-- STEP 4 -->
+                <div class="process-step reveal reveal-up reveal-delay-4">
+                    <span class="step-number">04</span>
+                    <h3>Visual Concept & UI</h3>
+                    <p>
+                        Crafting a cohesive visual language that balances aesthetics,
+                        brand identity, and usability.
+                    </p>
+                </div>
+
+                <!-- STEP 5 -->
+                <div class="process-step reveal reveal-up reveal-delay-5">
+                    <span class="step-number">05</span>
+                    <h3>Iteration</h3>
+                    <p>
+                        Refining continuously through feedback, testing, and real-world
+                        usage to improve the experience over time.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer reveal reveal-up reveal-delay-1" data-theme="dark">
+        <div class="container">
+
+            <div class="row footer-top">
+                <!-- BRAND -->
+                <div class="col-lg-4 footer-brand">
+                    <!-- Logo -->
+                    <a class="footer-brand" href="home.html">
+                        <img src="assets/uxRamirezLogo_dark.png" alt="UX Ramirez Logo" />
+                    </a>
+
+                    <p>
+                        UI/UX Designer specializing in creating clear, functional, and user-centered digital
+                        experiences.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="https://www.behance.net/ux_ramirez" target="_blank"><i
+                                class="fab fa-behance footer-icon"></i></a>
+                        <a href="https://dribbble.com/ux_ramirez" target="_blank"><i
+                                class="fab fa-dribbble footer-icon"></i></a>
+                        <a href="https://www.facebook.com/uxramirez" target="_blank"><i
+                                class="fab fa-facebook footer-icon"></i></a>
+                        <a href="https://www.instagram.com/ux_ramirez" target="_blank"><i
+                                class="fab fa-instagram footer-icon"></i></a>
+                        <a href="https://x.com/ux_ramirez" target="_blank"><i
+                                class="fa-brands fa-x-twitter footer-icon"></i></a>
+                        <a href="https://bsky.app/profile/uxramirez.bsky.social" target="_blank"><i
+                                class="fa-brands fa-bluesky footer-icon"></i></a>
+                        <a href="https://mx.pinterest.com/ux_ramirez/" target="_blank"><i
+                                class="fa-brands fa-pinterest footer-icon"></i></a>
+                        <a href="https://www.linkedin.com/in/abril-ramirez-flores-71a26b275/" target="_blank"><i
+                                class="fab fa-linkedin footer-icon"></i></a>
+                        <a href="https://github.com/iscRamirezAbril" target="_blank"><i
+                                class="fab fa-github footer-icon"></i></a>
+                    </div>
+                </div>
+
+                <!-- NAVIGATION -->
+                <div class="col-lg-3 footer-links">
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#store">Store</a></li>
+                    </ul>
+                </div>
+
+                <!-- SERVICES -->
+                <div class="col-lg-3 footer-links">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="services.html#WebDesign">Web Design</a></li>
+                        <li><a href="services.html#ProductDesign">Product Design</a></li>
+                        <li><a href="services.html#Templates">Templates & Landing Pages</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="col-lg-2 footer-links">
+                    <a href="contact.html" class="footer-contact-title">Contact <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                        </svg></a>
+
+                    <ul>
+                        <li><a class="email" href="mailto:contact@uxramirez.com">contact@uxramirez.com</a></li>
+                        <li><a class="email" href="https://wa.me/526643352557">+52 (664) 335 2557</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="footer-bottom">
+                <p>
+                    © 2026 UX Ramirez. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

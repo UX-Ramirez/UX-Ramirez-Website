@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UX Ramirez — Blog</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <meta name="p:domain_verify" content="0b38517be15d1363cfdd71f0a3bbb39e"/>
+    
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="home.html">
+                <img id="navbar-logo" src="assets/uxRamirezLogo_dark.png" alt="UX Ramirez Logo" />
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navMenu">
+
+                <!-- Centered Links -->
+                <ul class="navbar-nav mx-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="work.html">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="blog.html">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="store.html">Store</a>
+                    </li>
+                </ul>
+
+                <!-- Contact Button -->
+                <div class="d-flex align-items-center gap-3">
+                    <a href="contact.html" class="nav-btn">Contact</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="sub-hero" data-theme="dark">
+        <div class="container">
+
+            <h1 class="section-title reveal reveal-bottom reveal-delay-1">
+                BLOG
+            </h1>
+
+            <p class="services-intro reveal reveal-left reveal-delay-2">
+                Notes on UX, product design and the craft of building digital experiences.
+            </p>
+
+        </div>
+    </section>
+
+    <!-- BLOG CONTENT -->
+    <section class="blog-content" data-theme="light">
+        <div class="container">
+
+            <!-- CATEGORY FILTER -->
+            <div id="blog-toolbar" class="blog-toolbar">
+                <button class="blog-chip active" data-category="all">All</button>
+            </div>
+
+            <!-- POSTS GRID -->
+            <div id="blog-grid" class="row g-5">
+                <!-- Posts rendered by JS -->
+            </div>
+
+            <!-- PAGINATION -->
+            <div id="blog-pagination" class="blog-pagination" style="display:none;">
+                <button id="prev-page" type="button">
+                    <i class="bi bi-arrow-left"></i> Previous
+                </button>
+                <span class="page-info">
+                    Page <span id="current-page">1</span> of <span id="total-pages">1</span>
+                </span>
+                <button id="next-page" type="button">
+                    Next <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer reveal reveal-up reveal-delay-1" data-theme="dark">
+        <div class="container">
+
+            <div class="row footer-top">
+                <!-- BRAND -->
+                <div class="col-lg-4 footer-brand">
+                    <a class="footer-brand" href="home.html">
+                        <img src="assets/uxRamirezLogo_dark.png" alt="UX Ramirez Logo" />
+                    </a>
+
+                    <p>
+                        UI/UX Designer specializing in creating clear, functional, and user-centered digital
+                        experiences.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="https://www.behance.net/ux_ramirez" target="_blank"><i
+                                class="fab fa-behance footer-icon"></i></a>
+                        <a href="https://dribbble.com/ux_ramirez" target="_blank"><i
+                                class="fab fa-dribbble footer-icon"></i></a>
+                        <a href="https://www.facebook.com/uxramirez" target="_blank"><i
+                                class="fab fa-facebook footer-icon"></i></a>
+                        <a href="https://www.instagram.com/ux_ramirez" target="_blank"><i
+                                class="fab fa-instagram footer-icon"></i></a>
+                        <a href="https://x.com/ux_ramirez" target="_blank"><i
+                                class="fa-brands fa-x-twitter footer-icon"></i></a>
+                        <a href="https://bsky.app/profile/uxramirez.bsky.social" target="_blank"><i
+                                class="fa-brands fa-bluesky footer-icon"></i></a>
+                        <a href="https://mx.pinterest.com/ux_ramirez/" target="_blank"><i
+                                class="fa-brands fa-pinterest footer-icon"></i></a>
+                        <a href="https://www.linkedin.com/in/abril-ramirez-flores-71a26b275/" target="_blank"><i
+                                class="fab fa-linkedin footer-icon"></i></a>
+                        <a href="https://github.com/iscRamirezAbril" target="_blank"><i
+                                class="fab fa-github footer-icon"></i></a>
+                    </div>
+                </div>
+
+                <!-- NAVIGATION -->
+                <div class="col-lg-3 footer-links">
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="home.html#projects">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="store.html">Store</a></li>
+                    </ul>
+                </div>
+
+                <!-- SERVICES -->
+                <div class="col-lg-3 footer-links">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="services.html#WebDesign">Web Design</a></li>
+                        <li><a href="services.html#ProductDesign">Product Design</a></li>
+                        <li><a href="services.html#Templates">Templates & Landing Pages</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="col-lg-2 footer-links">
+                    <a href="contact.html" class="footer-contact-title">Contact <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right"
+                            viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                        </svg></a>
+
+                    <ul>
+                        <li><a class="email" href="mailto:contact@uxramirez.com">contact@uxramirez.com</a></li>
+                        <li><a class="email" href="https://wa.me/526643352557">+52 (664) 335 2557</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="footer-bottom">
+                <p>
+                    © 2026 UX Ramirez. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Config (add config.js to .gitignore) -->
+    <script src="config.js"></script>
+
+    <!-- ====================================================== -->
+    <!-- BLOG SCRIPT — Reads from posts.json                    -->
+    <!-- ====================================================== -->
+    <script>
+        /*  ========================================================
+            CONFIG — Pulled from config.js
+            ======================================================== */
+        const POSTS_PER_PAGE = SITE_CONFIG.POSTS_PER_PAGE;
+        const POSTS_FILE     = SITE_CONFIG.POSTS_FILE;
+
+        /*  ========================================================
+            DOM REFS
+            ======================================================== */
+        const $grid       = document.getElementById("blog-grid");
+        const $toolbar    = document.getElementById("blog-toolbar");
+        const $pagination = document.getElementById("blog-pagination");
+        const $prev       = document.getElementById("prev-page");
+        const $next       = document.getElementById("next-page");
+        const $current    = document.getElementById("current-page");
+        const $total      = document.getElementById("total-pages");
+
+        /*  ========================================================
+            STATE
+            ======================================================== */
+        let allPosts       = [];
+        let filteredPosts  = [];
+        let currentPage    = 1;
+        let activeCategory = "all";
+
+        /*  ========================================================
+            HELPERS
+            ======================================================== */
+        function formatDate(dateStr) {
+            if (!dateStr) return "";
+            const d = new Date(dateStr + "T00:00:00");
+            return d.toLocaleDateString("en-US", {
+                year: "numeric", month: "short", day: "numeric"
+            });
+        }
+
+        function escHtml(str) {
+            const el = document.createElement("span");
+            el.textContent = str || "";
+            return el.innerHTML;
+        }
+
+        /*  ========================================================
+            RENDER FUNCTIONS
+            ======================================================== */
+        function renderCategories() {
+            const cats = [...new Set(allPosts.map(p => p.category).filter(Boolean))].sort();
+
+            // Remove old dynamic chips (keep "All")
+            $toolbar.querySelectorAll(".blog-chip:not([data-category='all'])").forEach(c => c.remove());
+
+            cats.forEach(cat => {
+                const btn = document.createElement("button");
+                btn.className = "blog-chip" + (activeCategory === cat ? " active" : "");
+                btn.dataset.category = cat;
+                btn.textContent = cat;
+                $toolbar.appendChild(btn);
+            });
+        }
+
+        function renderPosts() {
+            // Filter
+            filteredPosts = activeCategory === "all"
+                ? [...allPosts]
+                : allPosts.filter(p => p.category === activeCategory);
+
+            // Sort newest first
+            filteredPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            // Pagination math
+            const totalPages = Math.max(1, Math.ceil(filteredPosts.length / POSTS_PER_PAGE));
+            if (currentPage > totalPages) currentPage = totalPages;
+            const start     = (currentPage - 1) * POSTS_PER_PAGE;
+            const pagePosts = filteredPosts.slice(start, start + POSTS_PER_PAGE);
+
+            // Empty state
+            if (!pagePosts.length) {
+                $grid.innerHTML = `
+                    <div class="col-12">
+                        <div class="blog-empty">
+                            <i class="bi bi-journal-text" style="font-size:48px; color:#9ca3af;"></i>
+                            <h3 class="mt-3">No posts yet</h3>
+                            <p>Check back soon — new articles are on the way.</p>
+                        </div>
+                    </div>`;
+                $pagination.style.display = "none";
+                return;
+            }
+
+            // Build cards
+            $grid.innerHTML = pagePosts.map((post, i) => {
+                const delay = (i % 3) + 1;
+                const link  = post.slug ? `post.html?slug=${encodeURIComponent(post.slug)}` : "#";
+
+                const imgHtml = post.cover
+                    ? `<img src="${escHtml(post.cover)}" alt="${escHtml(post.title)}" class="img-fluid" loading="lazy">`
+                    : `<div class="blog-img-placeholder"><i class="bi bi-image" style="font-size:32px;"></i></div>`;
+
+                return `
+                    <div class="col-lg-4 col-md-6 reveal reveal-up reveal-delay-${delay}">
+                        <div class="project-item">
+
+                            <div class="project-image">
+                                <a href="${link}">${imgHtml}</a>
+                            </div>
+
+                            <div class="project-body">
+                                <div class="blog-meta">
+                                    <span>${escHtml(post.category)}</span>
+                                    ${post.date ? `<span class="dot"></span><span>${escHtml(formatDate(post.date))}</span>` : ""}
+                                </div>
+
+                                <h4>${escHtml(post.title)}</h4>
+
+                                ${post.excerpt ? `<p class="blog-excerpt">${escHtml(post.excerpt)}</p>` : ""}
+
+                                <a href="${link}" class="cta">
+                                    Read Post <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>`;
+            }).join("");
+
+            // Trigger reveal animations on new elements
+            document.querySelectorAll("#blog-grid .reveal").forEach(el => el.classList.add("show"));
+
+            // Pagination UI
+            if (totalPages <= 1) {
+                $pagination.style.display = "none";
+            } else {
+                $pagination.style.display = "flex";
+                $current.textContent = currentPage;
+                $total.textContent   = totalPages;
+                $prev.disabled = currentPage <= 1;
+                $next.disabled = currentPage >= totalPages;
+            }
+        }
+
+        /*  ========================================================
+            EVENTS
+            ======================================================== */
+        $toolbar.addEventListener("click", (e) => {
+            const chip = e.target.closest(".blog-chip");
+            if (!chip) return;
+
+            $toolbar.querySelectorAll(".blog-chip").forEach(c => c.classList.remove("active"));
+            chip.classList.add("active");
+
+            activeCategory = chip.dataset.category;
+            currentPage = 1;
+            renderPosts();
+        });
+
+        $prev.addEventListener("click", () => {
+            if (currentPage > 1) {
+                currentPage--;
+                renderPosts();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+        });
+
+        $next.addEventListener("click", () => {
+            const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
+            if (currentPage < totalPages) {
+                currentPage++;
+                renderPosts();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+        });
+
+        /*  ========================================================
+            INIT — Load posts.json
+            ======================================================== */
+        (async function init() {
+            try {
+                const res = await fetch(POSTS_FILE);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
+                allPosts = await res.json();
+            } catch (err) {
+                console.warn("[Blog] Could not load posts.json:", err.message);
+                allPosts = [];
+            }
+
+            renderCategories();
+            renderPosts();
+        })();
+    </script>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

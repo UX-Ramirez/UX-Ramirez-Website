@@ -133,14 +133,46 @@
 
                         <textarea name="message" rows="5" placeholder="Your message" required></textarea>
 
-                        <button id="submit-btn" type="submit" class="submit-btn" data-fs-submit-btn>
+                        <button id="submit-btn" type="submit" class="submit-btn">
                             Submit
                         </button>
 
-                        <div data-fs-success></div>
-                        <div data-fs-error></div>
+                        <div id="form-error" class="form-error" role="alert" aria-live="polite"></div>
 
                     </form>
+
+
+                    <!-- SUCCESS STATE -->
+
+                    <div id="contact-success" class="contact-success" aria-hidden="true">
+
+                        <div class="success-icon">
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+
+                        <div class="success-content">
+
+                            <span class="success-label">
+                                MESSAGE SENT
+                            </span>
+
+                            <h2>
+                                Thank you for reaching out.
+                            </h2>
+
+                            <p>
+                                Your message has been successfully sent.
+                                I'll get back to you as soon as possible.
+                            </p>
+
+                            <button type="button" id="send-another" class="success-reset">
+                                Send another message
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -241,81 +273,135 @@
     <script>
         const form = document.getElementById('my-form');
         const submitBtn = document.getElementById('submit-btn');
-        const successMessage = form.querySelector('[data-fs-success]');
-        const errorMessage = form.querySelector('[data-fs-error]');
+        const errorMessage = document.getElementById('form-error');
 
-        const RECAPTCHA_SITE_KEY = '6Lc8kactAAAAANxFRBYZGC_GioiHtra9lUiFUr0d';
+        const successState = document.getElementById('contact-success');
+        const sendAnotherBtn = document.getElementById('send-another');
 
+        const RECAPTCHA_SITE_KEY =
+            '6Lc8kactAAAAANxFRBYZGC_GioiHtra9lUiFUr0d';
+
+
+        /* ========================================= */
+        /* FORM SUBMISSION */
+        /* ========================================= */
         form.addEventListener('submit', function (event) {
+
             event.preventDefault();
 
-            // Clear previous messages
-            successMessage.textContent = '';
+            // Clear previous error
             errorMessage.textContent = '';
 
             // Disable button
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending...';
 
+
             grecaptcha.ready(function () {
 
                 grecaptcha.execute(RECAPTCHA_SITE_KEY, {
                     action: 'submit'
+
                 }).then(function (token) {
 
                     const formData = new FormData(form);
 
                     // Add reCAPTCHA token
-                    formData.append('g-recaptcha-response', token);
+                    formData.append(
+                        'g-recaptcha-response',
+                        token
+                    );
 
-                    fetch('https://formspree.io/f/mjkbrvyo', {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    })
-                        .then(response => {
 
-                            if (!response.ok) {
-                                throw new Error('Form submission failed.');
+                    return fetch(
+                        'https://formspree.io/f/mjkbrvyo',
+                        {
+                            method: 'POST',
+
+                            body: formData,
+
+                            headers: {
+                                'Accept': 'application/json'
                             }
+                        }
+                    );
 
-                            return response.json();
-                        })
-                        .then(data => {
+                }).then(function (response) {
 
-                            successMessage.textContent =
-                                'Thank you! Your message has been sent successfully.';
+                    if (!response.ok) {
+                        throw new Error(
+                            'Form submission failed.'
+                        );
+                    }
 
-                            form.reset();
+                    return response.json();
 
-                            submitBtn.disabled = false;
-                            submitBtn.textContent = 'Submit';
-                        })
-                        .catch(error => {
+                }).then(function (data) {
+                    /*
+                     * FORM WAS SUCCESSFULLY SENT
+                     */
+                    form.reset();
 
-                            console.error('Formspree error:', error);
+                    // Hide form
+                    form.style.display = 'none';
 
-                            errorMessage.textContent =
-                                'Something went wrong. Please try again later.';
+                    // Show success state
+                    successState.classList.add('show');
 
-                            submitBtn.disabled = false;
-                            submitBtn.textContent = 'Submit';
-                        });
+                    successState.setAttribute(
+                        'aria-hidden',
+                        'false'
+                    );
 
-                }).catch(error => {
+                }).catch(function (error) {
 
-                    console.error('reCAPTCHA error:', error);
+                    console.error(
+                        'Formspree error:',
+                        error
+                    );
 
                     errorMessage.textContent =
-                        'Please complete the reCAPTCHA and try again.';
+                        'Something went wrong. Please try again later.';
 
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Submit';
+
                 });
+
             });
+
         });
+
+        /* ========================================= */
+        /* SEND ANOTHER MESSAGE */
+        /* ========================================= */
+        sendAnotherBtn.addEventListener(
+            'click',
+            function () {
+
+                // Hide success state
+                successState.classList.remove('show');
+
+                successState.setAttribute(
+                    'aria-hidden',
+                    'true'
+                );
+
+                // Show form again
+                form.style.display = 'flex';
+
+                // Clear form
+                form.reset();
+
+                // Clear errors
+                errorMessage.textContent = '';
+
+                // Restore button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit';
+
+            }
+        );
     </script>
 </body>
 

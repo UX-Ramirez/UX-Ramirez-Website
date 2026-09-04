@@ -498,6 +498,125 @@ body {
 /* |=====| PORTFOLIO |=====| */
 
 
+
+
+
+/* ========================================= */
+/* WORK PAGE */
+/* ========================================= */
+.work-hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.work-top {
+    padding-top: 80px;
+}
+
+/* DESCRIPTION */
+.work-desc {
+    color: #c4c4c4;
+    max-width: 620px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* ========================================= */
+/* PROJECTS SECTION */
+/* ========================================= */
+
+.work-projects {
+  background: #f5f5f7;
+  color: #070911;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0;
+}
+
+.work-projects .projects-content {
+    position: relative;
+    z-index: 1;
+
+    /* Evitamos el padding-top de index.html */
+    padding-top: 0;
+}
+
+/* PROJECT IMAGE */
+.work-projects .project-image img {
+    height: 260px;
+}
+
+/* PROJECT BODY */
+.work-projects .project-body {
+    padding-bottom: 20px;
+}
+
+/* PROJECT LINK BUTTON */
+.work-projects .cta-light {
+  text-decoration: none;
+  font-weight: 500;
+  color: rgba(7, 9, 17, 0.7);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.work-projects .cta-light:hover {
+  transform: translateX(5px);
+  color: #08659e;
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media (max-width: 991px) {
+    .work-hero {
+        min-height: 420px;
+    }
+
+    .work-projects {
+        padding: 90px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .work-hero {
+        min-height: 380px;
+    }
+
+    .work-desc {
+        font-size: 16px;
+    }
+
+    .work-projects {
+        padding: 70px 0;
+    }
+
+    .work-projects .project-image img {
+        height: auto;
+        aspect-ratio: 16 / 10;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* |=====| SERVICES |=====| */
 /* Grid */
 .services-grid {

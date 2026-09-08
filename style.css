@@ -448,7 +448,7 @@ body {
 
 .project-image img {
   width: 100%;
-  height: 240px;
+  height: 300px;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
@@ -488,7 +488,6 @@ body {
 /* WORK PAGE */
 /* ========================================= */
 .work-hero {
-    min-height: 500px;
     display: flex;
     align-items: center;
 }
@@ -513,19 +512,17 @@ body {
 /* ========================================= */
 
 .work-projects {
-  background: #f5f5f7;
-  color: #070911;
-    position: relative;
-    overflow: hidden;
-    padding: 120px 0;
+  position: relative;
+  overflow: hidden;
 }
 
 .work-projects .projects-content {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 
-    /* Evitamos el padding-top de index.html */
-    padding-top: 0;
+  /* Evitamos el padding-top de index.html */
+  padding-top: 0;
+  padding-left: 0;
 }
 
 /* PROJECT IMAGE */
@@ -536,7 +533,7 @@ body {
 .project-image-work img {
   width: 100%;
   height: 350px;
-  object-fit: cover;
+  object-fit: fill;
   display: block;
   transition: transform 0.4s ease;
 }
@@ -547,7 +544,7 @@ body {
 
 .project-image-work img {
   width: 100%;
-  height: 240px;
+  height: 220px;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
@@ -557,8 +554,29 @@ body {
 }
 
 /* PROJECT BODY */
-.work-projects .project-body {
-    padding-bottom: 20px;
+.extra-project {
+    display: none;
+}
+
+/* Show projects */
+.extra-project.show-project {
+    display: block;
+}
+
+.view-more-btn {
+  background: linear-gradient(135deg, #1574af, #00609b);
+  color: #FFFF;
+  border: none;
+  border-radius: 0px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.view-more-btn:hover {
+  background: #73c9ff;
+  color: #05070d;
 }
 
 /* ========================================= */

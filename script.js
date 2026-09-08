@@ -1,5 +1,4 @@
 /* |=====| SCROLL REVEAL |=====| */
-
 const reveals = document.querySelectorAll(".reveal");
 
 const revealObserver = new IntersectionObserver((entries) => {
@@ -17,7 +16,6 @@ reveals.forEach(el => revealObserver.observe(el));
 
 
 /* |=====| CURSOR |=====| */
-
 const dot = document.querySelector(".cursor-dot");
 const outline = document.querySelector(".cursor-outline");
 
@@ -50,7 +48,6 @@ animate();
 
 
 /* HOVER CURSOR */
-
 const hoverElements = document.querySelectorAll("a, button, .project-card");
 
 hoverElements.forEach(el => {
@@ -143,3 +140,23 @@ const navObserver = new IntersectionObserver((entries) => {
 sections.forEach(section => navObserver.observe(section));
 
 
+
+
+/* |=====| VIEW MORE BUTTON |=====| */
+document.addEventListener("DOMContentLoaded", function () {
+
+    const viewMoreBtn = document.getElementById("viewMoreBtn");
+    const extraProjects = document.querySelectorAll(".extra-project");
+
+    viewMoreBtn.addEventListener("click", function () {
+
+        extraProjects.forEach(project => {
+            project.classList.add("show-project");
+        });
+
+        // Ocultar el botón después de mostrar los proyectos
+        viewMoreBtn.style.display = "none";
+
+    });
+
+});

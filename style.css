@@ -478,23 +478,6 @@ body {
   font-size: 0.9rem;
   color: #666;
 }
-
-.cta {
-  text-decoration: none;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.7);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.cta:hover {
-  transform: translateX(5px);
-  color: #73c9ff;
-}
-
 /* |=====| PORTFOLIO |=====| */
 
 
@@ -576,23 +559,6 @@ body {
 /* PROJECT BODY */
 .work-projects .project-body {
     padding-bottom: 20px;
-}
-
-/* PROJECT LINK BUTTON */
-.work-projects .cta-light {
-  text-decoration: none;
-  font-weight: 500;
-  color: rgba(7, 9, 17, 0.7);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.work-projects .cta-light:hover {
-  transform: translateX(5px);
-  color: #08659e;
 }
 
 /* ========================================= */

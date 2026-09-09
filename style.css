@@ -562,25 +562,58 @@ body {
     display: none;
 }
 
+.extra-project {
+    display: none;
+}
+
 /* Show projects */
 .extra-project.show-project {
     display: block;
 }
 
-.view-more-btn {
-  background: linear-gradient(135deg, #1574af, #00609b);
-  color: #FFFF;
-  border: none;
-  border-radius: 0px;
-  padding: 10px 20px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  text-decoration: none;
+/* ========================================= */
+/* WORK PAGINATION */
+/* ========================================= */
+
+.work-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 70px;
 }
 
-.view-more-btn:hover {
-  background: #73c9ff;
-  color: #05070d;
+.work-pagination button {
+    background: transparent;
+    border: 1px solid rgb(243, 243, 243);
+    color: rgb(243, 243, 243);
+
+    padding: 10px 24px;
+
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.work-pagination button:hover:not(:disabled) {
+    background: rgb(243, 243, 243);
+    color: #05070d;
+    border-color: rgb(243, 243, 243);
+}
+
+.work-pagination button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.work-pagination .page-info {
+    font-size: 14px;
+    color: #6b7280;
 }
 
 /* ========================================= */

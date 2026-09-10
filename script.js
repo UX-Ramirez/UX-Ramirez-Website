@@ -1,162 +1,100 @@
-/* |=====| SCROLL REVEAL |=====| */
+/* Shared progressive-enhancement behaviour. Every feature is optional so one
+   page-specific element cannot prevent the rest of the site from working. */
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const supportsIntersectionObserver = "IntersectionObserver" in window;
+
 const reveals = document.querySelectorAll(".reveal");
-
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
+if (prefersReducedMotion.matches || !supportsIntersectionObserver) {
+  reveals.forEach((element) => element.classList.add("show"));
+} else {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
       entry.target.classList.add("show");
-    }
-  });
-}, {
-  threshold: 0.15
-});
-
-reveals.forEach(el => revealObserver.observe(el));
-
-
-
-/* |=====| CURSOR |=====| */
-const dot = document.querySelector(".cursor-dot");
-const outline = document.querySelector(".cursor-outline");
-
-let mouseX = 0;
-let mouseY = 0;
-
-let outlineX = 0;
-let outlineY = 0;
-
-document.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-
-  dot.style.left = mouseX + "px";
-  dot.style.top = mouseY + "px";
-});
-
-function animate() {
-  outlineX += (mouseX - outlineX) * 0.15;
-  outlineY += (mouseY - outlineY) * 0.15;
-
-  outline.style.left = outlineX + "px";
-  outline.style.top = outlineY + "px";
-
-  requestAnimationFrame(animate);
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.15 });
+  reveals.forEach((element) => revealObserver.observe(element));
 }
 
-animate();
+const dot = document.querySelector(".cursor-dot");
+const outline = document.querySelector(".cursor-outline");
+const useCustomCursor = dot && outline
+  && window.matchMedia("(hover: hover) and (pointer: fine)").matches
+  && !prefersReducedMotion.matches;
 
+if (useCustomCursor) {
+  document.documentElement.classList.add("custom-cursor-enabled");
+  let mouseX = 0;
+  let mouseY = 0;
+  let outlineX = 0;
+  let outlineY = 0;
+  let animationFrame;
 
+  const renderCursor = () => {
+    dot.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0) translate(-50%, -50%)`;
+    outlineX += (mouseX - outlineX) * 0.15;
+    outlineY += (mouseY - outlineY) * 0.15;
+    outline.style.transform = `translate3d(${outlineX}px, ${outlineY}px, 0) translate(-50%, -50%)`;
+    animationFrame = requestAnimationFrame(renderCursor);
+  };
 
-/* HOVER CURSOR */
-const hoverElements = document.querySelectorAll("a, button, .project-card");
-
-hoverElements.forEach(el => {
-  el.addEventListener("mouseenter", () => {
-    outline.style.transform = "translate(-50%, -50%) scale(1.8)";
-    outline.style.borderColor = "#3b82f6";
+  document.addEventListener("pointermove", (event) => {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+  }, { passive: true });
+  document.addEventListener("pointerover", (event) => {
+    if (event.target.closest("a, button, .project-card")) outline.classList.add("is-hovering");
   });
-
-  el.addEventListener("mouseleave", () => {
-    outline.style.transform = "translate(-50%, -50%) scale(1)";
-    outline.style.borderColor = "rgba(142,227,255,0.5)";
+  document.addEventListener("pointerout", (event) => {
+    if (event.target.closest("a, button, .project-card")) outline.classList.remove("is-hovering");
   });
-});
-
-
-
-const serviceItems = document.querySelectorAll(".service-item");
-
-serviceItems.forEach(item => {
-
-  item.addEventListener("click", () => {
-
-    const isActive = item.classList.contains("active");
-
-    // cerrar todos
-    serviceItems.forEach(i => i.classList.remove("active"));
-
-    // abrir solo si no estaba activo
-    if (!isActive) {
-      item.classList.add("active");
-    }
-
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) cancelAnimationFrame(animationFrame);
+    else animationFrame = requestAnimationFrame(renderCursor);
   });
+  animationFrame = requestAnimationFrame(renderCursor);
+}
 
-});
-
-const faqItems = document.querySelectorAll(".faq-item");
-
-faqItems.forEach(item => {
-  item.addEventListener("click", () => {
-
-    const isActive = item.classList.contains("active");
-
-    faqItems.forEach(i => i.classList.remove("active"));
-
-    if (!isActive) {
-      item.classList.add("active");
-    }
-
+const makeExclusive = (selector) => {
+  const items = document.querySelectorAll(selector);
+  items.forEach((item) => {
+    item.addEventListener("click", () => {
+      const shouldOpen = !item.classList.contains("active");
+      items.forEach((otherItem) => otherItem.classList.remove("active"));
+      item.classList.toggle("active", shouldOpen);
+    });
   });
-});
+};
+makeExclusive(".service-item");
+makeExclusive(".faq-item");
 
-
-
-
-/* |=====| NAVBAR LINK THEME |=====| */
-const navbar = document.getElementById("navbar");
 const navLinks = document.querySelectorAll(".nav-link");
 const sections = document.querySelectorAll("[data-theme]");
 const logo = document.getElementById("navbar-logo");
-
-const navObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-
-    if (entry.isIntersecting) {
-
-      const theme = entry.target.getAttribute("data-theme");
-
-      navLinks.forEach(link => {
-        link.classList.remove("link-light", "link-dark");
-
-        if (theme === "light") {
-          link.classList.add("link-dark");
-          logo.src = "assets/uxRamirezLogo_light.png";
-
-        } else {
-          link.classList.add("link-light");
-          logo.src = "assets/uxRamirezLogo_dark.png";
-        }
-      });
-
-    }
-
+const setNavigationTheme = (theme) => {
+  const lightTheme = theme === "light";
+  navLinks.forEach((link) => {
+    link.classList.toggle("link-dark", lightTheme);
+    link.classList.toggle("link-light", !lightTheme);
   });
-}, {
-  threshold: 0.2,
-  rootMargin: "0px 0px -70% 0px"
-});
-
-sections.forEach(section => navObserver.observe(section));
-
-
-
-
-/* |=====| VIEW MORE BUTTON |=====| */
-document.addEventListener("DOMContentLoaded", function () {
-
-    const viewMoreBtn = document.getElementById("viewMoreBtn");
-    const extraProjects = document.querySelectorAll(".extra-project");
-
-    viewMoreBtn.addEventListener("click", function () {
-
-        extraProjects.forEach(project => {
-            project.classList.add("show-project");
-        });
-
-        // Ocultar el botón después de mostrar los proyectos
-        viewMoreBtn.style.display = "none";
-
+  if (logo) logo.src = lightTheme
+    ? "assets/uxRamirezLogo_light.png"
+    : "assets/uxRamirezLogo_dark.png";
+};
+if (sections.length && supportsIntersectionObserver) {
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) setNavigationTheme(entry.target.dataset.theme);
     });
+  }, { threshold: 0.2, rootMargin: "0px 0px -70% 0px" });
+  sections.forEach((section) => navObserver.observe(section));
+}
 
-});
+const viewMoreBtn = document.getElementById("viewMoreBtn");
+if (viewMoreBtn) {
+  viewMoreBtn.addEventListener("click", () => {
+    document.querySelectorAll(".extra-project").forEach((project) => project.classList.add("show-project"));
+    viewMoreBtn.hidden = true;
+  });
+}

@@ -1,14 +1,46 @@
-/* |=====| GLOBAL |=====| */
+/* ===========================================================================
+   Foundations
+   ========================================================================== */
 @charset "UTF-8";
+
+:root {
+  --color-ink: #05070d;
+  --color-surface: #f5f5f7;
+  --color-text-muted: #c4c4c4;
+  --color-accent: #1574af;
+  --color-accent-light: #73c9ff;
+  --transition-base: 0.3s ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
 
 ::selection {
   background-color: rgb(188, 226, 255);
   color: black;
 }
 
+:focus-visible {
+  outline: 3px solid var(--color-accent-light);
+  outline-offset: 4px;
+}
+
 body {
   font-family: 'Inter', sans-serif;
-  background: #05070d;
+  background: var(--color-ink);
   color: white;
   overflow-x: hidden;
   cursor: auto;
@@ -274,6 +306,7 @@ body {
 }
 
 .small-text {
+  display: block;
   font-size: 24px;
   color: #aaa;
   letter-spacing: 3px;
@@ -383,7 +416,9 @@ body {
 /* |=====| HERO |=====| */
 
 
-/* |=====| PORTFOLIO |=====| */
+/* ===========================================================================
+   Portfolio
+   ========================================================================== */
 .projects-content {
   padding-top: 100px;
 }
@@ -395,13 +430,14 @@ body {
   left: 900px;
 }
 
-.project-image {
+.project-image,
+.project-image-work {
   overflow: hidden;
 }
 
-.project-image img {
+.project-image img,
+.project-image-work img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
@@ -462,10 +498,7 @@ body {
 }
 
 .project-image img {
-  width: 100%;
   height: 300px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
 }
 
 .project-item:hover .project-image img {
@@ -493,7 +526,7 @@ body {
   font-size: 0.9rem;
   color: #666;
 }
-/* |=====| PORTFOLIO |=====| */
+/* ========================================================================== */
 
 
 
@@ -521,9 +554,7 @@ body {
     line-height: 1.7;
 }
 
-/* ========================================= */
-/* PROJECTS SECTION */
-/* ========================================= */
+/* |=====| PROJECTS SECTION |=====| */
 .work-projects {
   position: relative;
   overflow: hidden;
@@ -538,28 +569,8 @@ body {
   padding-left: 0;
 }
 
-/* PROJECT IMAGE */
-.project-image-work {
-  overflow: hidden;
-}
-
 .project-image-work img {
-  width: 100%;
-  height: 350px;
-  object-fit: fill;
-  display: block;
-  transition: transform 0.4s ease;
-}
-
-.project-card:hover .project-image-work img {
-  transform: scale(0.95);
-}
-
-.project-image-work img {
-  width: 100%;
   height: 260px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
 }
 
 .project-item {
@@ -568,11 +579,6 @@ body {
 
 .project-item:hover .project-image-work img {
   transform: scale(0.95);
-}
-
-/* PROJECT BODY */
-.extra-project {
-    display: none;
 }
 
 .extra-project {
@@ -584,9 +590,7 @@ body {
     display: block;
 }
 
-/* ========================================= */
-/* WORK PAGINATION */
-/* ========================================= */
+/* |=====| WORK PAGINATION |=====| */
 .work-pagination {
     display: flex;
     justify-content: center;
@@ -623,9 +627,7 @@ body {
     color: #6b7280;
 }
 
-/* ========================================= */
-/* RESPONSIVE */
-/* ========================================= */
+/* |=====| RESPONSIVE |=====| */
 @media (max-width: 991px) {
     .work-hero {
         min-height: 420px;
@@ -666,8 +668,9 @@ body {
 
 
 
-
-/* |=====| SERVICES |=====| */
+/* ========================================= */
+/* SERVICES PAGE */
+/* ========================================= */
 /* Grid */
 .services-grid {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -1251,10 +1254,6 @@ body {
   background: #f5f5f7;
   padding: 120px 0 120px;
   color: #05070d;
-}
-
-/* separación visual opcional */
-.contact-content {
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -2492,4 +2491,16 @@ body {
 .post-not-found a {
     color: #05070d;
     font-weight: 500;
+}
+
+/* Respect user preferences without affecting the default visual language. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

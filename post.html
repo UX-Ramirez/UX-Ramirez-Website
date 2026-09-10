@@ -88,13 +88,6 @@
                 </div>
             </div>
 
-            <!-- COMMENTS (Cusdis) -->
-            <div class="post-comments">
-                <h4>Comments</h4>
-                <div id="cusdis_thread" data-host="" data-app-id="" data-page-id="" data-page-url="" data-page-title="">
-                </div>
-            </div>
-
         </div>
     </section>
 
@@ -286,72 +279,6 @@
 
             // Article content (HTML from JSON)
             document.getElementById("post-article").innerHTML = post.content || "<p>This article has no content yet.</p>";
-
-            // Share buttons
-            renderShareButtons(post);
-        }
-
-        /*  ========================================================
-            SHARE BUTTONS
-            ======================================================== */
-        function renderShareButtons(post) {
-            const url = window.location.href;
-            const title = encodeURIComponent(post.title);
-            const text = encodeURIComponent(post.excerpt || post.title);
-
-            const $share = document.getElementById("share-buttons");
-
-            // Native share (mobile)
-            const hasNativeShare = !!navigator.share;
-
-            $share.innerHTML = `
-                ${hasNativeShare ? `
-                    <button class="share-btn" id="native-share">
-                        <i class="bi bi-share"></i> Share
-                    </button>
-                ` : ""}
-                <button class="share-btn" id="copy-link">
-                    <i class="bi bi-link-45deg"></i> Copy link
-                </button>
-                <a class="share-btn" href="https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${title}" target="_blank" rel="noopener">
-                    <i class="fab fa-x-twitter"></i> X
-                </a>
-                <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}" target="_blank" rel="noopener">
-                    <i class="fab fa-linkedin-in"></i> LinkedIn
-                </a>
-                <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}" target="_blank" rel="noopener">
-                    <i class="fab fa-facebook-f"></i> Facebook
-                </a>
-                <a class="share-btn" href="https://wa.me/?text=${title}%20${encodeURIComponent(url)}" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-            `;
-
-            // Native share handler
-            if (hasNativeShare) {
-                document.getElementById("native-share").addEventListener("click", async () => {
-                    try {
-                        await navigator.share({ title: post.title, text: post.excerpt, url: url });
-                    } catch (e) { /* user cancelled */ }
-                });
-            }
-
-            // Copy link handler
-            document.getElementById("copy-link").addEventListener("click", async () => {
-                const btn = document.getElementById("copy-link");
-                try {
-                    await navigator.clipboard.writeText(url);
-                    btn.classList.add("copied");
-                    btn.innerHTML = '<i class="bi bi-check-lg"></i> Copied!';
-                    setTimeout(() => {
-                        btn.classList.remove("copied");
-                        btn.innerHTML = '<i class="bi bi-link-45deg"></i> Copy link';
-                    }, 2000);
-                } catch (e) {
-                    // Fallback
-                    prompt("Copy this link:", url);
-                }
-            });
         }
 
         /*  ========================================================
@@ -401,40 +328,6 @@
 
             // Trigger reveals
             $grid.querySelectorAll(".reveal").forEach(el => el.classList.add("show"));
-        }
-
-        /*  ========================================================
-            CUSDIS COMMENTS
-            ======================================================== */
-        function loadCusdis(post) {
-            const $thread = document.getElementById("cusdis_thread");
-
-            if (!CUSDIS_APP_ID || CUSDIS_APP_ID === "YOUR_CUSDIS_APP_ID") {
-                $thread.innerHTML = `
-                    <div style="text-align:center; padding:40px 20px; color:#9ca3af; border:1px dashed rgba(0,0,0,0.12); border-radius:8px;">
-                        <i class="bi bi-chat-dots" style="font-size:32px;"></i>
-                        <p style="margin-top:12px; font-size:14px;">
-                            Comments will appear here once you configure Cusdis.<br>
-                            Open <code style="background:#e5e7eb;padding:2px 6px;border-radius:4px;">config.js</code>
-                            and set <code style="background:#e5e7eb;padding:2px 6px;border-radius:4px;">CUSDIS_APP_ID</code> to your Cusdis App ID.
-                        </p>
-                    </div>`;
-                return;
-            }
-
-            // Set Cusdis data attributes
-            $thread.setAttribute("data-host", CUSDIS_HOST);
-            $thread.setAttribute("data-app-id", CUSDIS_APP_ID);
-            $thread.setAttribute("data-page-id", post.slug);
-            $thread.setAttribute("data-page-url", window.location.href);
-            $thread.setAttribute("data-page-title", post.title);
-
-            // Load the Cusdis SDK (~5kb gzipped)
-            const script = document.createElement("script");
-            script.src = CUSDIS_HOST + "/js/cusdis.es.js";
-            script.async = true;
-            script.defer = true;
-            document.body.appendChild(script);
         }
 
         /*  ========================================================

@@ -18,8 +18,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <meta name="p:domain_verify" content="0b38517be15d1363cfdd71f0a3bbb39e"/>
-    
+    <meta name="p:domain_verify" content="0b38517be15d1363cfdd71f0a3bbb39e" />
+
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -91,7 +91,7 @@
 
     <!-- BLOG CONTENT -->
     <section class="blog-content" data-theme="light">
-        <div class="container-fluid px-5">
+        <div class="container-fluid px-4 px-md-5">
 
             <!-- CATEGORY FILTER -->
             <div id="blog-toolbar" class="blog-toolbar">
@@ -99,7 +99,7 @@
             </div>
 
             <!-- POSTS GRID -->
-            <div id="blog-grid" class="row g-5">
+            <div id="blog-grid" class="row g-0">
                 <!-- Posts rendered by JS -->
             </div>
 
@@ -182,8 +182,7 @@
                 <!-- CONTACT -->
                 <div class="col-lg-2 footer-links">
                     <a href="contact.html" class="footer-contact-title">Contact <svg xmlns="http://www.w3.org/2000/svg"
-                            width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right"
-                            viewBox="0 0 16 16">
+                            width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
                         </svg></a>
@@ -218,25 +217,25 @@
             CONFIG — Pulled from config.js
             ======================================================== */
         const POSTS_PER_PAGE = SITE_CONFIG.POSTS_PER_PAGE;
-        const POSTS_FILE     = SITE_CONFIG.POSTS_FILE;
+        const POSTS_FILE = SITE_CONFIG.POSTS_FILE;
 
         /*  ========================================================
             DOM REFS
             ======================================================== */
-        const $grid       = document.getElementById("blog-grid");
-        const $toolbar    = document.getElementById("blog-toolbar");
+        const $grid = document.getElementById("blog-grid");
+        const $toolbar = document.getElementById("blog-toolbar");
         const $pagination = document.getElementById("blog-pagination");
-        const $prev       = document.getElementById("prev-page");
-        const $next       = document.getElementById("next-page");
-        const $current    = document.getElementById("current-page");
-        const $total      = document.getElementById("total-pages");
+        const $prev = document.getElementById("prev-page");
+        const $next = document.getElementById("next-page");
+        const $current = document.getElementById("current-page");
+        const $total = document.getElementById("total-pages");
 
         /*  ========================================================
             STATE
             ======================================================== */
-        let allPosts       = [];
-        let filteredPosts  = [];
-        let currentPage    = 1;
+        let allPosts = [];
+        let filteredPosts = [];
+        let currentPage = 1;
         let activeCategory = "all";
 
         /*  ========================================================
@@ -284,75 +283,191 @@
             filteredPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
             // Pagination math
-            const totalPages = Math.max(1, Math.ceil(filteredPosts.length / POSTS_PER_PAGE));
-            if (currentPage > totalPages) currentPage = totalPages;
-            const start     = (currentPage - 1) * POSTS_PER_PAGE;
-            const pagePosts = filteredPosts.slice(start, start + POSTS_PER_PAGE);
+            const totalPages = Math.max(
+                1,
+                Math.ceil(filteredPosts.length / POSTS_PER_PAGE)
+            );
 
-            // Empty state
+            if (currentPage > totalPages) {
+                currentPage = totalPages;
+            }
+
+            const start = (currentPage - 1) * POSTS_PER_PAGE;
+            const pagePosts = filteredPosts.slice(
+                start,
+                start + POSTS_PER_PAGE
+            );
+
+            // ========================================================
+            // EMPTY STATE
+            // ========================================================
+
             if (!pagePosts.length) {
                 $grid.innerHTML = `
-                    <div class="col-12">
-                        <div class="blog-empty">
-                            <i class="bi bi-journal-text" style="font-size:48px; color:#9ca3af;"></i>
-                            <h3 class="mt-3">No posts yet</h3>
-                            <p>Check back soon — new articles are on the way.</p>
-                        </div>
-                    </div>`;
+            <div class="col-12">
+                <div class="blog-empty">
+                    <i 
+                        class="bi bi-journal-text"
+                        style="font-size:48px; color:#9ca3af;"
+                    ></i>
+
+                    <h3 class="mt-3">No posts yet</h3>
+
+                    <p>
+                        Check back soon — new articles are on the way.
+                    </p>
+                </div>
+            </div>
+        `;
+
                 $pagination.style.display = "none";
                 return;
             }
 
-            // Build cards
+            // ========================================================
+            // BUILD BLOG LIST
+            // ========================================================
+
             $grid.innerHTML = pagePosts.map((post, i) => {
+
                 const delay = (i % 3) + 1;
-                const link  = post.slug ? `post.html?slug=${encodeURIComponent(post.slug)}` : "#";
+
+                const link = post.slug
+                    ? `post.html?slug=${encodeURIComponent(post.slug)}`
+                    : "#";
+
+                // ----------------------------------------------------
+                // IMAGE
+                // ----------------------------------------------------
 
                 const imgHtml = post.cover
-                    ? `<img src="${escHtml(post.cover)}" alt="${escHtml(post.title)}" class="img-fluid" loading="lazy">`
-                    : `<div class="blog-img-placeholder"><i class="bi bi-image" style="font-size:32px;"></i></div>`;
+                    ? `
+                <img
+                    src="${escHtml(post.cover)}"
+                    alt="${escHtml(post.title)}"
+                    loading="lazy"
+                >
+            `
+                    : `
+                <div class="blog-img-placeholder">
+                    <i
+                        class="bi bi-image"
+                        style="font-size:28px;"
+                    ></i>
+                </div>
+            `;
+
+                // ----------------------------------------------------
+                // META
+                // ----------------------------------------------------
+
+                const metaHtml = `
+            ${post.date
+                        ? `<span>${escHtml(formatDate(post.date))}</span>`
+                        : ""
+                    }
+
+            ${post.date && post.category
+                        ? `<span class="dot"></span>`
+                        : ""
+                    }
+
+            ${post.category
+                        ? `<span>${escHtml(post.category)}</span>`
+                        : ""
+                    }
+        `;
+
+                // ----------------------------------------------------
+                // CARD
+                // ----------------------------------------------------
 
                 return `
-                    <div class="col-lg-4 col-md-6 reveal reveal-up reveal-delay-${delay}">
-                        <div class="project-item">
+            <div class="col-12 reveal reveal-up reveal-delay-${delay}">
 
-                            <div class="project-image">
-                                <a href="${link}">${imgHtml}</a>
-                            </div>
+                <article class="project-item blog-card">
 
-                            <div class="project-body">
-                                <div class="blog-meta">
-                                    <span>${escHtml(post.category)}</span>
-                                    ${post.date ? `<span class="dot"></span><span>${escHtml(formatDate(post.date))}</span>` : ""}
-                                </div>
+                    <!-- CONTENT -->
+                    <div class="project-body">
 
-                                <h4>${escHtml(post.title)}</h4>
+                        <a
+                            href="${link}"
+                            class="blog-title-link"
+                        >
+                            <h4>
+                                ${escHtml(post.title)}
+                            </h4>
+                        </a>
 
-                                ${post.excerpt ? `<p class="blog-excerpt">${escHtml(post.excerpt)}</p>` : ""}
-
-                                <a href="${link}" class="cta">
-                                    Read Post <i class="bi bi-arrow-right"></i>
-                                </a>
-                            </div>
-
+                        <div class="blog-meta">
+                            ${metaHtml}
                         </div>
-                    </div>`;
+
+                        ${post.excerpt
+                        ? `
+                                    <p class="blog-excerpt">
+                                        ${escHtml(post.excerpt)}
+                                    </p>
+                                `
+                        : ""
+                    }
+
+                        <a
+                            href="${link}"
+                            class="cta"
+                        >
+                            Read Post
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+
+                    <!-- IMAGE -->
+                    <div class="project-image blog-card-image">
+
+                        <a href="${link}">
+                            ${imgHtml}
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+        `;
+
             }).join("");
 
-            // Trigger reveal animations on new elements
-            document.querySelectorAll("#blog-grid .reveal").forEach(el => el.classList.add("show"));
+            // ========================================================
+            // REVEAL ANIMATION
+            // ========================================================
 
-            // Pagination UI
+            document
+                .querySelectorAll("#blog-grid .reveal")
+                .forEach(el => el.classList.add("show"));
+
+
+            // ========================================================
+            // PAGINATION UI
+            // ========================================================
+
             if (totalPages <= 1) {
+
                 $pagination.style.display = "none";
+
             } else {
+
                 $pagination.style.display = "flex";
+
                 $current.textContent = currentPage;
-                $total.textContent   = totalPages;
+                $total.textContent = totalPages;
+
                 $prev.disabled = currentPage <= 1;
                 $next.disabled = currentPage >= totalPages;
             }
         }
+
 
         /*  ========================================================
             EVENTS

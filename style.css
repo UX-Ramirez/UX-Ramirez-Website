@@ -149,7 +149,6 @@ body {
 }
 
 /* LINKS SOBRE FONDO CLARO */
-
 .nav-link.link-dark {
   color: #05070d !important;
 }
@@ -411,7 +410,11 @@ body {
 
 .project-content p {
   color: #666;
-  line-height: 1.6;
+  font-size: 12px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
 }
 
 .project-card.dark p {
@@ -502,7 +505,6 @@ body {
     max-width: 620px;
     margin-top: 20px;
     margin-bottom: 20px;
-
     font-size: 17px;
     line-height: 1.7;
 }
@@ -510,7 +512,6 @@ body {
 /* ========================================= */
 /* PROJECTS SECTION */
 /* ========================================= */
-
 .work-projects {
   position: relative;
   overflow: hidden;
@@ -574,7 +575,6 @@ body {
 /* ========================================= */
 /* WORK PAGINATION */
 /* ========================================= */
-
 .work-pagination {
     display: flex;
     justify-content: center;
@@ -587,16 +587,11 @@ body {
     background: transparent;
     border: 1px solid rgb(243, 243, 243);
     color: rgb(243, 243, 243);
-
     padding: 10px 24px;
-
     border-radius: 999px;
-
     font-size: 14px;
     font-weight: 500;
-
     cursor: pointer;
-
     transition: all 0.25s ease;
 }
 
@@ -619,7 +614,6 @@ body {
 /* ========================================= */
 /* RESPONSIVE */
 /* ========================================= */
-
 @media (max-width: 991px) {
     .work-hero {
         min-height: 420px;
@@ -1386,7 +1380,6 @@ body {
 /* ========================================= */
 /* SUCCESS CONTENT */
 /* ========================================= */
-
 .success-content {
     max-width: 500px;
 }
@@ -1426,7 +1419,6 @@ body {
 /* ========================================= */
 /* SEND ANOTHER BUTTON */
 /* ========================================= */
-
 .success-reset {
     border: none;
     background: transparent;
@@ -1465,7 +1457,6 @@ body {
 /* ========================================= */
 /* ERROR MESSAGE */
 /* ========================================= */
-
 .form-error {
     color: #b42318;
     font-size: 14px;
@@ -1476,7 +1467,6 @@ body {
 /* ========================================= */
 /* ANIMATIONS */
 /* ========================================= */
-
 @keyframes successReveal {
 
     from {
@@ -1514,7 +1504,6 @@ body {
 /* ========================================= */
 /* RESPONSIVE */
 /* ========================================= */
-
 @media (max-width: 768px) {
 
     .contact-success {
@@ -1853,20 +1842,24 @@ body {
 /* |=====| BLOG PAGE (blog.html) |=====|         */
 /* |=============================================| */
 
-/* ===== BLOG SECTION ===== */
+/* =========================================================
+   BLOG
+   ========================================================= */
 .blog-content {
     background: #f5f5f7;
     color: #05070d;
-    padding: 100px 0 120px;
+    padding: 80px 0 120px;
     min-height: 60vh;
 }
 
-/* ===== CATEGORY FILTER CHIPS ===== */
+/* =========================================================
+   TOOLBAR
+   ========================================================= */
 .blog-toolbar {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 0;
     padding-bottom: 24px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
@@ -1893,57 +1886,173 @@ body {
     border-color: #05070d;
 }
 
-/* ===== POST CARD OVERRIDES (light bg) ===== */
+/* =========================================================
+   BLOG GRID
+   ========================================================= */
+/*
+   Bootstrap sigue usando .row,
+   pero ahora TODOS los posts son col-12.
+*/
+#blog-grid {
+    margin: 0;
+}
+
+#blog-grid > .col-12 {
+    padding: 0 !important;
+}
+
+/* =========================================================
+   BLOG CARD
+   ========================================================= */
+#blog-grid .blog-card {
+    width: 100%;
+    min-height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 28px 0;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: none;
+}
+
+/*
+   Hover MUY sutil como en la referencia.
+*/
+#blog-grid .blog-card:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================================================
+   LEFT CONTENT
+   ========================================================= */
+#blog-grid .blog-card .project-body {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0 !important;
+}
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+.blog-title-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.blog-title-link h4,
 .blog-content .project-body h4 {
+    margin: 0 0 9px;
     color: #05070d;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: -0.01em;
 }
 
-.blog-content .cta {
-    color: #05070d;
+.blog-title-link:hover h4 {
+    color: #043ebb;
 }
 
-.blog-content .cta:hover {
-    color: #3b82f6;
-}
-
-/* ===== META LINE ===== */
+/* =========================================================
+   META
+   ========================================================= */
 .blog-meta {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 13px;
-    color: #6b7280;
-    margin-bottom: 6px;
+    gap: 9px;
+    margin: 0;
+    color: #7a7f87;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.45px;
 }
 
 .blog-meta .dot {
     width: 3px;
     height: 3px;
+    flex: 0 0 3px;
     border-radius: 50%;
-    background: #6b7280;
+    background: #8b9097;
 }
 
-/* ===== EXCERPT ===== */
+/* =========================================================
+   EXCERPT
+   ========================================================= */
 .blog-excerpt {
-    color: #4b5563;
-    font-size: 15px;
-    line-height: 1.6;
+    max-width: 680px;
+    margin: 9px 0 0;
+    color: #5f636b;
+    font-size: 24px;
+    text-transform: none;
 }
 
-/* ===== IMAGE PLACEHOLDER ===== */
-.blog-img-placeholder {
-    background: #e5e7eb;
+/* =========================================================
+   CTA
+   ========================================================= */
+.blog-content .cta {
+    display: inline-block;
+    margin-top: 9px;
+    color: #05070d;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color;
+}
+
+.blog-content .cta:hover {
+    color: #2563eb;
+}
+
+/* =========================================================
+   RIGHT IMAGE
+   ========================================================= */
+#blog-grid .blog-card-image {
+    flex: 0 0 150px;
+    width: 150px;
+    height: 85px;
+    overflow: hidden;
+    margin: 0;
+    order: 2;
+}
+
+/* Link de imagen */
+#blog-grid .blog-card-image a {
+    display: block;
     width: 100%;
-    height: 240px;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Imagen */
+#blog-grid .blog-card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+#blog-grid .blog-card-image .blog-img-placeholder {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: #e5e7eb;
     color: #9ca3af;
 }
 
-/* ===== EMPTY STATE ===== */
+/* =========================================================
+   EMPTY
+   ========================================================= */
 .blog-empty {
     text-align: center;
     padding: 80px 20px;
@@ -1955,7 +2064,9 @@ body {
     margin-bottom: 10px;
 }
 
-/* ===== PAGINATION ===== */
+/* =========================================================
+   PAGINATION
+   ========================================================= */
 .blog-pagination {
     display: flex;
     justify-content: center;
@@ -1990,6 +2101,74 @@ body {
 .page-info {
     font-size: 14px;
     color: #6b7280;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+@media (max-width: 768px) {
+    .blog-content {
+        padding: 60px 0 80px;
+    }
+
+    .blog-content .container-fluid {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    #blog-grid .blog-card {
+        gap: 25px;
+        padding: 24px 0;
+    }
+
+    #blog-grid .blog-card-image {
+        flex: 0 0 125px;
+        width: 125px;
+        height: 75px;
+    }
+
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+@media (max-width: 576px) {
+    .blog-content .container-fluid {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    #blog-grid .blog-card {
+        gap: 18px;
+        padding: 22px 0;
+    }
+
+    #blog-grid .blog-card-image {
+        flex: 0 0 100px;
+        width: 100px;
+        height: 65px;
+    }
+
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+@media (max-width: 420px) {
+    #blog-grid .blog-card {
+        align-items: flex-start;
+    }
+
+    #blog-grid .blog-card-image {
+        flex: 0 0 90px;
+        width: 90px;
+        height: 60px;
+    }
+
+    .blog-content .cta {
+        display: none;
+    }
+
 }
 
 

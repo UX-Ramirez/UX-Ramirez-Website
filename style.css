@@ -1,6 +1,14 @@
 /* ===========================================================================
-   Foundations
+   UX Ramirez — Main stylesheet
+   --------------------------------------------------------------------------
+   1. Foundations          2. Shared interface       3. Home page
+   4. Work page            5. Contact page           6. Services page
+   7. About page           8. Blog and post pages
    ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Foundations
+   -------------------------------------------------------------------------- */
 @charset "UTF-8";
 
 :root {
@@ -86,7 +94,7 @@ body {
   position: relative;
 }
 
-/* pulso */
+/* Status pulse */
 .status-dot::after {
   content: "";
   position: absolute;
@@ -113,10 +121,12 @@ body {
   }
 }
 
-/* |=====| GLOBAL |=====| */
+/* End: foundations --------------------------------------------------------- */
 
 
-/* |=====| CURSOR |=====| */
+/* --------------------------------------------------------------------------
+   2. Shared interface — Custom cursor
+   -------------------------------------------------------------------------- */
 .cursor-dot {
   width: 6px;
   height: 6px;
@@ -160,10 +170,12 @@ body {
   border-color: #3b82f6;
 }
 
-/* |=====| CURSOR |=====| */
+/* End: custom cursor ------------------------------------------------------- */
 
 
-/* |=====| NAVBAR |=====| */
+/* --------------------------------------------------------------------------
+   2. Shared interface — Navigation
+   -------------------------------------------------------------------------- */
 .navbar {
   background: rgba(255, 255, 255, 0.02);
   padding: 25px 0 25px 0;
@@ -183,7 +195,7 @@ body {
   color: #73c9ff;
 }
 
-/* LINKS SOBRE FONDO OSCURO */
+/* Navigation over dark backgrounds */
 .nav-link.link-light {
   color: #dadada !important;
 }
@@ -192,7 +204,7 @@ body {
   color: #73c9ff !important;
 }
 
-/* LINKS SOBRE FONDO CLARO */
+/* Navigation over light backgrounds */
 .nav-link.link-dark {
   color: #05070d !important;
 }
@@ -236,10 +248,12 @@ body {
   width: 280px;
 }
 
-/* |=====| NAVBAR |=====| */
+/* End: navigation ---------------------------------------------------------- */
 
 
-/* |=====| HERO |=====| */
+/* --------------------------------------------------------------------------
+   3. Home page — Hero
+   -------------------------------------------------------------------------- */
 .hero {
   min-height: 100vh;
   height: auto;
@@ -259,14 +273,14 @@ body {
   z-index: -1;
 }
 
-/* Hero content */
+/* Content */
 .hero-content {
   position: relative;
   padding-top: 150px;
   z-index: 2;
 }
 
-/* Hero title */
+/* Title */
 .hero-title {
   font-weight: 800;
   line-height: 0.9;
@@ -314,7 +328,7 @@ body {
   text-align: center;
 }
 
-/* Hero footer */
+/* Footer */
 .hero-footer {
   display: flex;
   justify-content: space-between;
@@ -347,7 +361,7 @@ body {
   color: #aaa;
 }
 
-/* ACTIONS */
+/* Actions */
 .hero-actions {
   display: flex;
   align-items: center;
@@ -377,7 +391,7 @@ body {
   color: white;
 }
 
-/* Circle */
+/* Arrow button */
 .arrow-circle {
   width: 42px;
   height: 42px;
@@ -389,18 +403,18 @@ body {
   transition: border-color 0.3s ease;
 }
 
-/* Arrow */
+/* Icon */
 .arrow-icon {
   transition: transform 0.4s cubic-bezier(.4, 0, .2, 1);
 }
 
-/* Hover Interaction */
+/* Hover state */
 .btn-view-projects:hover .arrow-icon {
   transform: rotate(90deg);
   color: white;
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media(max-width:768px) {
   .hero-footer {
     flex-direction: column;
@@ -413,12 +427,12 @@ body {
   }
 }
 
-/* |=====| HERO |=====| */
+/* End: home hero ----------------------------------------------------------- */
 
 
-/* ===========================================================================
-   Portfolio
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   3. Home page — Portfolio
+   -------------------------------------------------------------------------- */
 .projects-content {
   padding-top: 100px;
 }
@@ -526,15 +540,12 @@ body {
   font-size: 0.9rem;
   color: #666;
 }
-/* ========================================================================== */
+/* End: home portfolio ------------------------------------------------------ */
 
 
-
-
-
-/* ========================================= */
-/* WORK PAGE */
-/* ========================================= */
+/* --------------------------------------------------------------------------
+   4. Work page
+   -------------------------------------------------------------------------- */
 .work-hero {
     display: flex;
     align-items: center;
@@ -544,7 +555,7 @@ body {
     padding-top: 80px;
 }
 
-/* DESCRIPTION */
+/* Hero description */
 .work-desc {
     color: #c4c4c4;
     max-width: 620px;
@@ -554,7 +565,7 @@ body {
     line-height: 1.7;
 }
 
-/* |=====| PROJECTS SECTION |=====| */
+/* Projects */
 .work-projects {
   position: relative;
   overflow: hidden;
@@ -564,7 +575,7 @@ body {
   position: relative;
   z-index: 1;
 
-  /* Evitamos el padding-top de index.html */
+  /* Override the home-page spacing. */
   padding-top: 0;
   padding-left: 0;
 }
@@ -585,12 +596,12 @@ body {
     display: none;
 }
 
-/* Show projects */
+/* Legacy “view more” state */
 .extra-project.show-project {
     display: block;
 }
 
-/* |=====| WORK PAGINATION |=====| */
+/* Pagination */
 .work-pagination {
     display: flex;
     justify-content: center;
@@ -627,7 +638,7 @@ body {
     color: #6b7280;
 }
 
-/* |=====| RESPONSIVE |=====| */
+/* Responsive */
 @media (max-width: 991px) {
     .work-hero {
         min-height: 420px;
@@ -656,21 +667,12 @@ body {
         aspect-ratio: 16 / 10;
     }
 }
+/* End: work page ------------------------------------------------------ */
 
 
-
-
-
-
-
-
-
-
-
-
-/* ========================================= */
-/* SERVICES PAGE */
-/* ========================================= */
+/* --------------------------------------------------------------------------
+   3. Home page — Services preview
+   -------------------------------------------------------------------------- */
 /* Grid */
 .services-grid {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -756,23 +758,25 @@ body {
   }
 }
 
-/* |=====| SERVICES |=====| */
+/* End: services preview ---------------------------------------------------- */
 
 
-/* |=====| MARQUEE |=====| */
+/* --------------------------------------------------------------------------
+   3. Home page — Marquee
+   -------------------------------------------------------------------------- */
 .marquee-section {
   background: #f5f5f7;
   padding: 64px 0;
   overflow: hidden;
 }
 
-/* CONTENEDOR */
+/* Container */
 .marquee {
   width: 100%;
   overflow: hidden;
 }
 
-/* TRACK */
+/* Track */
 .marquee-track {
   display: flex;
   gap: 60px;
@@ -780,7 +784,7 @@ body {
   animation: scroll 12s linear infinite;
 }
 
-/* TEXTO */
+/* Text */
 .marquee-track span {
   font-size: 82px;
   font-weight: 400;
@@ -794,7 +798,7 @@ body {
   color: #070911;
 }
 
-/* ANIMACIÓN */
+/* Animation */
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -805,16 +809,18 @@ body {
   }
 }
 
-/* |=====| MARQUEE |=====| */
+/* End: marquee ------------------------------------------------------------- */
 
 
-/* |=====| ABOUT |=====| */
-/* CONTENT */
+/* --------------------------------------------------------------------------
+   3. Home page — About preview
+   -------------------------------------------------------------------------- */
+/* Content */
 .about-content {
   align-items: flex-start;
 }
 
-/* LEFT TEXT */
+/* Introductory content */
 .about-text {
   padding-right: 60px;
 }
@@ -849,13 +855,13 @@ body {
   margin-top: 30px;
 }
 
-/* ITEM */
+/* Experience item */
 .experience-item {
   padding: 20px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* HEADER */
+/* Item header */
 .experience-header {
   display: flex;
   justify-content: space-between;
@@ -875,7 +881,7 @@ body {
   color: #9ca3af;
 }
 
-/* TEXT */
+/* Item text */
 .experience-item p {
   color: #b8b8b8;
   line-height: 1.6;
@@ -883,7 +889,7 @@ body {
   margin: 0;
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media (max-width:1200px) {
   .section-title {
     font-size: 80px;
@@ -915,17 +921,19 @@ body {
   }
 }
 
-/* |=====| ABOUT |=====| */
+/* End: about preview ------------------------------------------------------- */
 
 
-/* |=====| PROCESS |=====| */
+/* --------------------------------------------------------------------------
+   2. Shared interface — Process timeline
+   -------------------------------------------------------------------------- */
 .process-section {
   background: #f5f5f7;
   color: #070911;
   padding: 120px 0;
 }
 
-/* HEADER */
+/* Introductory content */
 .process-header {
   max-width: 600px;
 }
@@ -934,7 +942,7 @@ body {
   color: #909090;
 }
 
-/* GRID */
+/* Timeline grid */
 .process-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -942,7 +950,7 @@ body {
   position: relative;
 }
 
-/* LINE (timeline feel) */
+/* Timeline connector */
 .process-grid::before {
   content: "";
   position: absolute;
@@ -953,7 +961,7 @@ body {
   background: rgba(36, 36, 36, 0.08);
 }
 
-/* STEP */
+/* Timeline step */
 .process-step {
   transition: all 0.35s ease;
   border-radius: 12px;
@@ -962,7 +970,7 @@ body {
   padding-top: 40px;
 }
 
-/* NUMBER */
+/* Step number */
 .step-number {
   font-size: 14px;
   color: #1574af;
@@ -974,7 +982,7 @@ body {
   color: #60a5fa;
 }
 
-/* DOT */
+/* Timeline marker */
 .process-step::before {
   content: "";
   position: absolute;
@@ -993,7 +1001,7 @@ body {
   transform: translateY(-4px);
 }
 
-/* TITLE */
+/* Step title */
 .process-step h3 {
   font-size: 18px;
   margin-bottom: 10px;
@@ -1003,14 +1011,14 @@ body {
   color: #828282;
 }
 
-/* TEXT */
+/* Step description */
 .process-step p {
   font-size: 14px;
   color: #9ca3af;
   line-height: 1.6;
 }
 
-/* RESPONSIVE */
+/* Responsive */
 @media (max-width:992px) {
   .process-grid {
     grid-template-columns: 1fr;
@@ -1030,10 +1038,12 @@ body {
   }
 }
 
-/* |=====| PROCESS |=====| */
+/* End: process timeline ---------------------------------------------------- */
 
 
-/* |=====| FOOTER |=====| */
+/* --------------------------------------------------------------------------
+   2. Shared interface — Footer
+   -------------------------------------------------------------------------- */
 .site-footer {
   background: #05070d;
   color: #f5f5f7;
@@ -1045,7 +1055,7 @@ body {
   height: 69px;
 }
 
-/* BRAND */
+/* Brand */
 .footer-top p {
   line-height: 1.7;
   max-width: 300px;
@@ -1053,7 +1063,7 @@ body {
   margin-top: 20px;
 }
 
-/* LINKS */
+/* Links */
 .footer-links .footer-contact-title {
   color: #f5f5f7;
   text-decoration: none;
@@ -1119,7 +1129,7 @@ body {
   transition: width 0.3s ease;
 }
 
-/* CONTACT */
+/* Contact */
 .footer-contact a {
   color: #8b9096;
   margin-bottom: .5rem;
@@ -1136,7 +1146,7 @@ body {
   color: #73c9ff;
 }
 
-/* SOCIAL */
+/* Social links */
 .footer-social {
   padding-bottom: 24px;
 }
@@ -1154,7 +1164,7 @@ body {
   transform: translateY(-4px);
 }
 
-/* BOTTOM */
+/* Legal line */
 .footer-bottom {
   border-top: 1px solid rgba(244, 244, 244, 0.13);
   padding-top: 48px;
@@ -1182,10 +1192,12 @@ body {
   }
 }
 
-/* |=====| FOOTER |=====| */
+/* End: footer -------------------------------------------------------------- */
 
 
-/* |=====| SCROLL REVEAL |=====| */
+/* --------------------------------------------------------------------------
+   2. Shared interface — Scroll reveal
+   -------------------------------------------------------------------------- */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -1197,7 +1209,7 @@ body {
   transform: translateY(0);
 }
 
-/* DIRECCIONES */
+/* Directions */
 .reveal-left {
   transform: translateX(-60px);
 }
@@ -1210,7 +1222,7 @@ body {
   transform: translateY(60px);
 }
 
-/* STAGGER (delay progresivo) */
+/* Staggered delays */
 .reveal-delay-1 {
   transition-delay: 0.2s;
 }
@@ -1235,21 +1247,13 @@ body {
   transition-delay: 0.6s;
 }
 
-/* |=====| SCROLL REVEAL |=====| */
+/* End: scroll reveal ------------------------------------------------------- */
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* CONTENT */
+/* --------------------------------------------------------------------------
+   5. Contact page
+   -------------------------------------------------------------------------- */
+/* Content */
 .contact-content {
   background: #f5f5f7;
   padding: 120px 0 120px;
@@ -1257,14 +1261,14 @@ body {
   border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-/* TEXT */
+/* Introductory text */
 .contact-desc {
   color: #c4c4c4;
   max-width: 500px;
   margin-bottom: 20px;
 }
 
-/* RIGHT LINKS */
+/* Contact links */
 .contact-links {
   display: flex;
   flex-direction: column;
@@ -1278,7 +1282,7 @@ body {
   font-size: 18px;
 }
 
-/* CTA */
+/* Call to action */
 .contact-cta {
   font-size: 42px;
   font-weight: 700;
@@ -1304,7 +1308,7 @@ body {
   color: #1574af;
 }
 
-/* FORM */
+/* Form */
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -1336,9 +1340,7 @@ body {
   text-decoration: none;
 }
 
-/* ========================================= */
-/* CONTACT SUCCESS STATE */
-/* ========================================= */
+/* Submission success state */
 
 .contact-success {
     display: none;
@@ -1353,9 +1355,7 @@ body {
 }
 
 
-/* ========================================= */
-/* SUCCESS ICON */
-/* ========================================= */
+/* Success icon */
 
 .success-icon {
     width: 80px;
@@ -1388,9 +1388,7 @@ body {
 }
 
 
-/* ========================================= */
-/* SUCCESS CONTENT */
-/* ========================================= */
+/* Success content */
 .success-content {
     max-width: 500px;
 }
@@ -1427,9 +1425,7 @@ body {
 }
 
 
-/* ========================================= */
-/* SEND ANOTHER BUTTON */
-/* ========================================= */
+/* Reset action */
 .success-reset {
     border: none;
     background: transparent;
@@ -1465,9 +1461,7 @@ body {
 }
 
 
-/* ========================================= */
-/* ERROR MESSAGE */
-/* ========================================= */
+/* Error message */
 .form-error {
     color: #b42318;
     font-size: 14px;
@@ -1475,16 +1469,12 @@ body {
 }
 
 
-/* ========================================= */
-/* ANIMATIONS */
-/* ========================================= */
+/* Animations */
 @keyframes successReveal {
-
     from {
         opacity: 0;
         transform: translateY(30px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1493,30 +1483,23 @@ body {
 }
 
 @keyframes successPulse {
-
     0% {
         transform: scale(0.9);
         opacity: 0.5;
     }
-
     70% {
         transform: scale(1.15);
         opacity: 0;
     }
-
     100% {
         transform: scale(1.15);
         opacity: 0;
     }
-
 }
 
 
-/* ========================================= */
-/* RESPONSIVE */
-/* ========================================= */
+/* Responsive */
 @media (max-width: 768px) {
-
     .contact-success {
         flex-direction: column;
         align-items: flex-start;
@@ -1536,20 +1519,13 @@ body {
     }
 
 }
+/* End: contact page ------------------------------------------------------- */
 
 
-
-
-
-
-
-
-
-
-
-
-
-/* HERO */
+/* --------------------------------------------------------------------------
+   6. Services page
+   -------------------------------------------------------------------------- */
+/* Shared hero */
 .sub-hero {
   background: #05070d;
   padding: 200px 0 80px;
@@ -1568,7 +1544,7 @@ body {
   padding: 100px 0;
 }
 
-/* ITEM */
+/* Service accordion */
 .service-item {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding: 30px 0;
@@ -1576,7 +1552,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* HEADER */
+/* Accordion header */
 .service-header {
   display: flex;
   justify-content: space-between;
@@ -1593,13 +1569,13 @@ body {
   color: #1574af;
 }
 
-/* TOGGLE */
+/* Toggle */
 .service-toggle {
   font-size: 28px;
   transition: transform 0.3s ease;
 }
 
-/* BODY */
+/* Collapsible panel */
 .service-body {
   max-height: 0;
   overflow: hidden;
@@ -1607,7 +1583,7 @@ body {
   transition: all 0.4s ease;
 }
 
-/* CONTENT */
+/* Panel content */
 .service-body p {
   color: #444;
   margin-top: 20px;
@@ -1625,7 +1601,7 @@ body {
   color: #555;
 }
 
-/* ACTIVE */
+/* Expanded state */
 .service-item.active .service-body {
   max-height: 320px;
   opacity: 1;
@@ -1656,12 +1632,12 @@ body {
   padding: 120px 0;
 }
 
-/* LIST */
+/* FAQ list */
 .faq-list {
   margin-top: 60px;
 }
 
-/* ITEM */
+/* FAQ item */
 .faq-item {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 30px 0;
@@ -1669,7 +1645,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* QUESTION */
+/* Question */
 .faq-question {
   display: flex;
   justify-content: space-between;
@@ -1683,14 +1659,14 @@ body {
   color: #e5e5e5;
 }
 
-/* TOGGLE */
+/* Toggle */
 .faq-toggle {
   font-size: 24px;
   transition: transform 0.3s ease;
   color: #9ca3af;
 }
 
-/* ANSWER */
+/* Answer */
 .faq-answer {
   max-height: 0;
   overflow: hidden;
@@ -1705,7 +1681,7 @@ body {
   line-height: 1.7;
 }
 
-/* ACTIVE */
+/* Expanded state */
 .faq-item.active .faq-answer {
   max-height: 200px;
   opacity: 1;
@@ -1715,45 +1691,31 @@ body {
   transform: rotate(45deg);
 }
 
-/* HOVER */
+/* Hover state */
 .faq-item:hover {
   background: rgba(255, 255, 255, 0.02);
 }
 
-/* responsive */
+/* Responsive */
 @media(max-width:768px) {
   .service-content {
     grid-template-columns: 1fr;
   }
 }
+/* End: services page ------------------------------------------------------- */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* HERO */
+/* --------------------------------------------------------------------------
+   7. About page
+   -------------------------------------------------------------------------- */
+/* Hero */
 .about-hero-text {
   max-width: 600px;
   color: #9ca3af;
   font-size: 18px;
 }
 
-/* ABOUT */
+/* Profile */
 .aboutme-content {
   background: #f5f5f7;
   padding: 60px 0;
@@ -1789,14 +1751,14 @@ body {
   pointer-events: none;
 }
 
-/* EXPERIENCE */
+/* Education and certificates */
 .resume-section {
   background: #f5f5f7;
   color: #05070d;
   padding: 100px 0;
 }
 
-/* Education */
+/* Education list */
 .section-label {
   font-weight: 700;
 }
@@ -1832,7 +1794,7 @@ body {
   color: #00609b;
 }
 
-/* Responsive polish */
+/* Responsive */
 @media (max-width: 991px) {
   .edu-row:first-child {
     padding-top: 14px;
@@ -1846,16 +1808,13 @@ body {
     text-align: center;
   }
 }
+/* End: about page ---------------------------------------------------------- */
 
 
-
-/* |=============================================| */
-/* |=====| BLOG PAGE (blog.html) |=====|         */
-/* |=============================================| */
-
-/* =========================================================
-   BLOG
-   ========================================================= */
+/* --------------------------------------------------------------------------
+   8. Blog page
+   -------------------------------------------------------------------------- */
+/* Layout */
 .blog-content {
     background: #f5f5f7;
     color: #05070d;
@@ -1863,9 +1822,7 @@ body {
     min-height: 60vh;
 }
 
-/* =========================================================
-   TOOLBAR
-   ========================================================= */
+/* Filter toolbar */
 .blog-toolbar {
     display: flex;
     flex-wrap: wrap;
@@ -1897,13 +1854,7 @@ body {
     border-color: #05070d;
 }
 
-/* =========================================================
-   BLOG GRID
-   ========================================================= */
-/*
-   Bootstrap sigue usando .row,
-   pero ahora TODOS los posts son col-12.
-*/
+/* Post list — Bootstrap retains its row structure; posts span the full width. */
 #blog-grid {
     margin: 0;
 }
@@ -1912,9 +1863,7 @@ body {
     padding: 0 !important;
 }
 
-/* =========================================================
-   BLOG CARD
-   ========================================================= */
+/* Post card */
 #blog-grid .blog-card {
     width: 100%;
     min-height: 125px;
@@ -1930,25 +1879,19 @@ body {
     box-shadow: none;
 }
 
-/*
-   Hover MUY sutil como en la referencia.
-*/
+/* Keep hover feedback intentionally subtle. */
 #blog-grid .blog-card:hover {
     background: rgba(255, 255, 255, 0.35);
 }
 
-/* =========================================================
-   LEFT CONTENT
-   ========================================================= */
+/* Card content */
 #blog-grid .blog-card .project-body {
     flex: 1 1 auto;
     min-width: 0;
     padding: 0 !important;
 }
 
-/* =========================================================
-   TITLE
-   ========================================================= */
+/* Title */
 .blog-title-link {
     display: block;
     color: inherit;
@@ -1968,9 +1911,7 @@ body {
     color: #043ebb;
 }
 
-/* =========================================================
-   META
-   ========================================================= */
+/* Metadata */
 .blog-meta {
     display: flex;
     align-items: center;
@@ -1992,9 +1933,7 @@ body {
     background: #8b9097;
 }
 
-/* =========================================================
-   EXCERPT
-   ========================================================= */
+/* Excerpt */
 .blog-excerpt {
     max-width: 680px;
     margin: 9px 0 0;
@@ -2003,9 +1942,7 @@ body {
     text-transform: none;
 }
 
-/* =========================================================
-   CTA
-   ========================================================= */
+/* Call to action */
 .blog-content .cta {
     display: inline-block;
     margin-top: 9px;
@@ -2019,9 +1956,7 @@ body {
     color: #2563eb;
 }
 
-/* =========================================================
-   RIGHT IMAGE
-   ========================================================= */
+/* Card image */
 #blog-grid .blog-card-image {
     flex: 0 0 150px;
     width: 150px;
@@ -2031,7 +1966,7 @@ body {
     order: 2;
 }
 
-/* Link de imagen */
+/* Image link */
 #blog-grid .blog-card-image a {
     display: block;
     width: 100%;
@@ -2039,7 +1974,7 @@ body {
     overflow: hidden;
 }
 
-/* Imagen */
+/* Image */
 #blog-grid .blog-card-image img {
     display: block;
     width: 100%;
@@ -2047,10 +1982,7 @@ body {
     object-fit: cover;
 }
 
-/* =========================================================
-   PLACEHOLDER
-   ========================================================= */
-
+/* Image placeholder */
 #blog-grid .blog-card-image .blog-img-placeholder {
     width: 100%;
     height: 100%;
@@ -2061,9 +1993,7 @@ body {
     color: #9ca3af;
 }
 
-/* =========================================================
-   EMPTY
-   ========================================================= */
+/* Empty state */
 .blog-empty {
     text-align: center;
     padding: 80px 20px;
@@ -2075,9 +2005,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* =========================================================
-   PAGINATION
-   ========================================================= */
+/* Pagination */
 .blog-pagination {
     display: flex;
     justify-content: center;
@@ -2114,9 +2042,7 @@ body {
     color: #6b7280;
 }
 
-/* =========================================================
-   TABLET
-   ========================================================= */
+/* Tablet */
 @media (max-width: 768px) {
     .blog-content {
         padding: 60px 0 80px;
@@ -2140,9 +2066,7 @@ body {
 
 }
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* Mobile */
 @media (max-width: 576px) {
     .blog-content .container-fluid {
         padding-left: 20px !important;
@@ -2162,9 +2086,7 @@ body {
 
 }
 
-/* =========================================================
-   VERY SMALL MOBILE
-   ========================================================= */
+/* Compact mobile */
 @media (max-width: 420px) {
     #blog-grid .blog-card {
         align-items: flex-start;
@@ -2181,14 +2103,13 @@ body {
     }
 
 }
+/* End: blog page------------------------------------------------------------ */
 
 
-
-/* |=============================================| */
-/* |=====| POST PAGE (post.html) |=====|         */
-/* |=============================================| */
-
-/* ===== HERO COVER ===== */
+/* --------------------------------------------------------------------------
+   8. Post page
+   -------------------------------------------------------------------------- */
+/* Hero cover */
 .post-hero {
     padding: 200px 0 0;
     position: relative;
@@ -2220,7 +2141,7 @@ body {
     margin-top: 40px;
 }
 
-/* ===== BREADCRUMB / BACK ===== */
+/* Back link */
 .post-back {
     display: inline-flex;
     align-items: center;
@@ -2236,7 +2157,7 @@ body {
     color: #fff;
 }
 
-/* ===== META ===== */
+/* Metadata */
 .post-meta {
     display: flex;
     align-items: center;
@@ -2263,7 +2184,7 @@ body {
     max-width: 800px;
 }
 
-/* ===== ARTICLE BODY ===== */
+/* Article body */
 .post-body-section {
     background: #f5f5f7;
     color: #05070d;
@@ -2336,7 +2257,7 @@ body {
     margin: 24px 0;
 }
 
-/* ===== SHARE BAR ===== */
+/* Share controls */
 .post-share {
     max-width: 720px;
     margin: 0 auto;
@@ -2390,7 +2311,7 @@ body {
     border-color: #10b981;
 }
 
-/* ===== COMMENTS ===== */
+/* Comments */
 .post-comments {
     max-width: 720px;
     margin: 0 auto;
@@ -2405,21 +2326,21 @@ body {
     margin-bottom: 24px;
 }
 
-/* Hide scrollbar on Cusdis widget */
+/* Hide the embedded Cusdis scrollbar without affecting its content. */
 #cusdis_thread {
     overflow: hidden;
 }
 
 #cusdis_thread iframe {
     scrollbar-width: none;           /* Firefox */
-    -ms-overflow-style: none;        /* IE / Edge */
+    -ms-overflow-style: none;        /* Legacy Edge */
 }
 
 #cusdis_thread iframe::-webkit-scrollbar {
-    display: none;                   /* Chrome / Safari */
+    display: none;                   /* Chrome and Safari */
 }
 
-/* ===== RELATED POSTS ===== */
+/* Related posts */
 .related-section {
     background: #f5f5f7;
     color: #05070d;
@@ -2470,7 +2391,7 @@ body {
     background: #6b7280;
 }
 
-/* ===== 404 STATE ===== */
+/* Not-found state */
 .post-not-found {
     text-align: center;
     padding: 120px 20px;
@@ -2492,8 +2413,12 @@ body {
     color: #05070d;
     font-weight: 500;
 }
+/* End: post page ------------------------------------------------------- */
 
-/* Respect user preferences without affecting the default visual language. */
+
+/* --------------------------------------------------------------------------
+   User preferences
+   -------------------------------------------------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

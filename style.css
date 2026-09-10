@@ -247,7 +247,6 @@ body {
 .navbar-brand img {
   width: 280px;
 }
-
 /* End: navigation ---------------------------------------------------------- */
 
 
@@ -1346,7 +1345,6 @@ body {
 }
 
 /* Submission success state */
-
 .contact-success {
     display: none;
     align-items: center;
@@ -1361,7 +1359,6 @@ body {
 
 
 /* Success icon */
-
 .success-icon {
     width: 80px;
     height: 80px;

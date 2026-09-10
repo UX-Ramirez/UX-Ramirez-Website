@@ -232,7 +232,7 @@ body {
   background: linear-gradient(135deg, #1574af, #00609b);
   color: #FFFF;
   border: none;
-  border-radius: 0px;
+  border-radius: 999px;
   padding: 10px 20px;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -1332,12 +1332,17 @@ body {
   background: linear-gradient(135deg, #1574af, #00609b);
   color: #FFFF;
   border: none;
-  border-radius: 0px;
+  border-radius: 999px;
   padding: 10px 20px;
   font-weight: 500;
   transition: color 0.3s ease;
-  width: 120px;
   text-decoration: none;
+  width: 120px;
+}
+
+.submit-btn:hover {
+  background: #73c9ff;
+  color: #05070d;
 }
 
 /* Submission success state */

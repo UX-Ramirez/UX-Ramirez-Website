@@ -18,4 +18,8 @@ const SITE_CONFIG = {
 
     // Number of post cards per page on blog.html
     POSTS_PER_PAGE: 6,
+
+    // ── Portfolio Data ────────────────────────────────────────
+    PROJECTS_FILE: "projects.json",
+    PROJECTS_PER_PAGE: 12,
 };

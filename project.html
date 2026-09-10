@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Project — UX Ramirez</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="index.html"><img id="navbar-logo" src="assets/uxRamirezLogo_dark.png" alt="UX Ramirez Logo"></a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav mx-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="work.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+                <a href="contact.html" class="nav-btn">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Project details -->
+        <section id="project-hero" class="post-hero" data-theme="dark">
+            <div class="container-fluid px-5">
+                <a href="work.html" class="post-back"><i class="bi bi-arrow-left"></i> Back to Projects</a>
+                <div id="project-category" class="post-meta"></div>
+                <h1 id="project-title" class="post-hero-title"></h1>
+                <div id="project-cover" class="project-cover-wrapper"></div>
+            </div>
+        </section>
+
+        <!-- Project body -->
+        <section id="project-body" class="post-body-section" data-theme="light">
+            <div class="container"><article id="project-content" class="post-article"></article></div>
+        </section>
+
+        <!-- Related Projects -->
+        <section id="related-projects" class="related-section" data-theme="light" hidden>
+            <div class="container-fluid px-5">
+                <div class="related-header"><h3>Other projects</h3></div>
+                <div id="related-projects-grid" class="row g-5"></div>
+            </div>
+        </section>
+        
+        <!-- Project Not Found -->
+        <section id="project-not-found" class="post-not-found" data-theme="light" hidden>
+            <i class="bi bi-folder-x" aria-hidden="true"></i>
+            <h2>Project not found</h2><p>This project may have been moved or removed.</p>
+            <a href="work.html"><i class="bi bi-arrow-left"></i> Back to Projects</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer reveal reveal-up reveal-delay-1" data-theme="dark">
+        <div class="container-fluid px-5">
+
+            <div class="row footer-top">
+                <!-- BRAND -->
+                <div class="col-lg-4 footer-brand">
+                    <a class="footer-brand" href="index.html">
+                        <img src="assets/uxRamirezLogo_dark.png" alt="UX Ramirez Logo" />
+                    </a>
+
+                    <p>
+                        UI/UX Designer specializing in creating clear, functional, and user-centered digital
+                        experiences.
+                    </p>
+
+                    <div class="footer-social">
+                        <a href="https://www.behance.net/ux_ramirez" target="_blank"><i
+                                class="fab fa-behance footer-icon"></i></a>
+                        <a href="https://dribbble.com/ux_ramirez" target="_blank"><i
+                                class="fab fa-dribbble footer-icon"></i></a>
+                        <a href="https://www.facebook.com/uxramirez" target="_blank"><i
+                                class="fab fa-facebook footer-icon"></i></a>
+                        <a href="https://www.instagram.com/ux_ramirez" target="_blank"><i
+                                class="fab fa-instagram footer-icon"></i></a>
+                        <a href="https://x.com/ux_ramirez" target="_blank"><i
+                                class="fa-brands fa-x-twitter footer-icon"></i></a>
+                        <a href="https://bsky.app/profile/uxramirez.bsky.social" target="_blank"><i
+                                class="fa-brands fa-bluesky footer-icon"></i></a>
+                        <a href="https://mx.pinterest.com/ux_ramirez/" target="_blank"><i
+                                class="fa-brands fa-pinterest footer-icon"></i></a>
+                        <a href="https://www.linkedin.com/in/abril-ramirez-flores-71a26b275/" target="_blank"><i
+                                class="fab fa-linkedin footer-icon"></i></a>
+                        <a href="https://github.com/iscRamirezAbril" target="_blank"><i
+                                class="fab fa-github footer-icon"></i></a>
+                    </div>
+                </div>
+
+                <!-- NAVIGATION -->
+                <div class="col-lg-3 footer-links">
+                    <h5>Navigation</h5>
+                    <ul>
+                        <li><a href="home.html#projects">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="store.html">Store</a></li>
+                    </ul>
+                </div>
+
+                <!-- SERVICES -->
+                <div class="col-lg-3 footer-links">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="services.html#WebDesign">Web Design</a></li>
+                        <li><a href="services.html#ProductDesign">Product Design</a></li>
+                        <li><a href="services.html#Templates">Templates & Landing Pages</a></li>
+                    </ul>
+                </div>
+
+                <!-- CONTACT -->
+                <div class="col-lg-2 footer-links">
+                    <a href="contact.html" class="footer-contact-title">Contact <svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+                        </svg></a>
+
+                    <ul>
+                        <li><a class="email" href="mailto:contact@uxramirez.com">contact@uxramirez.com</a></li>
+                        <li><a class="email" href="https://wa.me/526643352557">+52 (663) 200 5715</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- BOTTOM -->
+            <div class="footer-bottom">
+                <p>
+                    © 2026 UX Ramirez. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cursor-dot"></div><div class="cursor-outline"></div>
+
+    <script src="config.js"></script>
+
+    <script>
+        (() => {
+            const escapeHtml = (value) => { const element = document.createElement("span"); element.textContent = value || ""; return element.innerHTML; };
+            const slug = new URLSearchParams(window.location.search).get("slug");
+            const showNotFound = () => {
+                document.getElementById("project-hero").hidden = true;
+                document.getElementById("project-body").hidden = true;
+                document.getElementById("related-projects").hidden = true;
+                document.getElementById("project-not-found").hidden = false;
+            };
+            const formatDate = (value) => value ? new Date(`${value}T00:00:00`).toLocaleDateString("en-US", {
+                year: "numeric", month: "long", day: "numeric"
+            }) : "";
+            const projectUrl = (project) => `project.html?slug=${encodeURIComponent(project.slug)}`;
+            const renderRelated = (projects, currentProject) => {
+                const related = projects.filter((project) => project.slug !== currentProject.slug)
+                    .sort(() => Math.random() - 0.5).slice(0, 3);
+                if (!related.length) return;
+                const section = document.getElementById("related-projects");
+                const grid = document.getElementById("related-projects-grid");
+                section.hidden = false;
+                grid.innerHTML = related.map((project, index) => `
+                    <div class="col-lg-4 col-md-6 reveal reveal-up reveal-delay-${index + 1}">
+                        <article class="project-item">
+                            <div class="project-image"><a href="${projectUrl(project)}"><img src="${escapeHtml(project.cover)}" alt="${escapeHtml(project.title)}" loading="lazy"></a></div>
+                            <div class="project-body">
+                                <div class="blog-meta"><span>${escapeHtml(project.category)}</span><span class="dot"></span><span>${escapeHtml(formatDate(project.date))}</span></div>
+                                <h4>${escapeHtml(project.title)}</h4>
+                                <a href="${projectUrl(project)}" class="cta">View project <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>`).join("");
+                grid.querySelectorAll(".reveal").forEach((element) => element.classList.add("show"));
+            };
+            if (!slug) { showNotFound(); return; }
+            fetch(SITE_CONFIG.PROJECTS_FILE)
+                .then((response) => response.ok ? response.json() : Promise.reject(new Error(`HTTP ${response.status}`)))
+                .then((projects) => {
+                    const project = projects.find((item) => item.slug === slug);
+                    if (!project) { showNotFound(); return; }
+                    document.title = `${project.title} — UX Ramirez`;
+                    document.getElementById("project-category").innerHTML = `<span>${escapeHtml(project.category)}</span><span class="dot"></span><span>${escapeHtml(formatDate(project.date))}</span>`;
+                    document.getElementById("project-title").textContent = project.title;
+                    document.getElementById("project-cover").innerHTML = `<img src="${escapeHtml(project.cover)}" alt="${escapeHtml(project.title)}">`;
+                    document.getElementById("project-content").innerHTML = `
+                        <h2>Project overview</h2>
+                        <p>${escapeHtml(project.title)} is a ${escapeHtml(project.category)} project featured in the UX Ramirez portfolio.</p>
+                        <p><strong>Published:</strong> ${escapeHtml(formatDate(project.date))}</p>
+                        <p><a class="certificate-cta" href="${escapeHtml(project.externalUrl)}" target="_blank" rel="noopener noreferrer">View the full project on Behance <i class="bi bi-arrow-up-right"></i></a></p>`;
+                    renderRelated(projects, project);
+                })
+                .catch(() => showNotFound());
+        })();
+    </script>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
